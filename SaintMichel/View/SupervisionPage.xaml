@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaintMichel.View.SupervisionPage"
+             Title="SupervisionPage">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" />
+    </Shell.BackButtonBehavior>
+
+    <Grid RowDefinitions="*" ColumnDefinitions="200,*">
+        <!-- Menu gauche -->
+        <VerticalStackLayout Padding="10" Spacing="20">
+            <Label Text="Menu" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <!-- Button with Logo -->
+            <HorizontalStackLayout>
+                <Image Source="food_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
+                <Button Text="Evenements" Command="{Binding NavigateToEventsCommand}" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Image Source="ticket_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
+                <Button Text="Offres" Command="{Binding NavigateToOffresCommand}" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <!-- Contenu principal -->
+        <!--<RefreshView Grid.Column="1" 
+                  Command="{Binding LoadItemsCommand}" 
+                  IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+         <CollectionView x:Name="ContactsItemView"
+                         ItemsSource="{Binding ObsItems}"
+                         SelectionMode="None">
+             <CollectionView.ItemTemplate>
+                 <DataTemplate>
+                     <StackLayout Padding="10" x:DataType="model:ToDoList">
+                         <Label Text="{Binding Title}" 
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                         <Label Text="{Binding Description}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                         <StackLayout.GestureRecognizers>
+                             <TapGestureRecognizer 
+                                 NumberOfTapsRequired="1"
+                                 Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ItemViewModel}}, Path=ItemTappedCommand}"
+                                 CommandParameter="{Binding .}">
+                             </TapGestureRecognizer>
+                         </StackLayout.GestureRecognizers>
+                     </StackLayout>
+                 </DataTemplate>
+             </CollectionView.ItemTemplate>
+         </CollectionView>
+     </RefreshView>-->
+    </Grid>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaintMichel.MainPage"
+             Title="Login :">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            HorizontalOptions="Center">
+            <Image
+                Source="logo_appadmin.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="{Binding Headtxt}" TextDecorations="Underline"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <!-- Champ pour le nom d'utilisateur -->
+            <Label Text="Nom d'utilisateur" />
+            <Entry Placeholder="Entrez votre nom d'utilisateur" />
+
+            <!-- Champ pour le mot de passe -->
+            <Label Text="Mot de passe" />
+            <Entry Placeholder="Entrez votre mot de passe"
+            IsPassword="True" />
+
+            <Button
+                x:Name="GotoToDo" 
+                Text="Connexion"
+                Command="{Binding GotoTodoViewCommand}"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
