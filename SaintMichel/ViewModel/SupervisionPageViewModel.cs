@@ -1,4 +1,5 @@
-﻿using SaintMichel.Services;
+﻿using Microsoft.Maui.Controls.Handlers.Items;
+using SaintMichel.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +10,28 @@ namespace SaintMichel.ViewModel
 {
     public partial class SupervisionPageViewModel : BaseViewModel
     {
-        [ObservableProperty] // Private backing field for ObsItems
-        private ObservableCollection<ToDoList> _obsItems;
+        [ObservableProperty] 
+        private ObservableCollection<Event> _obsItems;
+
+        [ObservableProperty] 
+        private ObservableCollection<Offre> _obsItems2;
+
+        [ObservableProperty]
+        private Boolean eventVisibility;
+
+        [ObservableProperty]
+        private Boolean offreVisibility;
+        
+
+        DAO_SaintMichelAPI dao_SaintMichelAPI;
 
         public SupervisionPageViewModel()
         {
-            Title = "To DO List";
-            //ObsItems = new ObservableCollection<ToDoList>();
+            Title = "Supervision Page";
+            dao_SaintMichelAPI = new DAO_SaintMichelAPI();
+            ObsItems = new ObservableCollection<Event>();
+            ObsItems2 = new ObservableCollection<Offre>();
+            OnAppearing();
         }
 
         public void OnAppearing()
@@ -24,54 +40,72 @@ namespace SaintMichel.ViewModel
         }
 
         [RelayCommand]
-        async Task LoadItems()
+        async Task LoadOffres()
         {
-            //IsBusy = true;
-            //try
-            //{
-            //    ObsItems.Clear();
-            //    var items = await ItemStore.GetItemsAsync(true);
+            IsBusy = true;
+            try
+            {
+                ObsItems2.Clear();
+                var List = await dao_SaintMichelAPI.GetOffresAsync();
 
-            //    foreach (var item in items)
-            //    {
-            //        ObsItems.Add(item);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //}
-            //finally
-            //{
-            //    IsBusy = false;
+                foreach (var item in List)
+                {
+                    ObsItems2.Add(item);
+                }
 
-            //}
+                await App.Current.MainPage.DisplayAlert("Alert", $"{ObsItems2.Count} offres found", "OK");
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                IsBusy = false;
+
+            }
         }
 
-        //[RelayCommand]
-        //async void ItemTapped(ToDoList item)
-        //{
-        //    if (item == null)
-        //    {
+        [RelayCommand]
+        async Task LoadEvent()
+        {
+            IsBusy = true;
+            try
+            {
+                ObsItems.Clear();
+                var List = await dao_SaintMichelAPI.GetEventsAsync();
 
-        //        return;
+                foreach (var item in List)
+                {
+                    ObsItems.Add(item);
+                }
 
-        //    }
-        //    await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailPageViewModel.ItemId)}={item.Id}");
-        //}
+                await App.Current.MainPage.DisplayAlert("Alert", $"{ObsItems.Count} items found", "OK");
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                IsBusy = false;
+
+            }
+        }
 
         [RelayCommand]
         async Task NavigateToEvents()
         {
-
-            await Shell.Current.GoToAsync($"{nameof(EventPage)}");
+            EventVisibility = true;
+            OffreVisibility = false;
+            await LoadEvent();
 
         }
 
         [RelayCommand]
         async Task NavigateToOffres()
         {
-
-            await Shell.Current.GoToAsync($"{nameof(OffresPage)}");
+            OffreVisibility = true;
+            EventVisibility = false;
+            await LoadOffres();
 
         }
     }
