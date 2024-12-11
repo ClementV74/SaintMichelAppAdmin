@@ -13,7 +13,7 @@
                 Source="logo_appadmin.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eighte" />
+                SemanticProperties.Description="dot net bot in a race car number eight" />
 
             <Label
                 Text="{Binding Headtxt}" TextDecorations="Underline"
