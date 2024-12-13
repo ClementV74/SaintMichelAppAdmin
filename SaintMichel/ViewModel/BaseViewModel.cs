@@ -5,6 +5,8 @@ namespace SaintMichel.ViewModel
 
     {
         public IitemStore<ToDoList> ItemStore => DependencyService.Get<IitemStore<ToDoList>>();
+        public IitemStore<Event> API_Event => DependencyService.Get<IitemStore<Event>>();
+        public IitemStore<Offre> API_Offres => DependencyService.Get<IitemStore<Offre>>();
 
         bool isBusy = false;
         public bool IsBusy

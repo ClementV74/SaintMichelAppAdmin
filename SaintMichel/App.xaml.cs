@@ -6,6 +6,8 @@
         {
             InitializeComponent();
             DependencyService.Register<MockItemStore>();
+            DependencyService.Register<API_Event>();
+            DependencyService.Register<API_Offres>();   
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

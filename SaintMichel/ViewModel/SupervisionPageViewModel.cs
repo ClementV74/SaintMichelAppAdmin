@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using SaintMichel.Services;
 namespace SaintMichel.ViewModel
 {
     public partial class SupervisionPageViewModel : BaseViewModel
@@ -23,12 +23,9 @@ namespace SaintMichel.ViewModel
         private Boolean offreVisibility;
         
 
-        DAO_SaintMichelAPI dao_SaintMichelAPI;
-
         public SupervisionPageViewModel()
         {
             Title = "Supervision Page";
-            dao_SaintMichelAPI = new DAO_SaintMichelAPI();
             ObsItems = new ObservableCollection<Event>();
             ObsItems2 = new ObservableCollection<Offre>();
             OnAppearing();
@@ -46,14 +43,14 @@ namespace SaintMichel.ViewModel
             try
             {
                 ObsItems2.Clear();
-                var List = await dao_SaintMichelAPI.GetOffresAsync();
+
+                var List = await API_Offres.GetItemsAsync(true);
 
                 foreach (var item in List)
                 {
                     ObsItems2.Add(item);
                 }
 
-                await App.Current.MainPage.DisplayAlert("Alert", $"{ObsItems2.Count} offres found", "OK");
             }
             catch (Exception ex)
             {
@@ -72,14 +69,14 @@ namespace SaintMichel.ViewModel
             try
             {
                 ObsItems.Clear();
-                var List = await dao_SaintMichelAPI.GetEventsAsync();
+
+                var List = await API_Event.GetItemsAsync();
 
                 foreach (var item in List)
                 {
                     ObsItems.Add(item);
                 }
 
-                await App.Current.MainPage.DisplayAlert("Alert", $"{ObsItems.Count} items found", "OK");
             }
             catch (Exception ex)
             {
