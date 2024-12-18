@@ -61,23 +61,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.GestionUt
 build_metadata.AdditionalFiles.TargetPath = View\GestionUtilisateurPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\GestionUtilisateurPage.xaml
 
-[C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/ItemDetailPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.ItemDetailPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\ItemDetailPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\ItemDetailPage.xaml
-
 [C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/ItemPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.ItemPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\ItemPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\ItemPage.xaml
-
-[C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/NewItemPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.NewItemPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\NewItemPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\NewItemPage.xaml
 
 [C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/ShopPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

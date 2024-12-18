@@ -7,7 +7,6 @@ namespace SaintMichel.ViewModel
         protected readonly EventAPI EventService;
         protected readonly OffreAPI OffreService;
 
-        public IitemStore<ToDoList> ItemStore => DependencyService.Get<IitemStore<ToDoList>>();
 
         public BaseViewModel()
         {

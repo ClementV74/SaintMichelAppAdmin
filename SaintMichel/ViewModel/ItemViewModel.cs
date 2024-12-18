@@ -41,26 +41,6 @@
         }
 
         [RelayCommand]
-        async void ItemTapped(ToDoList item)
-        {
-            if (item == null)
-            {
-
-                return;
-                
-            }
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailPageViewModel.ItemId)}={item.Id}");
-        }
-
-        [RelayCommand]
-        async Task AddItem()
-        {
-           
-            await Shell.Current.GoToAsync($"{nameof(NewItemPage)}");
-         
-        }
-
-        [RelayCommand]
         async Task NavigateToFood()
         {
             await Shell.Current.GoToAsync(nameof(FoodPage));
