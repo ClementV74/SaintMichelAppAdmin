@@ -1,9 +1,93 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Vabre\\Documents\\SaintMichelAppAdmin\\",
+  "WorkspaceRootPath": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\documents\\saintmichelappadmin\\saintmichel\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\view\\ticketpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\ticketpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\view\\ticketpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\ticketpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\view\\shoppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\shoppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\viewmodel\\ticketpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\ticketpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\services\\mockticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\services\\mockticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\services\\mockitemstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\services\\mockitemstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\model\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\model\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\viewmodel\\ticketdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\ticketdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\viewmodel\\newitempageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\newitempageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\viewmodel\\offrespageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\offrespageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\viewmodel\\shoppageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\shoppageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\viewmodel\\supervisionpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\supervisionpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\view\\ticketdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\ticketdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\view\\ticketdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\ticketdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\view\\supervisionpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\supervisionpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\view\\supervisionpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\supervisionpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\services\\dao_saintmichelapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\services\\dao_saintmichelapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\a_coe\\source\\repos\\saintmichelappadminmaui\\saintmichel\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -14,20 +98,276 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 12,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShopPage.xaml",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\ShopPage.xaml",
+              "RelativeDocumentMoniker": "SaintMichel\\View\\ShopPage.xaml",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\ShopPage.xaml",
+              "RelativeToolTip": "SaintMichel\\View\\ShopPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-13T08:49:22.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\App.xaml",
+              "RelativeDocumentMoniker": "SaintMichel\\App.xaml",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\App.xaml",
+              "RelativeToolTip": "SaintMichel\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-13T07:40:37.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\App.xaml.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\App.xaml.cs",
+              "RelativeToolTip": "SaintMichel\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T07:40:07.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OffresPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\OffresPageViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\OffresPageViewModel.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\OffresPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\OffresPageViewModel.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T07:33:11.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TicketDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\TicketDetailViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\TicketDetailViewModel.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\TicketDetailViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\TicketDetailViewModel.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:38:12.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TicketDetailPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\TicketDetailPage.xaml.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\View\\TicketDetailPage.xaml.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\TicketDetailPage.xaml.cs",
+              "RelativeToolTip": "SaintMichel\\View\\TicketDetailPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:37:02.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TicketDetailPage.xaml",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\TicketDetailPage.xaml",
+              "RelativeDocumentMoniker": "SaintMichel\\View\\TicketDetailPage.xaml",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\TicketDetailPage.xaml",
+              "RelativeToolTip": "SaintMichel\\View\\TicketDetailPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-11T13:36:49.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\Model\\Ticket.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\Model\\Ticket.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\Model\\Ticket.cs",
+              "RelativeToolTip": "SaintMichel\\Model\\Ticket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:26:29.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MockTicketService.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\Services\\MockTicketService.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\Services\\MockTicketService.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\Services\\MockTicketService.cs",
+              "RelativeToolTip": "SaintMichel\\Services\\MockTicketService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:25:59.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\BaseViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:20:08.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TicketPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\TicketPage.xaml.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\View\\TicketPage.xaml.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\TicketPage.xaml.cs",
+              "RelativeToolTip": "SaintMichel\\View\\TicketPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:19:06.344Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TicketPage.xaml",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\TicketPage.xaml",
+              "RelativeDocumentMoniker": "SaintMichel\\View\\TicketPage.xaml",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\TicketPage.xaml",
+              "RelativeToolTip": "SaintMichel\\View\\TicketPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-11T13:19:03.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NewItemPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\NewItemPageViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\NewItemPageViewModel.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\NewItemPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\NewItemPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:18:40.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\MainPageViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\MainPageViewModel.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\MainPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\MainPageViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:18:39.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ShopPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\ShopPageViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\ShopPageViewModel.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\ShopPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\ShopPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:18:37.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TicketPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\TicketPageViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\TicketPageViewModel.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\TicketPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\TicketPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:18:18.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DAO_SaintMichelAPI.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\Services\\DAO_SaintMichelAPI.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\Services\\DAO_SaintMichelAPI.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\Services\\DAO_SaintMichelAPI.cs",
+              "RelativeToolTip": "SaintMichel\\Services\\DAO_SaintMichelAPI.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:17:53.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MockItemStore.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\Services\\MockItemStore.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\Services\\MockItemStore.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\Services\\MockItemStore.cs",
+              "RelativeToolTip": "SaintMichel\\Services\\MockItemStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:16:53.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SupervisionPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\SupervisionPageViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\SupervisionPageViewModel.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\ViewModel\\SupervisionPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\SupervisionPageViewModel.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:16:32.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SupervisionPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\SupervisionPage.xaml.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\View\\SupervisionPage.xaml.cs",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\SupervisionPage.xaml.cs",
+              "RelativeToolTip": "SaintMichel\\View\\SupervisionPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:16:23.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SupervisionPage.xaml",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\SupervisionPage.xaml",
+              "RelativeDocumentMoniker": "SaintMichel\\View\\SupervisionPage.xaml",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\View\\SupervisionPage.xaml",
+              "RelativeToolTip": "SaintMichel\\View\\SupervisionPage.xaml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-11T13:16:12.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Vabre\\Documents\\SaintMichelAppAdmin\\SaintMichel\\MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\MainPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\Vabre\\Documents\\SaintMichelAppAdmin\\SaintMichel\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\a_coe\\source\\repos\\SaintMichelAppAdminMAUI\\SaintMichel\\MainPage.xaml",
               "RelativeToolTip": "SaintMichel\\MainPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-06T09:46:53.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-06T09:46:53.069Z"
             }
           ]
         }

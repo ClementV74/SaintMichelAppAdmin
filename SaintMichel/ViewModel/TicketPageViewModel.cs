@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
+namespace SaintMichel.ViewModel;
 
-namespace SaintMichel.ViewModel
+public class TicketPageViewModel : BaseViewModel
 {
-    internal class TicketPageViewModel
+    public ObservableCollection<Ticket> Tickets { get; set; }
+
+    public TicketPageViewModel()
     {
+        Tickets = new ObservableCollection<Ticket>(MockTicketService.GetMockTickets());
     }
 }

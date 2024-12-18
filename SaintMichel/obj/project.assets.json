@@ -54498,26 +54498,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vabre\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\a_coe\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vabre\\Documents\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
+      "projectUniqueName": "C:\\Users\\a_coe\\Source\\Repos\\SaintMichelAppAdminMAUI\\SaintMichel\\SaintMichel.csproj",
       "projectName": "SaintMichel",
-      "projectPath": "C:\\Users\\Vabre\\Documents\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
-      "packagesPath": "C:\\Users\\Vabre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vabre\\Documents\\SaintMichelAppAdmin\\SaintMichel\\obj\\",
+      "projectPath": "C:\\Users\\a_coe\\Source\\Repos\\SaintMichelAppAdminMAUI\\SaintMichel\\SaintMichel.csproj",
+      "packagesPath": "C:\\Users\\a_coe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\a_coe\\Source\\Repos\\SaintMichelAppAdminMAUI\\SaintMichel\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vabre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\a_coe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

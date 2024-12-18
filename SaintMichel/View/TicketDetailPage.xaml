@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaintMichel.View.TicketDetailPage"
+             Title="Ticket Details">
+
+    <VerticalStackLayout Padding="10">
+        <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="24" />
+        <Label Text="{Binding Description}" FontSize="16" TextColor="Gray" />
+        <Label Text="Status: " FontAttributes="Bold" FontSize="16" />
+        <Label Text="{Binding Status}" FontSize="16" TextColor="{Binding StatusColor}" />
+        <Label Text="Submitted By: " FontAttributes="Bold" FontSize="16" />
+        <Label Text="{Binding SubmittedBy}" FontSize="16" TextColor="Blue" />
+
+        <Button Text="Toggle Status" Command="{Binding ToggleStatusCommand}" />
+
+        <Label Text="Response:" FontAttributes="Bold" FontSize="16" Margin="0,20,0,5" />
+        <Editor Text="{Binding Response}" Placeholder="Write your response here..." />
+        <Button Text="Send Response" Command="{Binding SendResponseCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
