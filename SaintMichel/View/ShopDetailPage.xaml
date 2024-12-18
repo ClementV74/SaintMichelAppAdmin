@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaintMichel.View.ShopDetailPage"
+             Title="Détails de l'Article">
+
+    <ScrollView Padding="20">
+        <StackLayout Spacing="10">
+            <Label Text="Titre" />
+            <Entry Text="{Binding SelectedItem.Title}" />
+
+            <Label Text="Description" />
+            <Entry Text="{Binding SelectedItem.Description}" />
+
+            <Label Text="Prix" />
+            <Entry Text="{Binding SelectedItem.Prix}" Keyboard="Numeric" />
+
+            <Label Text="Image actuelle" />
+            <!-- Affiche l'image liée à l'URL -->
+            <Image Source="{Binding SelectedItem.ImageUrl}" HeightRequest="90" WidthRequest="90" Aspect="AspectFit" />
+
+
+            <Label Text="URL de l'image" />
+            <Entry Text="{Binding SelectedItem.ImageUrl}" />
+
+            <Button Text="Sauvegarder" Command="{Binding SaveCommand}" />
+
+            <Button Text="Supprimer" Command="{Binding DeleteCommand}" BackgroundColor="Red" TextColor="White"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -4,14 +4,42 @@
              x:Class="SaintMichel.View.ShopPage"
              Title="ShopPage">
 
-    <Shell.BackButtonBehavior>
-        <BackButtonBehavior IsVisible="False" />
-    </Shell.BackButtonBehavior>
-    
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <StackLayout Padding="10">
+        <!-- Bouton Ajouter -->
+        <Button Text="Ajouter un article"
+                Command="{Binding AddShopCommand}" 
+                BackgroundColor="Green" 
+                TextColor="White" />
+
+        <!-- ScrollView pour afficher les articles -->
+        <ScrollView>
+            <Grid Padding="10" ColumnSpacing="10" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Collection des articles -->
+                <CollectionView ItemsSource="{Binding ShopItems}" SelectionMode="Single" SelectionChanged="OnItemSelected">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="Gray" Padding="10" CornerRadius="10" HasShadow="True">
+                                <StackLayout Spacing="5">
+                                    <!-- Image -->
+                                    <Image Source="{Binding ImageUrl}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+                                    <!-- Titre -->
+                                    <Label Text="{Binding Title}" FontSize="16" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+
 </ContentPage>

@@ -1,12 +1,26 @@
-namespace SaintMichel.View;
+using Microsoft.Maui.Controls;
 
-public partial class ShopPage : ContentPage
+namespace SaintMichel.View
 {
-	public ShopPage()
-	{
-		InitializeComponent();
+    public partial class ShopPage : ContentPage
+    {
+        public ShopPage()
+        {
+            InitializeComponent();
+            BindingContext = new ShopPageViewModel();
+        }
 
-        BindingContext = new ShopPageViewModel();
 
+
+        private async void OnItemSelected(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedItem = e.CurrentSelection.FirstOrDefault() as ShopItem;
+
+            if (selectedItem != null)
+            {
+                // Naviguer vers la page de détails
+                await Shell.Current.GoToAsync($"{nameof(ShopDetailPage)}?itemId={selectedItem.IdShop}");
+            }
+        }
     }
 }
