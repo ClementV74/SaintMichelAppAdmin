@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using UraniumUI;
 
 namespace SaintMichel
 {
@@ -10,6 +11,8 @@ namespace SaintMichel
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseUraniumUI()
+                .UseUraniumUIMaterial()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

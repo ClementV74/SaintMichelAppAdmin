@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SaintMichel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+a8ffce0ff7fc5abeccee4ee07a684d21009f26ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+8fcb14f3d3490d4330f7acc7cae7ee8c48d045d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("SaintMichel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SaintMichel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
