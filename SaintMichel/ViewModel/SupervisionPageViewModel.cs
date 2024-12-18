@@ -44,7 +44,7 @@ namespace SaintMichel.ViewModel
             {
                 ObsItems2.Clear();
 
-                var List = await API_Offres.GetItemsAsync(true);
+                var List = await OffreService.GetAllOffresAsync();
 
                 foreach (var item in List)
                 {
@@ -70,7 +70,7 @@ namespace SaintMichel.ViewModel
             {
                 ObsItems.Clear();
 
-                var List = await API_Event.GetItemsAsync();
+                var List = await EventService.GetAllEventsAsync();
 
                 foreach (var item in List)
                 {

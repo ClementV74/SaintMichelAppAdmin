@@ -6,9 +6,10 @@
         {
             InitializeComponent();
             DependencyService.Register<MockItemStore>();
-            DependencyService.Register<API_Event>();
-            DependencyService.Register<API_Offres>();
-
+            //DependencyService.Register<API_Event>();
+            //DependencyService.Register<API_Offres>();
+            DependencyService.Register<OffreAPI>();
+            DependencyService.Register<EventAPI>();
             UserAppTheme = AppTheme.Dark;
 
         }

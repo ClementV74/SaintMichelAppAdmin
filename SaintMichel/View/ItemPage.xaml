@@ -8,60 +8,34 @@
 
     <Grid RowDefinitions="*" ColumnDefinitions="200,*">
         <!-- Menu gauche -->
-        <VerticalStackLayout Padding="20" Spacing="25">
-            <!-- Title -->
-            <Label Text="Menu" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Start" />
+        <VerticalStackLayout Padding="10" Spacing="20">
+            <Label Text="Menu" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
 
-            <!-- Food Button with Icon -->
-            <HorizontalStackLayout Spacing="15" VerticalOptions="Start">
-                <Image Source="food_icon.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
-                <Button Text="Food" Command="{Binding NavigateToFoodCommand}"
-                    BackgroundColor="{DynamicResource ButtonBackgroundColor}" 
-                    TextColor="{DynamicResource ButtonTextColor}"
-                    CornerRadius="10" Padding="10"
-                    HorizontalOptions="FillAndExpand" />
+            <!-- Button with Logo -->
+            <HorizontalStackLayout>
+                <Image Source="food_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
+                <Button Text="Food" Command="{Binding NavigateToFoodCommand}" />
             </HorizontalStackLayout>
 
-            <!-- Ticket Button with Icon -->
-            <HorizontalStackLayout Spacing="15" VerticalOptions="Start">
-                <Image Source="ticket_icon.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
-                <Button Text="Ticket" Command="{Binding NavigateToTicketCommand}"
-                    BackgroundColor="{DynamicResource ButtonBackgroundColor}" 
-                    TextColor="{DynamicResource ButtonTextColor}"
-                    CornerRadius="10" Padding="10"
-                    HorizontalOptions="FillAndExpand" />
+            <HorizontalStackLayout>
+                <Image Source="ticket_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
+                <Button Text="Ticket" Command="{Binding NavigateToTicketCommand}" />
             </HorizontalStackLayout>
 
-            <!-- Shop Button with Icon -->
-            <HorizontalStackLayout Spacing="15" VerticalOptions="Start">
-                <Image Source="shop_icon.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
-                <Button Text="Shop" Command="{Binding NavigateToShopCommand}"
-                    BackgroundColor="{DynamicResource ButtonBackgroundColor}" 
-                    TextColor="{DynamicResource ButtonTextColor}"
-                    CornerRadius="10" Padding="10"
-                    HorizontalOptions="FillAndExpand" />
+            <HorizontalStackLayout>
+                <Image Source="shop_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
+                <Button Text="Shop" Command="{Binding NavigateToShopCommand}" />
             </HorizontalStackLayout>
 
-            <!-- Supervision Button with Icon -->
-            <HorizontalStackLayout Spacing="15" VerticalOptions="Start">
-                <Image Source="supervision_icon.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
-                <Button Text="Supervision" Command="{Binding NavigateToSupervisionCommand}"
-                    BackgroundColor="{DynamicResource ButtonBackgroundColor}" 
-                    TextColor="{DynamicResource ButtonTextColor}"
-                    CornerRadius="10" Padding="10"
-                    HorizontalOptions="FillAndExpand" />
+            <HorizontalStackLayout>
+                <Image Source="supervision_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
+                <Button Text="Supervision" Command="{Binding NavigateToSupervisionCommand}" />
             </HorizontalStackLayout>
 
-            <!-- Gestion Utilisateur Button with Icon -->
-            <HorizontalStackLayout Spacing="15" VerticalOptions="Start">
-                <Image Source="user_icon.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
-                <Button Text="Gestion Utilisateur" Command="{Binding NavigateToGestionUtilisateurCommand}"
-                    BackgroundColor="{DynamicResource ButtonBackgroundColor}" 
-                    TextColor="{DynamicResource ButtonTextColor}"
-                    CornerRadius="10" Padding="10"
-                    HorizontalOptions="FillAndExpand" />
+            <HorizontalStackLayout>
+                <Image Source="user_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
+                <Button Text="Gestion Utilisateur" Command="{Binding NavigateToGestionUtilisateurCommand}" />
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </Grid>
-
 </ContentPage>
