@@ -6,7 +6,7 @@
         {
             InitializeComponent();
             //DependencyService.Register<API_Event>();
-            //DependencyService.Register<API_Offres>();
+            DependencyService.Register<UserAPI>();
             DependencyService.Register<OffreAPI>();
             DependencyService.Register<EventAPI>();
             UserAppTheme = AppTheme.Dark;

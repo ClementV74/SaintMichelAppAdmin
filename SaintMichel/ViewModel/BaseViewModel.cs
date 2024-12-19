@@ -6,12 +6,13 @@ namespace SaintMichel.ViewModel
     {
         protected readonly EventAPI EventService;
         protected readonly OffreAPI OffreService;
-
+        protected readonly UserAPI UserService;
 
         public BaseViewModel()
         {
             EventService = DependencyService.Get<EventAPI>();
             OffreService = DependencyService.Get<OffreAPI>();
+            UserService = DependencyService.Get<UserAPI>();
         }
 
 

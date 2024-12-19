@@ -89,6 +89,13 @@ namespace SaintMichel.ViewModel
         }
 
         [RelayCommand]
+        async Task EventTouch()
+        {
+            await Shell.Current.GoToAsync(nameof(FoodPage));
+        }
+
+
+        [RelayCommand]
         async Task NavigateToEvents()
         {
             EventVisibility = true;
