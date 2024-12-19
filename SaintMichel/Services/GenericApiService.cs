@@ -113,5 +113,8 @@ namespace SaintMichel.Services
                 throw new Exception("Erreur lors de l'ajout de l'article");
             }
         }
+
+
+        
     }
 }

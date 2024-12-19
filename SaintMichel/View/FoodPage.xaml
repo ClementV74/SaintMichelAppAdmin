@@ -3,15 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SaintMichel.View.FoodPage"
              Title="FoodPage">
-    
+
     <Shell.BackButtonBehavior>
         <BackButtonBehavior IsVisible="False" />
     </Shell.BackButtonBehavior>
 
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label Text="Menu de la semaine" 
+               FontSize="24" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <ListView x:Name="MenuListView" 
+                  ItemsSource="{Binding Menus}" 
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding LoadMenusCommand}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding date_menu}" Detail="{Binding contenu}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </VerticalStackLayout>
 </ContentPage>
