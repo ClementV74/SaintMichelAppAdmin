@@ -17,6 +17,9 @@ namespace SaintMichel.ViewModel
         private ObservableCollection<Offre> _obsItems2;
 
         [ObservableProperty]
+        private Event _selectedItem;
+
+        [ObservableProperty]
         private Boolean eventVisibility;
 
         [ObservableProperty]
@@ -35,6 +38,17 @@ namespace SaintMichel.ViewModel
         {
             IsBusy = true;
         }
+
+        [RelayCommand]
+        async Task EventSelected()
+        {
+            if (SelectedItem == null)
+            {
+                return;
+            }
+            await Shell.Current.GoToAsync($"{nameof(EventDetailPage)}?{nameof(EventDetailPageViewModel.EventId)}={SelectedItem.IDevent}");
+        }
+
 
         [RelayCommand]
         async Task LoadOffres()

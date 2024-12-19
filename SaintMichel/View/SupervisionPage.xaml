@@ -21,48 +21,45 @@
             </HorizontalStackLayout>
         </VerticalStackLayout>
 
-        <ListView ItemsSource="{Binding ObsItems}" Grid.Column="2" IsVisible="{Binding EventVisibility}">
-            <ListView.ItemTemplate>
+        <CollectionView ItemsSource="{Binding ObsItems}" Grid.Column="2" IsVisible="{Binding EventVisibility}" SelectionMode="Single" SelectedItem="{Binding SelectedItem}"
+                        SelectionChangedCommand="{Binding EventSelectedCommand}">
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <Frame Margin="10"
-               Padding="15"
-               CornerRadius="10"
-               BackgroundColor="LightBlue"
-               HasShadow="True">
-                            <VerticalStackLayout Spacing="5">
-                                <!-- Name -->
-                                <Label Text="{Binding Name}" 
-                       FontSize="22" 
-                       FontAttributes="Bold"
-                       TextColor="Navy" />
+                    <Frame Margin="10"
+        Padding="15"
+        CornerRadius="10"
+        BackgroundColor="LightBlue"
+        HasShadow="True">
+                        <VerticalStackLayout Spacing="5">
+                            <!-- Name -->
+                            <Label Text="{Binding Name}" 
+                FontSize="22" 
+                FontAttributes="Bold"
+                TextColor="Navy" />
 
-                                <!-- Date -->
-                                <Label Text="{Binding Date}" 
-                       FontSize="18" 
-                       TextColor="Gray" />
+                            <!-- Date -->
+                            <Label Text="{Binding Date}" 
+                FontSize="18" 
+                TextColor="Gray" />
 
-                                <!-- Description -->
-                                <Label Text="{Binding Description}" 
-                       FontSize="16" 
-                       TextColor="Black"
-                       LineBreakMode="WordWrap" />
+                            <!-- Description -->
+                            <Label Text="{Binding Description}" 
+                FontSize="16" 
+                TextColor="Black"
+                LineBreakMode="WordWrap" />
 
-                                <!-- Lieu -->
-                                <Label Text="{Binding Lieu}" 
-                       FontSize="18" 
-                       FontAttributes="Italic"
-                       TextColor="DarkSlateBlue" />
-                                <VerticalStackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding EventTouchCommand}" CommandParameter="{}"/>
-                                </VerticalStackLayout.GestureRecognizers>
-                            </VerticalStackLayout>
-                        </Frame>
-                    </ViewCell>
+                            <!-- Lieu -->
+                            <Label Text="{Binding Lieu}" 
+                FontSize="18" 
+                FontAttributes="Italic"
+                TextColor="DarkSlateBlue" />
+                        </VerticalStackLayout>
+                    </Frame>
                 </DataTemplate>
-            </ListView.ItemTemplate>
+            </CollectionView.ItemTemplate>
 
-        </ListView>
+        </CollectionView>
+
         
         <!-- Contenu principal -->
 

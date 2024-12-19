@@ -6,6 +6,9 @@
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="View\EventDetailPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\FoodPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

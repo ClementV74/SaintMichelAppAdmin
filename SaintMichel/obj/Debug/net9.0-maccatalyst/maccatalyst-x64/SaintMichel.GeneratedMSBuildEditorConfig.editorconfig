@@ -49,6 +49,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.Resources.Styl
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/EventDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.EventDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\EventDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\EventDetailPage.xaml
+
 [C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/FoodPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.FoodPage.xaml
