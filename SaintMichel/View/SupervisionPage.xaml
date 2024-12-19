@@ -54,7 +54,7 @@
                        FontAttributes="Italic"
                        TextColor="DarkSlateBlue" />
                                 <VerticalStackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding EventTouchCommand}" />
+                                    <TapGestureRecognizer Command="{Binding EventTouchCommand}" CommandParameter="{}"/>
                                 </VerticalStackLayout.GestureRecognizers>
                             </VerticalStackLayout>
                         </Frame>
