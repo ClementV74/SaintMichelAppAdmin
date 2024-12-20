@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace SaintMichel.ViewModel
 {
+
+    [QueryProperty(nameof(IDEvent), nameof(IDEvent))]
+
     public partial class EventDetailPageViewModel : BaseViewModel
     {
-        public int EventId;
+
+        [ObservableProperty]
+        private int iDEvent;
 
         [ObservableProperty]
         private string _Name;
@@ -28,26 +34,58 @@ namespace SaintMichel.ViewModel
         [ObservableProperty]
         private string _UserIdUser;
 
- 
+        //public string? IDevent { get; set; }
+
         public EventDetailPageViewModel()
         {
             Title = "Event Detail";
-            OnAppearing();
         }
 
-        public async void OnAppearing()
+        [RelayCommand]
+        public async Task Confirm()
         {
-            IsBusy = true;
-            await LoadEventDetails();
+            Event newEvent = new Event()
+            {
+                IDevent = iDEvent,
+                Name = Name,
+                Description = Description,
+                Date = Date,
+                Lieu = Lieu,
+                state = int.Parse(State),
+                user_iduser = int.Parse(UserIdUser)
+            };
+
+            await EventService.UpdateEventAsync(newEvent);
+
         }
 
-        async Task LoadEventDetails()
+        [RelayCommand]
+        public async Task Delete()
+        {
+            await EventService.DeleteEventAsync(iDEvent.ToString());
+        }
+
+
+        partial void OnIDEventChanged(int value)
+        {
+            if (value > 0) // Si vous souhaitez vérifier que l'ID est valide
+            {
+                LoadEventDetails(value).ConfigureAwait(false);
+            }
+            else
+            {
+                Debug.WriteLine("Invalid EventId provided");
+            }
+        }
+
+        async Task LoadEventDetails(int OnEventId)
         {
             IsBusy = true;
             try
             {
+                int toto = iDEvent;
+                var _Event = await EventService.GetEventAsync(OnEventId.ToString());
 
-                var _Event = await EventService.GetEventAsync(EventId.ToString());
                 Name = _Event.Name;
                 Description = _Event.Description;
                 Date = _Event.Date;
@@ -55,7 +93,7 @@ namespace SaintMichel.ViewModel
                 State = _Event.state.ToString();
                 UserIdUser = _Event.user_iduser.ToString();
 
-                await Application.Current.MainPage.DisplayAlert("Warning", $"The event location {Lieu} is not set.", "OK");
+              
             }
             catch (Exception ex)
             {

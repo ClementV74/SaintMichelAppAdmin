@@ -33,7 +33,9 @@ namespace SaintMichel.Services
             var json = JsonSerializer.Serialize(item);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PutAsync($"{_baseUrl}+/{id}", content);
+            var response = await _httpClient.PutAsync($"{_baseUrl}+/Put{typeof(T).Name}/{id}", content);
+            // warn response .IsSuccessStatusCode;
+            await Application.Current.MainPage.DisplayAlert("Warning", response.IsSuccessStatusCode.ToString(), "OK");
             return response.IsSuccessStatusCode;
         }
 

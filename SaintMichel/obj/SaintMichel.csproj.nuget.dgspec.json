@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\André Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj": {}
+    "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\André Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj": {
+    "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\André Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
+        "projectUniqueName": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
         "projectName": "SaintMichel",
-        "projectPath": "C:\\Users\\André Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
-        "packagesPath": "C:\\Users\\André Suzuki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\André Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\obj\\",
+        "projectPath": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
+        "packagesPath": "C:\\Users\\Suzuki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\André Suzuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Suzuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,19 +31,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {}
         },
         "frameworks": {
           "net9.0-android35.0": {
             "targetAlias": "net9.0-android",
             "projectReferences": {}
           },
-          "net9.0-ios18.1": {
+          "net9.0-ios18.0": {
             "targetAlias": "net9.0-ios",
             "projectReferences": {}
           },
-          "net9.0-maccatalyst18.1": {
+          "net9.0-maccatalyst18.0": {
             "targetAlias": "net9.0-maccatalyst",
             "projectReferences": {}
           },
@@ -59,7 +59,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -157,9 +157,9 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         },
-        "net9.0-ios18.1": {
+        "net9.0-ios18.0": {
           "targetAlias": "net9.0-ios",
           "dependencies": {
             "CommunityToolkit.Maui": {
@@ -252,9 +252,9 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         },
-        "net9.0-maccatalyst18.1": {
+        "net9.0-maccatalyst18.0": {
           "targetAlias": "net9.0-maccatalyst",
           "dependencies": {
             "CommunityToolkit.Maui": {
@@ -348,7 +348,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         },
         "net9.0-windows10.0.19041": {
           "targetAlias": "net9.0-windows10.0.19041.0",
@@ -443,7 +443,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

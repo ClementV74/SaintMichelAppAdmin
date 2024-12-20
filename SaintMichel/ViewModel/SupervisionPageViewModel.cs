@@ -14,10 +14,13 @@ namespace SaintMichel.ViewModel
         private ObservableCollection<Event> _obsItems;
 
         [ObservableProperty] 
-        private ObservableCollection<Offre> _obsItems2;
+        private ObservableCollection<OffrePro> _obsItems2;
 
         [ObservableProperty]
         private Event _selectedItem;
+
+        [ObservableProperty]
+        private OffrePro _selectedOffre;
 
         [ObservableProperty]
         private Boolean eventVisibility;
@@ -30,7 +33,7 @@ namespace SaintMichel.ViewModel
         {
             Title = "Supervision Page";
             ObsItems = new ObservableCollection<Event>();
-            ObsItems2 = new ObservableCollection<Offre>();
+            ObsItems2 = new ObservableCollection<OffrePro>();
             OnAppearing();
         }
 
@@ -42,15 +45,26 @@ namespace SaintMichel.ViewModel
         [RelayCommand]
         async Task EventSelected()
         {
+            if (SelectedOffre == null)
+            {
+                return;
+            }
+
+
+            await Shell.Current.GoToAsync($"{nameof(OffreDetailPage)}?{nameof(OffreDetailPageViewModel.IDInterim)}={SelectedOffre.IDInterim}");
+        }
+
+        [RelayCommand]
+        async Task OffreSelected()
+        {
             if (SelectedItem == null)
             {
                 return;
             }
 
 
-            await Shell.Current.GoToAsync($"{nameof(EventDetailPage)}?{nameof(EventDetailPageViewModel.EventId)}={SelectedItem.IDevent}");
+            await Shell.Current.GoToAsync($"{nameof(EventDetailPage)}?{nameof(EventDetailPageViewModel.IDEvent)}={SelectedItem.IDevent}");
         }
-
 
         [RelayCommand]
         async Task LoadOffres()

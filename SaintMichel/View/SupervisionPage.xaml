@@ -63,11 +63,11 @@
         
         <!-- Contenu principal -->
 
-        <ListView ItemsSource="{Binding ObsItems2}" Grid.Column="2" IsVisible="{Binding OffreVisibility}" >
-            <ListView.ItemTemplate>
+        <CollectionView ItemsSource="{Binding ObsItems2}" Grid.Column="2" IsVisible="{Binding OffreVisibility}" SelectionMode="Single" SelectedItem="{Binding SelectedOffre}"
+                        SelectionChangedCommand="{Binding OffreSelectedCommand}">
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <Frame Margin="10"
+                    <Frame Margin="10"
           Padding="15"
           CornerRadius="10"
           BackgroundColor="LightGray"
@@ -123,12 +123,11 @@
                   LineBreakMode="WordWrap" />
                             </VerticalStackLayout>
                         </Frame>
-                    </ViewCell>
                 </DataTemplate>
-            </ListView.ItemTemplate>
+            </CollectionView.ItemTemplate>
 
 
-        </ListView>
+        </CollectionView>
         
     </Grid>
 </ContentPage>

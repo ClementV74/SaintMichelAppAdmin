@@ -1,10 +1,15 @@
-namespace SaintMichel.View;
 
-public partial class EventDetailPage : ContentPage
+using Microsoft.Maui.Controls;
+namespace SaintMichel.View
+
 {
-	public EventDetailPage()
+
+	public partial class EventDetailPage : ContentPage
 	{
-		InitializeComponent();
-        BindingContext = new EventDetailPageViewModel();
-    }
+		public EventDetailPage()
+		{
+			InitializeComponent();
+			BindingContext = new EventDetailPageViewModel();
+		}
+	}
 }

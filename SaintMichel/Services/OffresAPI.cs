@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SaintMichel.Services
 {
-    public class OffreAPI : GenericApiService<Offre>
+    public class OffreAPI : GenericApiService<OffrePro>
     {
-        public OffreAPI() : base("https://saintmichel.alwaysdata.net/GetAllOffrePro")
+        public OffreAPI() : base("https://saintmichel.alwaysdata.net")
         {
         }
 
@@ -17,7 +17,7 @@ namespace SaintMichel.Services
         /// </summary>
         /// <param name="shop">The shop to add.</param>
         /// <returns>True if the shop was successfully added; otherwise, false.</returns>
-        public async Task<bool> AddOffreAsync(Offre shop)
+        public async Task<bool> AddOffreAsync(OffrePro shop)
         {
             return await AddItemAsync(shop);
         }
@@ -27,7 +27,7 @@ namespace SaintMichel.Services
         /// </summary>
         /// <param name="shop">The shop to update.</param>
         /// <returns>True if the shop was successfully updated; otherwise, false.</returns>
-        public async Task<bool> UpdateOffreAsync(Offre shop)
+        public async Task<bool> UpdateOffreAsync(OffrePro shop)
         {
             return await UpdateItemAsync(shop.IDInterim.ToString(), shop);
         }
@@ -47,7 +47,7 @@ namespace SaintMichel.Services
         /// </summary>
         /// <param name="idshop">The ID of the shop to retrieve.</param>
         /// <returns>The shop if found; otherwise, null.</returns>
-        public async Task<Offre> GetOffreAsync(string idshop)
+        public async Task<OffrePro> GetOffreAsync(string idshop)
         {
             return await GetItemAsync(idshop);
         }
@@ -56,7 +56,7 @@ namespace SaintMichel.Services
         /// Retrieves all shops.
         /// </summary>
         /// <returns>A list of all shops.</returns>
-        public async Task<IEnumerable<Offre>> GetAllOffresAsync()
+        public async Task<IEnumerable<OffrePro>> GetAllOffresAsync()
         {
             var toto = await GetItemsAsync();
             return toto;
@@ -67,7 +67,7 @@ namespace SaintMichel.Services
         /// </summary>
         /// <param name="filter">The search filter.</param>
         /// <returns>A list of matching shops.</returns>
-        public async Task<IEnumerable<Offre>> SearchOffresAsync(string filter)
+        public async Task<IEnumerable<OffrePro>> SearchOffresAsync(string filter)
         {
             var allOffres = await GetItemsAsync();
             return allOffres.Where(shop => shop.NameEntreprise.Contains(filter, StringComparison.OrdinalIgnoreCase));

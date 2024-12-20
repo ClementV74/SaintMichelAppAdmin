@@ -7,6 +7,7 @@
             InitializeComponent();
 
             //register to the root
+            Routing.RegisterRoute(nameof(OffreDetailPage), typeof(OffreDetailPage));
             Routing.RegisterRoute(nameof(EventDetailPage), typeof(EventDetailPage));
             Routing.RegisterRoute(nameof(ItemPage), typeof(ItemPage));
             Routing.RegisterRoute(nameof(FoodPage), typeof(FoodPage));
