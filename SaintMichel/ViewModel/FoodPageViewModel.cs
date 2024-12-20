@@ -57,7 +57,8 @@ namespace SaintMichel.ViewModel
             var startOfWeek = currentDate.AddDays(-(int)currentDate.DayOfWeek + (int)DayOfWeek.Monday);
             var endOfWeek = startOfWeek.AddDays(4); // Fin de la semaine (vendredi)
 
-            CurrentWeek = $"{startOfWeek:dd MMM} - {endOfWeek:dd MMM yyyy}";
+            // Enlever l'année du format de la semaine
+            CurrentWeek = $"{startOfWeek:dd MMM} - {endOfWeek:dd MMM}";
         }
 
         private async Task LoadMenusAsync()

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\foodpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\foodpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\foodpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\foodpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\foodpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\foodpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\addshoppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -182,7 +182,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -228,13 +228,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FoodPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\FoodPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\FoodPageViewModel.cs",
-              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\FoodPageViewModel.cs*",
-              "RelativeToolTip": "SaintMichel\\ViewModel\\FoodPageViewModel.cs*",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAkwGsAAAAyAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\FoodPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\FoodPageViewModel.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAcwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T14:01:56.039Z",
               "EditorCaption": ""
@@ -254,13 +254,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FoodPage.xaml",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\FoodPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\FoodPage.xaml",
               "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\FoodPage.xaml*",
               "RelativeToolTip": "SaintMichel\\View\\FoodPage.xaml*",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGUAAABXAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAYwGEAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-11T13:20:55.678Z",
               "EditorCaption": ""
