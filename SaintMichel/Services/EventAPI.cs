@@ -8,7 +8,7 @@ namespace SaintMichel.Services
 {
     public class EventAPI: GenericApiService<Event>
     {
-        public EventAPI() : base("https://saintmichel.alwaysdata.net/GetAllEvent")
+        public EventAPI() : base("https://saintmichel.alwaysdata.net/")
         {
         }
 

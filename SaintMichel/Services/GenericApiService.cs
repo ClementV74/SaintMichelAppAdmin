@@ -45,7 +45,7 @@ namespace SaintMichel.Services
 
         public async Task<T> GetItemAsync(string id)
         {
-            var response = await _httpClient.GetAsync($"{_baseUrl}/{id}");
+            var response = await _httpClient.GetAsync($"{_baseUrl}/Get{typeof(T).Name}ById/{id}");
 
             if (response.IsSuccessStatusCode)
             {
@@ -58,7 +58,7 @@ namespace SaintMichel.Services
 
         public async Task<IEnumerable<T>> GetItemsAsync()
         {
-            var response = await _httpClient.GetAsync(_baseUrl);
+            var response = await _httpClient.GetAsync($"{_baseUrl}/GetAll{typeof(T).Name}");
 
             if (response.IsSuccessStatusCode)
             {

@@ -16529,7 +16529,7 @@
         }
       }
     },
-    "net9.0-ios18.0": {
+    "net9.0-ios18.1": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -18024,7 +18024,7 @@
         }
       }
     },
-    "net9.0-ios18.0/android-arm64": {
+    "net9.0-ios18.1/android-arm64": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -19673,7 +19673,7 @@
         }
       }
     },
-    "net9.0-ios18.0/android-x64": {
+    "net9.0-ios18.1/android-x64": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -21322,7 +21322,7 @@
         }
       }
     },
-    "net9.0-ios18.0/iossimulator-x64": {
+    "net9.0-ios18.1/iossimulator-x64": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -22976,7 +22976,7 @@
         }
       }
     },
-    "net9.0-ios18.0/maccatalyst-x64": {
+    "net9.0-ios18.1/maccatalyst-x64": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -24630,7 +24630,7 @@
         }
       }
     },
-    "net9.0-ios18.0/win10-x64": {
+    "net9.0-ios18.1/win10-x64": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -26286,7 +26286,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.0": {
+    "net9.0-maccatalyst18.1": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -27761,7 +27761,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.0/android-arm64": {
+    "net9.0-maccatalyst18.1/android-arm64": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -29410,7 +29410,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.0/android-x64": {
+    "net9.0-maccatalyst18.1/android-x64": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -31059,7 +31059,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.0/iossimulator-x64": {
+    "net9.0-maccatalyst18.1/iossimulator-x64": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -32708,7 +32708,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.0/maccatalyst-x64": {
+    "net9.0-maccatalyst18.1/maccatalyst-x64": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -34360,7 +34360,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.0/win10-x64": {
+    "net9.0-maccatalyst18.1/win10-x64": {
       "CommunityToolkit.Maui/9.1.1": {
         "type": "package",
         "dependencies": {
@@ -54440,7 +54440,7 @@
       "UraniumUI.Icons.MaterialIcons >= 2.10.2",
       "UraniumUI.Material >= 2.10.2"
     ],
-    "net9.0-ios18.0": [
+    "net9.0-ios18.1": [
       "CommunityToolkit.Maui >= 9.1.1",
       "CommunityToolkit.Mvvm >= 8.3.2",
       "FontAwesome >= 4.7.0",
@@ -54459,7 +54459,7 @@
       "UraniumUI.Icons.MaterialIcons >= 2.10.2",
       "UraniumUI.Material >= 2.10.2"
     ],
-    "net9.0-maccatalyst18.0": [
+    "net9.0-maccatalyst18.1": [
       "CommunityToolkit.Maui >= 9.1.1",
       "CommunityToolkit.Mvvm >= 8.3.2",
       "FontAwesome >= 4.7.0",
@@ -54498,26 +54498,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Suzuki\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\André Suzuki\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
+      "projectUniqueName": "C:\\Users\\André Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
       "projectName": "SaintMichel",
-      "projectPath": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
-      "packagesPath": "C:\\Users\\Suzuki\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\obj\\",
+      "projectPath": "C:\\Users\\André Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
+      "packagesPath": "C:\\Users\\André Suzuki\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\André Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Suzuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\André Suzuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -54529,18 +54527,19 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0-android35.0": {
           "targetAlias": "net9.0-android",
           "projectReferences": {}
         },
-        "net9.0-ios18.0": {
+        "net9.0-ios18.1": {
           "targetAlias": "net9.0-ios",
           "projectReferences": {}
         },
-        "net9.0-maccatalyst18.0": {
+        "net9.0-maccatalyst18.1": {
           "targetAlias": "net9.0-maccatalyst",
           "projectReferences": {}
         },
@@ -54557,7 +54556,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -54655,9 +54654,9 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       },
-      "net9.0-ios18.0": {
+      "net9.0-ios18.1": {
         "targetAlias": "net9.0-ios",
         "dependencies": {
           "CommunityToolkit.Maui": {
@@ -54750,9 +54749,9 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       },
-      "net9.0-maccatalyst18.0": {
+      "net9.0-maccatalyst18.1": {
         "targetAlias": "net9.0-maccatalyst",
         "dependencies": {
           "CommunityToolkit.Maui": {
@@ -54846,7 +54845,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       },
       "net9.0-windows10.0.19041": {
         "targetAlias": "net9.0-windows10.0.19041.0",
@@ -54941,7 +54940,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

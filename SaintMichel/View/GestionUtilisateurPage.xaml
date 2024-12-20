@@ -15,56 +15,55 @@
         <ListView ItemsSource="{Binding ObsItems}" Grid.RowSpan="2" IsVisible="{Binding EventVisibility}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <Frame Margin="10"
-              Padding="15"
-              CornerRadius="10"
-              BackgroundColor="AliceBlue"
-              HasShadow="True">
-                            <VerticalStackLayout Spacing="10">
-                                <!-- User Details -->
-                                <HorizontalStackLayout Spacing="15">
-                                    <!-- Avatar -->
-                                    <Image Source="{Binding photo_profil}" 
+                    <Frame Margin="10"
+                            Padding="15"
+                            CornerRadius="10"
+                            BackgroundColor="AliceBlue"
+                            HasShadow="True">
+                        <VerticalStackLayout Spacing="10">
+                            <!-- User Details -->
+                            <HorizontalStackLayout Spacing="15">
+                                <!-- Avatar -->
+                                <Image Source="{Binding photo_profil}" 
                           WidthRequest="50" 
                           HeightRequest="50" 
                           Aspect="AspectFill"/>
 
-                                    <!-- User Information -->
-                                    <VerticalStackLayout>
-                                        <!-- Full Name -->
-                                        <Label Text="{Binding nom}" 
+                                <!-- User Information -->
+                                <VerticalStackLayout>
+                                    <!-- Full Name -->
+                                    <Label Text="{Binding nom}" 
                               FontSize="20" 
                               FontAttributes="Bold" 
                               TextColor="Navy" />
 
-                                        <!-- Email -->
-                                        <Label Text="{Binding email}" 
+                                    <!-- Email -->
+                                    <Label Text="{Binding email}" 
                               FontSize="16" 
                               TextColor="DarkSlateGray" />
 
-                                        <!-- Role -->
-                                        <Label Text="{Binding role}" 
+                                    <!-- Role -->
+                                    <Label Text="{Binding role}" 
                               FontSize="14" 
                               FontAttributes="Italic" 
                               TextColor="Gray" />
 
-                                        <!-- Pseudo -->
-                                        <Label Text="{Binding pseudo}" 
+                                    <!-- Pseudo -->
+                                    <Label Text="{Binding pseudo}" 
                               FontSize="14" 
                               TextColor="SlateBlue" />
 
-                                        <!-- Phone -->
-                                        <Label Text="{Binding telephone}" 
+                                    <!-- Phone -->
+                                    <Label Text="{Binding telephone}" 
                               FontSize="14" 
                               TextColor="DimGray" />
-                                    </VerticalStackLayout>
-                                </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
 
-                                <!-- Buttons -->
-                                <HorizontalStackLayout Spacing="15" HorizontalOptions="End">
-                                    <!-- Edit Button -->
-                                    <Button Text="Edit" 
+                            <!-- Buttons -->
+                            <HorizontalStackLayout Spacing="15" HorizontalOptions="End">
+                                <!-- Edit Button -->
+                                <Button Text="Edit" 
                            BackgroundColor="LightGreen" 
                            TextColor="White" 
                            FontSize="14" 
@@ -72,18 +71,17 @@
                            Command="{Binding EditCommand}" 
                            CommandParameter="{Binding .}" />
 
-                                    <!-- Delete Button -->
-                                    <Button Text="Delete" 
+                                <!-- Delete Button -->
+                                <Button Text="Delete" 
                            BackgroundColor="Crimson" 
                            TextColor="White" 
                            FontSize="14" 
                            CornerRadius="10" 
                            Command="{Binding DeleteCommand}" 
                            CommandParameter="{Binding .}" />
-                                </HorizontalStackLayout>
-                            </VerticalStackLayout>
-                        </Frame>
-                    </ViewCell>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

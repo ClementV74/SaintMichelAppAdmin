@@ -1,13 +1,15 @@
 
-    <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SaintMichel.View.EventDetailPage"
              Title="EventDetailPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <StackLayout Padding="20">
+        <Label Text="Event Details" FontSize="24" HorizontalOptions="Center" />
+        <Label Text="{Binding Name}" FontSize="18" />
+        <Label Text="{Binding Date}" FontSize="16" />
+        <Label Text="{Binding Description}" FontSize="16" TextColor="Red" />
+        <Label Text="{Binding Lieu}" FontSize="16" />
+        <Label Text="{Binding State}" FontSize="16" />
+        <Label Text="{Binding UserIdUser}" FontSize="16" />
+    </StackLayout>
 </ContentPage>

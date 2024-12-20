@@ -46,6 +46,8 @@ namespace SaintMichel.ViewModel
             {
                 return;
             }
+
+
             await Shell.Current.GoToAsync($"{nameof(EventDetailPage)}?{nameof(EventDetailPageViewModel.EventId)}={SelectedItem.IDevent}");
         }
 
