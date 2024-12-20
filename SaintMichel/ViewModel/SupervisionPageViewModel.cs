@@ -50,8 +50,8 @@ namespace SaintMichel.ViewModel
                 return;
             }
 
+            await Shell.Current.GoToAsync($"{nameof(EventDetailPage)}?{nameof(EventDetailPageViewModel.IDEvent)}={SelectedItem.IDevent}");
 
-            await Shell.Current.GoToAsync($"{nameof(OffreDetailPage)}?{nameof(OffreDetailPageViewModel.IDInterim)}={SelectedOffre.IDInterim}");
         }
 
         [RelayCommand]
@@ -63,7 +63,7 @@ namespace SaintMichel.ViewModel
             }
 
 
-            await Shell.Current.GoToAsync($"{nameof(EventDetailPage)}?{nameof(EventDetailPageViewModel.IDEvent)}={SelectedItem.IDevent}");
+            await Shell.Current.GoToAsync($"{nameof(OffreDetailPage)}?{nameof(OffreDetailPageViewModel.IDInterim)}={SelectedOffre.IDInterim}");
         }
 
         [RelayCommand]

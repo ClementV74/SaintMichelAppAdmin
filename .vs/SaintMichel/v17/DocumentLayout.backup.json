@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\model\\offrepro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\model\\offrepro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\services\\offresapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\services\\offresapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\viewmodel\\offredetailpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\offredetailpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\viewmodel\\shoppageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\shoppageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\viewmodel\\supervisionpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\supervisionpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\viewmodel\\ticketpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\ticketpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\model\\offrepro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\model\\offrepro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\services\\userapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,18 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\view\\supervisionpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\supervisionpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\viewmodel\\supervisionpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\supervisionpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\viewmodel\\shoppageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\shoppageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\viewmodel\\offredetailpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\offredetailpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,10 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\view\\eventdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\eventdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\viewmodel\\ticketpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\ticketpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\suzuki\\source\\repos\\clementv74\\saintmichelappadmin\\saintmichel\\viewmodel\\foodpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -170,7 +170,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 222,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -190,46 +190,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "OffreDetailPageViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\OffreDetailPageViewModel.cs",
-              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\OffreDetailPageViewModel.cs",
-              "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\OffreDetailPageViewModel.cs",
-              "RelativeToolTip": "SaintMichel\\ViewModel\\OffreDetailPageViewModel.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEoAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T10:00:48.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "SupervisionPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\SupervisionPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\SupervisionPageViewModel.cs",
               "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\SupervisionPageViewModel.cs",
               "RelativeToolTip": "SaintMichel\\ViewModel\\SupervisionPageViewModel.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAewDUAAABwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T13:56:09.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SupervisionPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\SupervisionPage.xaml",
-              "RelativeDocumentMoniker": "SaintMichel\\View\\SupervisionPage.xaml",
-              "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\SupervisionPage.xaml",
-              "RelativeToolTip": "SaintMichel\\View\\SupervisionPage.xaml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEEAAABtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-11T13:16:28.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "ShopPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\ShopPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\ShopPageViewModel.cs",
@@ -242,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "GenericApiService.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\Services\\GenericApiService.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Services\\GenericApiService.cs",
@@ -255,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "EventAPI.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\Services\\EventAPI.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Services\\EventAPI.cs",
@@ -268,20 +242,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "OffresAPI.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\Services\\OffresAPI.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Services\\OffresAPI.cs",
-              "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\Services\\OffresAPI.cs*",
-              "RelativeToolTip": "SaintMichel\\Services\\OffresAPI.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\Services\\OffresAPI.cs",
+              "RelativeToolTip": "SaintMichel\\Services\\OffresAPI.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T06:15:44.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "UserAPI.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\Services\\UserAPI.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Services\\UserAPI.cs",
@@ -294,12 +268,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "OffrePro.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\Model\\OffrePro.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Model\\OffrePro.cs",
-              "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\Model\\OffrePro.cs*",
-              "RelativeToolTip": "SaintMichel\\Model\\OffrePro.cs*",
+              "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\Model\\OffrePro.cs",
+              "RelativeToolTip": "SaintMichel\\Model\\OffrePro.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T09:56:45.988Z",
@@ -307,7 +281,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TicketPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\TicketPageViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\TicketPageViewModel.cs",
+              "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\TicketPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\TicketPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:58:12.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OffreDetailPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\OffreDetailPageViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\OffreDetailPageViewModel.cs",
+              "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\OffreDetailPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\OffreDetailPageViewModel.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwCsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:00:48.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "SupervisionPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\SupervisionPage.xaml",
+              "RelativeDocumentMoniker": "SaintMichel\\View\\SupervisionPage.xaml",
+              "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\SupervisionPage.xaml",
+              "RelativeToolTip": "SaintMichel\\View\\SupervisionPage.xaml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEEAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-11T13:16:28.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "BaseViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\BaseViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\BaseViewModel.cs",
@@ -320,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "GestionUtilisateurPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\GestionUtilisateurPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\GestionUtilisateurPageViewModel.cs",
@@ -333,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\AppShell.xaml.cs",
@@ -346,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "OffreDetailPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\OffreDetailPage.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\View\\OffreDetailPage.xaml.cs",
@@ -359,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "OffreDetailPage.xaml",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\OffreDetailPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\OffreDetailPage.xaml",
@@ -372,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ShopPage.xaml",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\ShopPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\ShopPage.xaml",
@@ -385,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ItemPage.xaml",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\ItemPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\ItemPage.xaml",
@@ -398,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "GestionUtilisateurPage.xaml",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\GestionUtilisateurPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\GestionUtilisateurPage.xaml",
@@ -411,7 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "FoodPage.xaml",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\FoodPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\FoodPage.xaml",
@@ -424,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\App.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\App.xaml",
@@ -437,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "EventDetailPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\EventDetailPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\EventDetailPageViewModel.cs",
@@ -450,7 +463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Event.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\Model\\Event.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Model\\Event.cs",
@@ -464,19 +477,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "TicketPageViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\TicketPageViewModel.cs",
-              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\TicketPageViewModel.cs",
-              "ToolTip": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\ViewModel\\TicketPageViewModel.cs",
-              "RelativeToolTip": "SaintMichel\\ViewModel\\TicketPageViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:58:12.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
               "Title": "EventDetailPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\EventDetailPage.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\View\\EventDetailPage.xaml.cs",
@@ -489,7 +489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "EventDetailPage.xaml",
               "DocumentMoniker": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\View\\EventDetailPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\EventDetailPage.xaml",
