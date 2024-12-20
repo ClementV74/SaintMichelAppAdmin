@@ -1,10 +1,13 @@
-﻿namespace SaintMichel.Model
+﻿using System;
+
+namespace SaintMichel.Model
 {
     public class CantineMenuItem
     {
-        public int idmenu { get; set; }
-        public string date_menu { get; set; }
-        public string categorie { get; set; }
-        public string contenu { get; set; }
+        public int IdMenu { get; set; }
+        public DateTime DateMenu { get; set; }
+        public string Categorie { get; set; }
+        public string Contenu { get; set; }
+        public string Jour { get; set; }
     }
 }

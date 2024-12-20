@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\services\\api_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\services\\api_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\foodpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\foodpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -15,24 +11,68 @@
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\foodpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\addshoppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\addshoppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\services\\api_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\services\\api_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\model\\cantinemenuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\model\\cantinemenuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\foodpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\foodpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\model\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\model\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\addshoppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\addshoppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\model\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\model\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\services\\api_shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\services\\api_shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\model\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\model\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\shopdetailpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\shopdetailpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\shopdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\shopdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\shoppageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\shoppageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\services\\api_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\services\\api_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\shopdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\shopdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\shoppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\shoppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\foodpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\foodpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\shoppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\shoppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\gestionutilisateurpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\gestionutilisateurpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\model\\offre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,32 +95,8 @@
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\services\\api_offres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\shoppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\shoppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\shoppageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\shoppageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\shoppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\shoppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\shopdetailpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\shopdetailpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\shopdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\shopdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\view\\shopdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\view\\shopdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\services\\mockitemstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,20 +147,8 @@
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\gestionutilisateurpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\gestionutilisateurpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\supervisionpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\supervisionpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\services\\api_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|solutionrelative:saintmichel\\services\\api_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29DDEB00-0AED-4804-A024-37D783233988}|SaintMichel\\SaintMichel.csproj|c:\\users\\vabre\\source\\repos\\saintmichelappadminv2\\saintmichel\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -178,7 +182,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -186,57 +190,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "API_Menu.cs",
-              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Menu.cs",
-              "RelativeDocumentMoniker": "SaintMichel\\Services\\API_Menu.cs",
-              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Menu.cs*",
-              "RelativeToolTip": "SaintMichel\\Services\\API_Menu.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T13:48:53.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CantineMenuItem.cs",
-              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Model\\CantineMenuItem.cs",
-              "RelativeDocumentMoniker": "SaintMichel\\Model\\CantineMenuItem.cs",
-              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Model\\CantineMenuItem.cs*",
-              "RelativeToolTip": "SaintMichel\\Model\\CantineMenuItem.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T13:47:20.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Model\\Event.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\Model\\Event.cs",
+              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Model\\Event.cs",
+              "RelativeToolTip": "SaintMichel\\Model\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T08:17:35.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "API_Shop.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Shop.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Services\\API_Shop.cs",
               "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Shop.cs",
               "RelativeToolTip": "SaintMichel\\Services\\API_Shop.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABlAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwBAAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T08:32:43.89Z"
+              "WhenOpened": "2024-12-13T08:32:43.89Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "API_Offres.cs",
-              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Offres.cs",
-              "RelativeDocumentMoniker": "SaintMichel\\Services\\API_Offres.cs",
-              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Offres.cs",
-              "RelativeToolTip": "SaintMichel\\Services\\API_Offres.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAA9wDcAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T07:23:59.545Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "AddShopPage.xaml",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\AddShopPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\AddShopPage.xaml",
@@ -248,20 +228,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FoodPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\FoodPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\FoodPageViewModel.cs",
-              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\FoodPageViewModel.cs*",
-              "RelativeToolTip": "SaintMichel\\ViewModel\\FoodPageViewModel.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAkwCwAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\FoodPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\FoodPageViewModel.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAkwH0AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T14:01:56.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "ShopItem.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Model\\ShopItem.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Model\\ShopItem.cs",
@@ -269,24 +249,25 @@
               "RelativeToolTip": "SaintMichel\\Model\\ShopItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T08:41:07.806Z"
+              "WhenOpened": "2024-12-13T08:41:07.806Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FoodPage.xaml",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\FoodPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\FoodPage.xaml",
               "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\FoodPage.xaml*",
               "RelativeToolTip": "SaintMichel\\View\\FoodPage.xaml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGUAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-11T13:20:55.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "AddShopPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\AddShopPage.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\View\\AddShopPage.xaml.cs",
@@ -294,31 +275,98 @@
               "RelativeToolTip": "SaintMichel\\View\\AddShopPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:04:27.067Z"
+              "WhenOpened": "2024-12-18T14:04:27.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "FoodPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\FoodPage.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\View\\FoodPage.xaml.cs",
               "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\FoodPage.xaml.cs",
               "RelativeToolTip": "SaintMichel\\View\\FoodPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T13:31:20.116Z"
+              "WhenOpened": "2024-12-19T13:31:20.116Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
+              "Title": "GestionUtilisateurPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\GestionUtilisateurPageViewModel.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\GestionUtilisateurPageViewModel.cs",
+              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\GestionUtilisateurPageViewModel.cs",
+              "RelativeToolTip": "SaintMichel\\ViewModel\\GestionUtilisateurPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T14:01:54.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "API_Event.cs",
+              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Event.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\Services\\API_Event.cs",
+              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Event.cs",
+              "RelativeToolTip": "SaintMichel\\Services\\API_Event.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T07:13:39.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "API_Menu.cs",
+              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Menu.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\Services\\API_Menu.cs",
+              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Menu.cs",
+              "RelativeToolTip": "SaintMichel\\Services\\API_Menu.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T13:48:53.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "API_Offres.cs",
+              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Offres.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\Services\\API_Offres.cs",
+              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Offres.cs",
+              "RelativeToolTip": "SaintMichel\\Services\\API_Offres.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA9wDcAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T07:23:59.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CantineMenuItem.cs",
+              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Model\\CantineMenuItem.cs",
+              "RelativeDocumentMoniker": "SaintMichel\\Model\\CantineMenuItem.cs",
+              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Model\\CantineMenuItem.cs",
+              "RelativeToolTip": "SaintMichel\\Model\\CantineMenuItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T13:47:20.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ShopDetailPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\ShopDetailPage.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\View\\ShopDetailPage.xaml.cs",
               "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\ShopDetailPage.xaml.cs",
               "RelativeToolTip": "SaintMichel\\View\\ShopDetailPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T08:58:09.328Z"
+              "WhenOpened": "2024-12-13T08:58:09.328Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -330,11 +378,12 @@
               "RelativeToolTip": "SaintMichel\\View\\ShopPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T08:55:45.301Z"
+              "WhenOpened": "2024-12-13T08:55:45.301Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "Offre.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Model\\Offre.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Model\\Offre.cs",
@@ -346,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "GenericApiService.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\GenericApiService.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Services\\GenericApiService.cs",
@@ -358,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\AppShell.xaml.cs",
@@ -370,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "AddShopPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\AddShopPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\AddShopPageViewModel.cs",
@@ -382,15 +431,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 10,
               "Title": "ShopPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\ShopPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\ShopPageViewModel.cs",
               "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\ShopPageViewModel.cs",
               "RelativeToolTip": "SaintMichel\\ViewModel\\ShopPageViewModel.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAuwCwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwEkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:01:37.695Z"
+              "WhenOpened": "2024-12-11T14:01:37.695Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -402,11 +452,12 @@
               "RelativeToolTip": "SaintMichel\\View\\ShopPage.xaml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-11T13:21:10.38Z"
+              "WhenOpened": "2024-12-11T13:21:10.38Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "ItemPage.xaml",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\ItemPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\ItemPage.xaml",
@@ -418,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "IitemStore.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\IitemStore.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Services\\IitemStore.cs",
@@ -430,19 +481,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 8,
               "Title": "ShopDetailPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\ShopDetailPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\ShopDetailPageViewModel.cs",
               "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\ShopDetailPageViewModel.cs",
               "RelativeToolTip": "SaintMichel\\ViewModel\\ShopDetailPageViewModel.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAswDcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T08:53:47.382Z"
+              "WhenOpened": "2024-12-13T08:53:47.382Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 12,
               "Title": "ShopDetailPage.xaml",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\ShopDetailPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\ShopDetailPage.xaml",
@@ -450,11 +502,12 @@
               "RelativeToolTip": "SaintMichel\\View\\ShopDetailPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-13T08:53:29.921Z"
+              "WhenOpened": "2024-12-13T08:53:29.921Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "NewItemPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\NewItemPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\NewItemPageViewModel.cs",
@@ -466,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "MockItemStore.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\MockItemStore.cs",
               "RelativeDocumentMoniker": "SaintMichel\\Services\\MockItemStore.cs",
@@ -478,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "MainPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\MainPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\MainPageViewModel.cs",
@@ -490,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "ItemDetailPage.xaml",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\ItemDetailPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\ItemDetailPage.xaml",
@@ -502,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "ItemDetailPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\ItemDetailPage.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\View\\ItemDetailPage.xaml.cs",
@@ -514,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "ItemPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\ItemPage.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\View\\ItemPage.xaml.cs",
@@ -526,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "GlobalUsing.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\GlobalUsing.cs",
               "RelativeDocumentMoniker": "SaintMichel\\GlobalUsing.cs",
@@ -538,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\AppShell.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\AppShell.xaml",
@@ -550,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\App.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\App.xaml.cs",
@@ -562,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "NewItemPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\NewItemPage.xaml.cs",
               "RelativeDocumentMoniker": "SaintMichel\\View\\NewItemPage.xaml.cs",
@@ -574,19 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "GestionUtilisateurPageViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\GestionUtilisateurPageViewModel.cs",
-              "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\GestionUtilisateurPageViewModel.cs",
-              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\GestionUtilisateurPageViewModel.cs",
-              "RelativeToolTip": "SaintMichel\\ViewModel\\GestionUtilisateurPageViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:01:54.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "SupervisionPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\SupervisionPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\SupervisionPageViewModel.cs",
@@ -598,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 16,
               "Title": "BaseViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\BaseViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\BaseViewModel.cs",
@@ -606,11 +647,12 @@
               "RelativeToolTip": "SaintMichel\\ViewModel\\BaseViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:01:56.768Z"
+              "WhenOpened": "2024-12-11T14:01:56.768Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "ItemDetailPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\ItemDetailPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\ItemDetailPageViewModel.cs",
@@ -622,19 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "API_Event.cs",
-              "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Event.cs",
-              "RelativeDocumentMoniker": "SaintMichel\\Services\\API_Event.cs",
-              "ToolTip": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\Services\\API_Event.cs",
-              "RelativeToolTip": "SaintMichel\\Services\\API_Event.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T07:13:39.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\MauiProgram.cs",
               "RelativeDocumentMoniker": "SaintMichel\\MauiProgram.cs",
@@ -646,7 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "ItemViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\ItemViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\ItemViewModel.cs",
@@ -658,7 +688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "TicketPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\ViewModel\\TicketPageViewModel.cs",
               "RelativeDocumentMoniker": "SaintMichel\\ViewModel\\TicketPageViewModel.cs",
@@ -670,7 +700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "TicketPage.xaml",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\View\\TicketPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\View\\TicketPage.xaml",
@@ -682,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\Vabre\\source\\repos\\SaintMichelAppAdminv2\\SaintMichel\\MainPage.xaml",
               "RelativeDocumentMoniker": "SaintMichel\\MainPage.xaml",

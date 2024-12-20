@@ -1,28 +1,112 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SaintMichel.View.FoodPage"
-             Title="FoodPage">
+             xmlns:vm="clr-namespace:SaintMichel.ViewModel"
+             x:Class="SaintMichel.View.FoodPage">
 
-    <Shell.BackButtonBehavior>
-        <BackButtonBehavior IsVisible="False" />
-    </Shell.BackButtonBehavior>
+    <ContentPage.BindingContext>
+        <vm:FoodPageViewModel />
+    </ContentPage.BindingContext>
 
-    <VerticalStackLayout>
-        <Label Text="Menu de la semaine" 
-               FontSize="24" 
-               VerticalOptions="Center" 
-               HorizontalOptions="Center" />
+    <ContentPage.Content>
+        <Grid Padding="10" RowDefinitions="Auto, *" ColumnDefinitions="*">
+            <!-- Première ligne pour les boutons -->
+            <Grid Grid.Row="0" Padding="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Spacing="20">
+                    <!-- Bouton pour la semaine précédente -->
+                    <Button Text="&lt; Semaine Précédente"
+                            Command="{Binding PreviousWeekCommand}"
+                            HorizontalOptions="Start"
+                            BackgroundColor="LightBlue"
+                            TextColor="White"
+                            Padding="10"
+                            HeightRequest="40"/>
 
-        <ListView x:Name="MenuListView" 
-                  ItemsSource="{Binding Menus}" 
-                  IsPullToRefreshEnabled="True"
-                  RefreshCommand="{Binding LoadMenusCommand}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding date_menu}" Detail="{Binding contenu}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </VerticalStackLayout>
+                    <!-- Label pour afficher la semaine actuelle -->
+                    <Label Text="{Binding CurrentWeek}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="CenterAndExpand"
+                           FontSize="18"
+                           Padding="10"/>
+
+                    <!-- Bouton pour la semaine suivante -->
+                    <Button Text="Semaine Suivante &gt;"
+                            Command="{Binding NextWeekCommand}"
+                            HorizontalOptions="End"
+                            BackgroundColor="LightBlue"
+                            TextColor="White"
+                            Padding="10"
+                            HeightRequest="40"/>
+                </StackLayout>
+            </Grid>
+
+            <!-- Deuxième ligne pour les menus -->
+            <Grid Grid.Row="1">
+                <ScrollView Padding="10">
+                    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*, *, *, *, *">
+                        <!-- En-têtes des jours -->
+                        <Label Text="Lundi" FontSize="18" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" />
+                        <Label Text="Mardi" FontSize="18" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1" />
+                        <Label Text="Mercredi" FontSize="18" HorizontalOptions="Center" Grid.Row="0" Grid.Column="2" />
+                        <Label Text="Jeudi" FontSize="18" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3" />
+                        <Label Text="Vendredi" FontSize="18" HorizontalOptions="Center" Grid.Row="0" Grid.Column="4" />
+
+                        <!-- Lundi -->
+                        <CollectionView ItemsSource="{Binding MondayMenus}" Grid.Row="1" Grid.Column="0">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BorderColor="LightGray" Padding="10" Margin="5">
+                                        <Label Text="{Binding Contenu}" FontSize="14"/>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <!-- Mardi -->
+                        <CollectionView ItemsSource="{Binding TuesdayMenus}" Grid.Row="1" Grid.Column="1">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BorderColor="LightGray" Padding="10" Margin="5">
+                                        <Label Text="{Binding Contenu}" FontSize="14"/>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <!-- Mercredi -->
+                        <CollectionView ItemsSource="{Binding WednesdayMenus}" Grid.Row="1" Grid.Column="2">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BorderColor="LightGray" Padding="10" Margin="5">
+                                        <Label Text="{Binding Contenu}" FontSize="14"/>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <!-- Jeudi -->
+                        <CollectionView ItemsSource="{Binding ThursdayMenus}" Grid.Row="1" Grid.Column="3">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BorderColor="LightGray" Padding="10" Margin="5">
+                                        <Label Text="{Binding Contenu}" FontSize="14"/>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <!-- Vendredi -->
+                        <CollectionView ItemsSource="{Binding FridayMenus}" Grid.Row="1" Grid.Column="4">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BorderColor="LightGray" Padding="10" Margin="5">
+                                        <Label Text="{Binding Contenu}" FontSize="14"/>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </Grid>
+                </ScrollView>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>
