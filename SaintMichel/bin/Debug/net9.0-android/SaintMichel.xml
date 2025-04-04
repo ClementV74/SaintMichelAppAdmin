@@ -6,16 +6,9 @@
     <members>
         <member name="T:SaintMichel.ViewModel.EventPageViewModel">
             <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:SaintMichel.ViewModel.EventPageViewModel.ObsItems">
             <inheritdoc cref="F:SaintMichel.ViewModel.EventPageViewModel._obsItems"/>
-        </member>
-        <member name="F:SaintMichel.ViewModel.EventPageViewModel.loadItemsCommand">
-            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.EventPageViewModel.LoadItemsCommand"/>.</summary>
-        </member>
-        <member name="P:SaintMichel.ViewModel.EventPageViewModel.LoadItemsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.EventPageViewModel.LoadItems"/>.</summary>
         </member>
         <member name="T:SaintMichel.ViewModel.ItemDetailPageViewModel">
             <inheritdoc/>
@@ -144,16 +137,9 @@
         </member>
         <member name="T:SaintMichel.ViewModel.OffresPageViewModel">
             <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:SaintMichel.ViewModel.OffresPageViewModel.ObsItems">
             <inheritdoc cref="F:SaintMichel.ViewModel.OffresPageViewModel._obsItems"/>
-        </member>
-        <member name="F:SaintMichel.ViewModel.OffresPageViewModel.loadItemsCommand">
-            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.OffresPageViewModel.LoadItemsCommand"/>.</summary>
-        </member>
-        <member name="P:SaintMichel.ViewModel.OffresPageViewModel.LoadItemsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.OffresPageViewModel.LoadItems"/>.</summary>
         </member>
         <member name="T:SaintMichel.ViewModel.SupervisionPageViewModel">
             <inheritdoc/>
@@ -181,6 +167,19 @@
         </member>
         <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.NavigateToOffresCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.SupervisionPageViewModel.NavigateToOffres"/>.</summary>
+        </member>
+        <member name="T:SaintMichel.ViewModel.TicketPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.TicketPageViewModel.Ticketsitems">
+            <inheritdoc cref="F:SaintMichel.ViewModel.TicketPageViewModel.ticketsitems"/>
+        </member>
+        <member name="F:SaintMichel.ViewModel.TicketPageViewModel.loadEventCommand">
+            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.TicketPageViewModel.LoadEventCommand"/>.</summary>
+        </member>
+        <member name="P:SaintMichel.ViewModel.TicketPageViewModel.LoadEventCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.TicketPageViewModel.LoadEvent"/>.</summary>
         </member>
         <member name="T:SaintMichel.Resource">
             <summary>
@@ -332,6 +331,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Headtxt">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Headtxt" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Ticketsitems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Ticketsitems" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -355,6 +357,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Headtxt">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Headtxt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Ticketsitems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Ticketsitems" generated properties.</summary>
         </member>
     </members>
 </doc>

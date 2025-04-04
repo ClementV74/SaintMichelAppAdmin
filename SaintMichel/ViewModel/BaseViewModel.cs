@@ -4,7 +4,11 @@ namespace SaintMichel.ViewModel
     public class BaseViewModel : ObservableObject //INotifyPropertyChanged
 
     {
-        public IitemStore<ToDoList> ItemStore => DependencyService.Get<IitemStore<ToDoList>>();
+        protected readonly TicketApi TicketApiService;
+        public BaseViewModel()
+        {
+            TicketApiService = DependencyService.Get<TicketApi>();
+        }
 
         bool isBusy = false;
         public bool IsBusy

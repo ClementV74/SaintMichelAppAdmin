@@ -25,17 +25,17 @@ namespace SaintMichel.ViewModel
         [RelayCommand]
         async void SaveBtn()
         {
-            ToDoList newtodolist = new ToDoList()
-            {
-                Id = Guid.NewGuid().ToString(),
-                Title = Title,
-                Description = Description,
-                IsDone = false
-            };
-            await ItemStore.AddItemAsync(newtodolist);
+            //ToDoList newtodolist = new ToDoList()
+            //{
+            //    Id = Guid.NewGuid().ToString(),
+            //    Title = Title,
+            //    Description = Description,
+            //    IsDone = false
+            //};
+            //await ItemStore.AddItemAsync(newtodolist);
 
-            // This will pop the current page off the navigation stack
-            await Shell.Current.GoToAsync("ItemPage");
+            //// This will pop the current page off the navigation stack
+            //await Shell.Current.GoToAsync("ItemPage");
 
         }
     }

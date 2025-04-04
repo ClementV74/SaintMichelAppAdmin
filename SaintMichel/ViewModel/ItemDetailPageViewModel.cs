@@ -10,7 +10,7 @@ namespace SaintMichel.ViewModel
         private string? title;
         [ObservableProperty]
         private string? description;
-        public string Id { get; set; }
+        public int Id { get; set; }
 
 
         partial void OnItemIdChanged(string? value)
@@ -29,10 +29,10 @@ namespace SaintMichel.ViewModel
         {
             try
             {
-                var item = await ItemStore.GetItemAsync(itemId);
-                Id = item.Id;
-                Title = item.Title;
-                Description = item.Description;
+                var item = await TicketApiService.GetItemAsync(itemId);
+                Id = item.id_ticket;
+                Title = item.titre;
+                Description = item.description;
             }
             catch (Exception)
             {

@@ -5,7 +5,8 @@
         public App()
         {
             InitializeComponent();
-            DependencyService.Register<MockItemStore>();
+
+            DependencyService.Register<TicketApi>();
         }
 
         protected override Window CreateWindow(IActivationState? activationState)
