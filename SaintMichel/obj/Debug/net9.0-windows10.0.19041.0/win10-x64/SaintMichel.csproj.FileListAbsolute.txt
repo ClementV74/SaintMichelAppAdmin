@@ -2001,3 +2001,5 @@ C:\Users\a_coe\Source\Repos\SaintMichelAppAdminMAUI\SaintMichel\obj\Debug\net9.0
 C:\Users\a_coe\Source\Repos\SaintMichelAppAdminMAUI\SaintMichel\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\a_coe\Source\Repos\SaintMichelAppAdminMAUI\SaintMichel\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\a_coe\Source\Repos\SaintMichelAppAdminMAUI\SaintMichel\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\a_coe\Source\Repos\SaintMichelAppAdminMAUI\SaintMichel\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\logo_stmichel.scale-100.png
+C:\Users\a_coe\Source\Repos\SaintMichelAppAdminMAUI\SaintMichel\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\logo_stmichel.scale-100.png

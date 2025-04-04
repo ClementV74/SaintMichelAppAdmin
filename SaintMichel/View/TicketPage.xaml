@@ -3,63 +3,94 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SaintMichel.View.TicketPage"
              Title="TicketPage"
-                          BackgroundColor="{AppThemeBinding Light=#F8F9FA, Dark=#212529}">
+             BackgroundColor="{AppThemeBinding Light=#F8F9FA, Dark=#212529}">
 
-    <Grid RowDefinitions="Auto,*">
-        <!-- Header -->
+
+    <Grid RowDefinitions="Auto,Auto,*">
+        <!-- En-tête principal -->
         <Grid Grid.Row="0" Padding="20,15" BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#343A40}" 
               Shadow="{Shadow Offset='0,5', Opacity=0.1, Radius=10, Brush=#000000}">
-            <Label Text="Mes Tickets" FontSize="24" FontAttributes="Bold" 
-                   TextColor="{AppThemeBinding Light=#212529, Dark=#F8F9FA}" 
-                   HorizontalOptions="Start" VerticalOptions="Center" />
+            <Grid ColumnDefinitions="Auto,*">
+                <Image Source="logo_stmichel.png" HeightRequest="40" VerticalOptions="Center" />
 
-            <Button Grid.Column="1" Text="+" FontSize="20" FontAttributes="Bold"
-                    BackgroundColor="#4361EE" TextColor="White" CornerRadius="20"
-                    WidthRequest="40" HeightRequest="40" Padding="0"
-                    HorizontalOptions="End" VerticalOptions="Center" />
+                <Label Grid.Column="1" Text="Support Technique" FontSize="22" FontAttributes="Bold" 
+                       TextColor="{AppThemeBinding Light=#212529, Dark=#F8F9FA}" 
+                       HorizontalOptions="Center" VerticalOptions="Center" />
+            </Grid>
         </Grid>
 
-        <!-- Tickets List -->
-        <RefreshView Grid.Row="1">
+        <!-- Sous-en-tête avec titre et filtres -->
+        <Grid Grid.Row="1" Padding="20,15" ColumnDefinitions="*,Auto" 
+              BackgroundColor="{AppThemeBinding Light=#F8F9FA, Dark=#2A2E33}">
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Mes Tickets" FontSize="20" FontAttributes="Bold" 
+                       TextColor="{AppThemeBinding Light=#212529, Dark=#F8F9FA}" />
+                <Label Text="Gérez vos demandes de support" FontSize="14" 
+                       TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}" />
+            </VerticalStackLayout>
+
+            <Frame Grid.Column="1" Padding="10,5" CornerRadius="8" HasShadow="False"
+                   BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#343A40}"
+                   BorderColor="{AppThemeBinding Light=#DEE2E6, Dark=#495057}">
+                <HorizontalStackLayout Spacing="10">
+                    <Image Source="filter_icon.png" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" />
+                    <Label Text="Filtrer" FontSize="14" VerticalOptions="Center"
+                           TextColor="{AppThemeBinding Light=#212529, Dark=#F8F9FA}" />
+                </HorizontalStackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding FilterCommand}" />
+                </Frame.GestureRecognizers>
+            </Frame>
+        </Grid>
+
+        <!-- Liste des tickets -->
+        <RefreshView Grid.Row="2" Command="{Binding RefreshCommand}" IsRefreshing="{Binding IsRefreshing}">
             <CollectionView ItemsSource="{Binding Ticketsitems}"
                             SelectionMode="Single"
                             SelectionChanged="OnTicketSelected"
-                            Margin="10,5">
+                            Margin="15,10">
                 <CollectionView.EmptyView>
-                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                        <Label Text="Aucun ticket trouvé" FontSize="18" TextColor="Gray" 
-                               HorizontalOptions="Center" Margin="0,20,0,0" />
-                    </VerticalStackLayout>
+                    <Grid VerticalOptions="Center" Margin="0,50,0,0">
+                        <VerticalStackLayout HorizontalOptions="Center" Spacing="15">
+                            <Image Source="empty_tickets.png" HeightRequest="120" Opacity="0.7" />
+                            <Label Text="Aucun ticket trouvé" FontSize="18" 
+                                   TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}" 
+                                   HorizontalOptions="Center" />
+                            <Label Text="Aucun ticket n'est disponible actuellement" FontSize="14" 
+                                   TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}" 
+                                   HorizontalOptions="Center" />
+                        </VerticalStackLayout>
+                    </Grid>
                 </CollectionView.EmptyView>
 
                 <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="15" />
                 </CollectionView.ItemsLayout>
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="0" HasShadow="True" CornerRadius="10" 
+                        <Frame Padding="0" HasShadow="True" CornerRadius="12" 
                                BorderColor="Transparent"
                                BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#343A40}">
                             <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto" Padding="15">
-                                <!-- Status Indicator - Now wider and more visible -->
+                                <!-- Indicateur de statut -->
                                 <Border Grid.RowSpan="3" WidthRequest="10" Margin="0,0,15,0"
                                         BackgroundColor="{Binding StatusColor}"
                                         StrokeThickness="0"
                                         StrokeShape="RoundRectangle 5,5,5,5" />
 
-                                <!-- Ticket Content -->
+                                <!-- Contenu du ticket -->
                                 <Grid Grid.Column="1" Grid.Row="0" ColumnDefinitions="*,Auto">
                                     <Label Text="{Binding titre}" 
                                            FontAttributes="Bold" FontSize="18" 
                                            TextColor="{AppThemeBinding Light=#212529, Dark=#F8F9FA}"
                                            VerticalOptions="Center" />
 
-                                    <!-- Status Badge - Now at top right for better visibility -->
+                                    <!-- Badge de statut -->
                                     <Border Grid.Column="1" 
                                             BackgroundColor="{Binding StatusColor}"
                                             StrokeThickness="0"
-                                            Padding="10,5" 
+                                            Padding="12,6" 
                                             StrokeShape="RoundRectangle 15,15,15,15">
                                         <Label Text="{Binding StatusText}" 
                                                FontSize="13" FontAttributes="Bold"
@@ -67,56 +98,42 @@
                                     </Border>
                                 </Grid>
 
+                                <!-- Description du ticket -->
                                 <Label Grid.Column="1" Grid.Row="1" 
                                        Text="{Binding description}" 
                                        FontSize="14" LineBreakMode="TailTruncation" MaxLines="2"
                                        TextColor="{AppThemeBinding Light=#6C757D, Dark=#CED4DA}"
-                                       Margin="0,12,0,10" />
+                                       Margin="0,12,0,12" />
 
+                                <!-- Pied du ticket avec date et actions -->
                                 <Grid Grid.Column="1" Grid.Row="2" ColumnDefinitions="Auto,*,Auto">
-                                    <!-- Date (if available) -->
+                                    <!-- Catégorie (si disponible) -->
+                                    <Frame Padding="8,4" CornerRadius="6" HasShadow="False"
+                                           BackgroundColor="{AppThemeBinding Light=#F8F9FA, Dark=#495057}"
+                                           BorderColor="{AppThemeBinding Light=#DEE2E6, Dark=#6C757D}">
+                                        <Label Text="Support" FontSize="12" 
+                                               TextColor="{AppThemeBinding Light=#495057, Dark=#CED4DA}" />
+                                    </Frame>
+
+                                    <!-- Date de création -->
                                     <Label Grid.Column="2" 
                                            Text="{Binding DateCreation, StringFormat='{0:dd/MM/yyyy}'}" 
                                            FontSize="12" TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"
-                                           VerticalOptions="Center"
-                                           IsVisible="{Binding DateCreation, Converter={StaticResource NullToBoolConverter}}" />
+                                           VerticalOptions="Center" />
                                 </Grid>
                             </Grid>
+
+                            <!-- Gesture pour sélectionner le ticket -->
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1"
+                                    Command="{Binding Path=BindingContext.ItemTappedCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                    CommandParameter="{Binding .}" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </RefreshView>
-
-        <!-- Légende des statuts (en bas de l'écran) -->
-        <Border Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center"
-                Margin="0,0,0,15" Padding="15,8"
-                BackgroundColor="{AppThemeBinding Light=White, Dark=#343A40}"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 20,20,20,20"
-                Shadow="{Shadow Offset='0,4', Opacity=0.15, Radius=8, Brush=#000000}">
-            <HorizontalStackLayout Spacing="15">
-                <!-- Répétez pour chaque statut possible -->
-                <HorizontalStackLayout Spacing="5">
-                    <BoxView Color="#4361EE" WidthRequest="10" HeightRequest="10" CornerRadius="5" VerticalOptions="Center" />
-                    <Label Text="En attente" FontSize="12" VerticalOptions="Center" />
-                </HorizontalStackLayout>
-
-                <HorizontalStackLayout Spacing="5">
-                    <BoxView Color="#FF9F1C" WidthRequest="10" HeightRequest="10" CornerRadius="5" VerticalOptions="Center" />
-                    <Label Text="En cours" FontSize="12" VerticalOptions="Center" />
-                </HorizontalStackLayout>
-
-                <HorizontalStackLayout Spacing="5">
-                    <BoxView Color="#2EC4B6" WidthRequest="10" HeightRequest="10" CornerRadius="5" VerticalOptions="Center" />
-                    <Label Text="Terminé" FontSize="12" VerticalOptions="Center" />
-                </HorizontalStackLayout>
-
-                <HorizontalStackLayout Spacing="5">
-                    <BoxView Color="#E71D36" WidthRequest="10" HeightRequest="10" CornerRadius="5" VerticalOptions="Center" />
-                    <Label Text="Annulé" FontSize="12" VerticalOptions="Center" />
-                </HorizontalStackLayout>
-            </HorizontalStackLayout>
-        </Border>
     </Grid>
 </ContentPage>
