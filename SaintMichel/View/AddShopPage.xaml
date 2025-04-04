@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaintMichel.View.AddShopPage"
+             Title="Ajouter un article">
+
+    <StackLayout Padding="20">
+        <!-- Titre de l'Article -->
+        <Entry Placeholder="Titre" Text="{Binding Title}" />
+
+        <!-- Prix -->
+        <Entry Placeholder="Prix" Text="{Binding Prix}" Keyboard="Numeric" />
+
+        <!-- URL de l'image -->
+        <Entry Placeholder="URL de l'image" Text="{Binding ImageUrl}" />
+
+        <!-- Description -->
+        <Editor Placeholder="Description" Text="{Binding Description}" HeightRequest="100" />
+
+        <!-- Bouton Ajouter -->
+        <Button Text="Ajouter" Command="{Binding AddShopCommand}" BackgroundColor="Green" TextColor="White" />
+    </StackLayout>
+</ContentPage>

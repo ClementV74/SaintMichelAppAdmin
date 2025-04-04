@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Net.Http;
 using System.Text.Json;
 
 namespace SaintMichel.Services
@@ -32,10 +33,10 @@ namespace SaintMichel.Services
         {
             var json = JsonSerializer.Serialize(item);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-
             var response = await _httpClient.PutAsync($"{_baseUrl}+/Put{typeof(T).Name}/{id}", content);
             // warn response .IsSuccessStatusCode;
             await Application.Current.MainPage.DisplayAlert("Warning", response.IsSuccessStatusCode.ToString(), "OK");
+
             return response.IsSuccessStatusCode;
         }
 
@@ -48,6 +49,7 @@ namespace SaintMichel.Services
         public async Task<T> GetItemAsync(string id)
         {
             var response = await _httpClient.GetAsync($"{_baseUrl}/Get{typeof(T).Name}ById/{id}");
+
 
             if (response.IsSuccessStatusCode)
             {
@@ -70,5 +72,54 @@ namespace SaintMichel.Services
 
             return Enumerable.Empty<T>();
         }
+    
+
+
+        // Méthodes Spécifiques à ShopItem
+        public async Task<List<ShopItem>> GetAllShopItemsAsync()
+        {
+            var response = await _httpClient.GetStringAsync($"{_baseUrl}/getAllShop");
+            return JsonSerializer.Deserialize<List<ShopItem>>(response);
+        }
+
+        public async Task<ShopItem> GetShopItemByIdAsync(int id)
+        {
+            var response = await _httpClient.GetStringAsync($"{_baseUrl}/getShopById/{id}");
+            return JsonSerializer.Deserialize<ShopItem>(response);
+        }
+
+        public async Task DeleteShopItemAsync(int itemId)
+        {
+            var response = await _httpClient.DeleteAsync($"{_baseUrl}/deleteShop/{itemId}");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception($"Erreur lors de la suppression de l'article avec l'ID {itemId}");
+            }
+        }
+
+        public async Task UpdateShopItemAsync(ShopItem item)
+        {
+            var json = JsonSerializer.Serialize(item);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await _httpClient.PutAsync($"{_baseUrl}/updateShop/{item.IdShop}", content);
+            response.EnsureSuccessStatusCode();
+        }
+
+        public async Task AddShopItemAsync(ShopItem item)
+        {
+            var json = JsonSerializer.Serialize(item);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PostAsync($"{_baseUrl}/addShop", content);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Erreur lors de l'ajout de l'article");
+            }
+        }
+
+
+        
     }
 }
