@@ -13,9 +13,12 @@
             Routing.RegisterRoute(nameof(FoodPage), typeof(FoodPage));
             Routing.RegisterRoute(nameof(ShopPage), typeof(ShopPage));
             Routing.RegisterRoute(nameof(ShopPage), typeof(ShopPage));  // Pour ShopPage
+            Routing.RegisterRoute(nameof(AddShopPage), typeof(AddShopPage));  // Pour AddShopPage
+            Routing.RegisterRoute(nameof(ShopDetailPage), typeof(ShopDetailPage));
             Routing.RegisterRoute(nameof(GestionUtilisateurPage), typeof(GestionUtilisateurPage));
             Routing.RegisterRoute(nameof(SupervisionPage), typeof(SupervisionPage));
             Routing.RegisterRoute(nameof(TicketPage), typeof(TicketPage));
+
         }
     }
 }
