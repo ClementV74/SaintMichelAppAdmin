@@ -54498,18 +54498,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vabre\\.nuget\\packages\\": {},
+    "C:\\Users\\Suzuki\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vabre\\Source\\Repos\\SaintMichelAppAdminv2\\SaintMichel\\SaintMichel.csproj",
+      "projectUniqueName": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
       "projectName": "SaintMichel",
-      "projectPath": "C:\\Users\\Vabre\\Source\\Repos\\SaintMichelAppAdminv2\\SaintMichel\\SaintMichel.csproj",
-      "packagesPath": "C:\\Users\\Vabre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vabre\\Source\\Repos\\SaintMichelAppAdminv2\\SaintMichel\\obj\\",
+      "projectPath": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
+      "packagesPath": "C:\\Users\\Suzuki\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -54517,7 +54517,7 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vabre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Suzuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -54961,5 +54961,13 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
