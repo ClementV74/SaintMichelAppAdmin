@@ -6,36 +6,407 @@
              xmlns:model="clr-namespace:SaintMichel.Model"
              Title="{Binding Title}">
 
-    <Grid RowDefinitions="*" ColumnDefinitions="200,*">
-        <!-- Menu gauche -->
-        <VerticalStackLayout Padding="10" Spacing="20">
-            <Label Text="Menu" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" />
+    </Shell.BackButtonBehavior>
 
-            <!-- Button with Logo -->
-            <HorizontalStackLayout>
-                <Image Source="food_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
-                <Button Text="Food" Command="{Binding NavigateToFoodCommand}" />
-            </HorizontalStackLayout>
+    <Grid RowDefinitions="*" ColumnDefinitions="280,*">
+        <!-- Menu latéral -->
+        <Grid RowDefinitions="Auto,*,Auto" 
+              BackgroundColor="{AppThemeBinding Light=#353A50, Dark=#282C3E}">
 
-            <HorizontalStackLayout>
-                <Image Source="ticket_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
-                <Button Text="Ticket" Command="{Binding NavigateToTicketCommand}" />
-            </HorizontalStackLayout>
+            <!-- En-tête du menu avec logo -->
+            <Grid RowDefinitions="Auto,Auto" Padding="20,30,20,20">
+                <Image Source="logo_stmichel.png" HeightRequest="60" HorizontalOptions="Center" />
+                <Label Grid.Row="1" Text="Saint Michel" FontSize="22" FontAttributes="Bold" 
+                       TextColor="White"
+                       HorizontalOptions="Center" Margin="0,15,0,0" />
+            </Grid>
 
-            <HorizontalStackLayout>
-                <Image Source="shop_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
-                <Button Text="Shop" Command="{Binding NavigateToShopCommand}" />
-            </HorizontalStackLayout>
+            <!-- Options du menu -->
+            <ScrollView Grid.Row="1">
+                <VerticalStackLayout Spacing="5" Padding="15,10">
+                    <!-- Food -->
+                    <Frame Padding="15,12" Margin="0,5" HasShadow="False" 
+                           BackgroundColor="#353A50"
+                           CornerRadius="10" BorderColor="Transparent">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NavigateToFoodCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid ColumnDefinitions="Auto,*">
+                            <Image Source="food_icon.png" WidthRequest="24" HeightRequest="24" 
+                                   VerticalOptions="Center" />
+                            <Label Grid.Column="1" Text="Restauration" FontSize="16" 
+                                   TextColor="White"
+                                   VerticalOptions="Center" Margin="15,0,0,0" />
+                        </Grid>
+                    </Frame>
 
-            <HorizontalStackLayout>
-                <Image Source="supervision_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
-                <Button Text="Supervision" Command="{Binding NavigateToSupervisionCommand}" />
-            </HorizontalStackLayout>
+                    <!-- Ticket - Élément actif -->
+                    <Frame Padding="15,12" Margin="0,5" HasShadow="False" 
+                           BackgroundColor="#4361EE"
+                           CornerRadius="10" BorderColor="Transparent">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NavigateToTicketCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid ColumnDefinitions="Auto,*">
+                            <Image Source="ticket_icon.png" WidthRequest="24" HeightRequest="24" 
+                                   VerticalOptions="Center" />
+                            <Label Grid.Column="1" Text="Support Technique" FontSize="16" 
+                                   TextColor="White"
+                                   VerticalOptions="Center" Margin="15,0,0,0" />
+                        </Grid>
+                    </Frame>
 
-            <HorizontalStackLayout>
-                <Image Source="user_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
-                <Button Text="Gestion Utilisateur" Command="{Binding NavigateToGestionUtilisateurCommand}" />
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
+                    <!-- Shop -->
+                    <Frame Padding="15,12" Margin="0,5" HasShadow="False" 
+                           BackgroundColor="#353A50"
+                           CornerRadius="10" BorderColor="Transparent">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NavigateToShopCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid ColumnDefinitions="Auto,*">
+                            <Image Source="shop_icon.png" WidthRequest="24" HeightRequest="24" 
+                                   VerticalOptions="Center" />
+                            <Label Grid.Column="1" Text="Boutique" FontSize="16" 
+                                   TextColor="White"
+                                   VerticalOptions="Center" Margin="15,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Supervision -->
+                    <Frame Padding="15,12" Margin="0,5" HasShadow="False" 
+                           BackgroundColor="#353A50"
+                           CornerRadius="10" BorderColor="Transparent">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NavigateToSupervisionCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid ColumnDefinitions="Auto,*">
+                            <Image Source="supervision_icon.png" WidthRequest="24" HeightRequest="24" 
+                                   VerticalOptions="Center" />
+                            <Label Grid.Column="1" Text="Supervision" FontSize="16" 
+                                   TextColor="White"
+                                   VerticalOptions="Center" Margin="15,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Gestion Utilisateur -->
+                    <Frame Padding="15,12" Margin="0,5" HasShadow="False" 
+                           BackgroundColor="#353A50"
+                           CornerRadius="10" BorderColor="Transparent">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NavigateToGestionUtilisateurCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid ColumnDefinitions="Auto,*">
+                            <Image Source="user_icon.png" WidthRequest="24" HeightRequest="24" 
+                                   VerticalOptions="Center" />
+                            <Label Grid.Column="1" Text="Gestion Utilisateur" FontSize="16" 
+                                   TextColor="White"
+                                   VerticalOptions="Center" Margin="15,0,0,0" />
+                        </Grid>
+                    </Frame>
+                </VerticalStackLayout>
+            </ScrollView>
+
+            <!-- Pied de page du menu -->
+            <Grid Grid.Row="2" RowDefinitions="Auto,Auto" Padding="20" 
+                  BackgroundColor="#2A2F41">
+                <Frame Padding="15,12" Margin="0,5" HasShadow="False" 
+                       BackgroundColor="#353A50"
+                       CornerRadius="10" BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LogoutCommand}" />
+                    </Frame.GestureRecognizers>
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Image Source="logout_icon.png" WidthRequest="24" HeightRequest="24" 
+                               VerticalOptions="Center" />
+                        <Label Grid.Column="1" Text="Déconnexion" FontSize="16" 
+                               TextColor="White"
+                               VerticalOptions="Center" Margin="15,0,0,0" />
+                    </Grid>
+                </Frame>
+
+                <Label Grid.Row="1" Text="Version 1.0.0" FontSize="12" 
+                       TextColor="#8D93A6"
+                       HorizontalOptions="Center" Margin="0,15,0,0" />
+            </Grid>
+        </Grid>
+
+        <!-- Contenu principal - Page de présentation -->
+        <Grid Grid.Column="1" RowDefinitions="Auto,*">
+            <!-- En-tête de la page -->
+            <Grid ColumnDefinitions="*,Auto" Padding="25,20" 
+                  BackgroundColor="#2D3142">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Tableau de bord" FontSize="24" FontAttributes="Bold" 
+                           TextColor="White" />
+                    <Label Text="Bienvenue dans votre espace de gestion" FontSize="14" 
+                           TextColor="#8D93A6" />
+                </VerticalStackLayout>
+
+                <HorizontalStackLayout Grid.Column="1" Spacing="15">
+                    <Frame Padding="12" WidthRequest="42" HeightRequest="42" HasShadow="False"
+                           BackgroundColor="#353A50"
+                           CornerRadius="8" BorderColor="Transparent">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NotificationsCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Image Source="notification_icon.png" WidthRequest="18" HeightRequest="18" />
+                    </Frame>
+
+                    <Frame Padding="12" WidthRequest="42" HeightRequest="42" HasShadow="False"
+                           BackgroundColor="#353A50"
+                           CornerRadius="8" BorderColor="Transparent">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ProfileCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Image Source="profile_icon.png" WidthRequest="18" HeightRequest="18" />
+                    </Frame>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <!-- Page de présentation -->
+            <ScrollView Grid.Row="1" BackgroundColor="#1E2130">
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto" Padding="25" RowSpacing="25">
+                    <!-- Bannière de bienvenue -->
+                    <Frame Padding="0" HasShadow="False" BorderColor="Transparent" 
+                           CornerRadius="15" HeightRequest="200">
+                        <Grid>
+                            <BoxView Color="#4361EE" />
+                            <VerticalStackLayout VerticalOptions="Center" Padding="30">
+                                <Label Text="Bienvenue sur Saint Michel" 
+                                       FontSize="28" FontAttributes="Bold" TextColor="White" />
+                                <Label Text="Votre plateforme de gestion complète" 
+                                       FontSize="18" TextColor="White" Margin="0,10,0,0" />
+                                <Button Text="Commencer" 
+                                        BackgroundColor="White" TextColor="#4361EE"
+                                        CornerRadius="8" Margin="0,20,0,0" 
+                                        WidthRequest="150" HorizontalOptions="Start" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+
+                    <!-- Statistiques -->
+                    <Grid Grid.Row="1" ColumnDefinitions="*,*,*" ColumnSpacing="20">
+                        <!-- Tickets -->
+                        <Frame Padding="20" HasShadow="False" BorderColor="Transparent" 
+                               CornerRadius="15" BackgroundColor="#2D3142">
+                            <VerticalStackLayout>
+                                <Grid ColumnDefinitions="*,Auto">
+                                    <Label Text="Tickets" FontSize="18" FontAttributes="Bold" 
+                                           TextColor="White" />
+                                    <Frame Grid.Column="1" Padding="10" CornerRadius="10" HasShadow="False"
+                                           BackgroundColor="#4361EE" Opacity="0.2" BorderColor="Transparent">
+                                        <Image Source="ticket_icon.png" WidthRequest="20" HeightRequest="20" />
+                                    </Frame>
+                                </Grid>
+                                <Label Text="24" FontSize="36" FontAttributes="Bold" 
+                                       TextColor="#4361EE" Margin="0,15,0,0" />
+                                <Label Text="5 tickets en attente" FontSize="14" 
+                                       TextColor="#8D93A6" />
+                            </VerticalStackLayout>
+                        </Frame>
+
+                        <!-- Utilisateurs -->
+                        <Frame Grid.Column="1" Padding="20" HasShadow="False" BorderColor="Transparent" 
+                               CornerRadius="15" BackgroundColor="#2D3142">
+                            <VerticalStackLayout>
+                                <Grid ColumnDefinitions="*,Auto">
+                                    <Label Text="Utilisateurs" FontSize="18" FontAttributes="Bold" 
+                                           TextColor="White" />
+                                    <Frame Grid.Column="1" Padding="10" CornerRadius="10" HasShadow="False"
+                                           BackgroundColor="#FF9F1C" Opacity="0.2" BorderColor="Transparent">
+                                        <Image Source="user_icon.png" WidthRequest="20" HeightRequest="20" />
+                                    </Frame>
+                                </Grid>
+                                <Label Text="156" FontSize="36" FontAttributes="Bold" 
+                                       TextColor="#FF9F1C" Margin="0,15,0,0" />
+                                <Label Text="12 nouveaux ce mois" FontSize="14" 
+                                       TextColor="#8D93A6" />
+                            </VerticalStackLayout>
+                        </Frame>
+
+                        <!-- Commandes -->
+                        <Frame Grid.Column="2" Padding="20" HasShadow="False" BorderColor="Transparent" 
+                               CornerRadius="15" BackgroundColor="#2D3142">
+                            <VerticalStackLayout>
+                                <Grid ColumnDefinitions="*,Auto">
+                                    <Label Text="Commandes" FontSize="18" FontAttributes="Bold" 
+                                           TextColor="White" />
+                                    <Frame Grid.Column="1" Padding="10" CornerRadius="10" HasShadow="False"
+                                           BackgroundColor="#2EC4B6" Opacity="0.2" BorderColor="Transparent">
+                                        <Image Source="shop_icon.png" WidthRequest="20" HeightRequest="20" />
+                                    </Frame>
+                                </Grid>
+                                <Label Text="89" FontSize="36" FontAttributes="Bold" 
+                                       TextColor="#2EC4B6" Margin="0,15,0,0" />
+                                <Label Text="8 en cours de livraison" FontSize="14" 
+                                       TextColor="#8D93A6" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <!-- Activité récente -->
+                    <Frame Grid.Row="2" Padding="20" HasShadow="False" BorderColor="Transparent" 
+                           CornerRadius="15" BackgroundColor="#2D3142">
+                        <VerticalStackLayout Spacing="15">
+                            <Label Text="Activité récente" FontSize="20" FontAttributes="Bold" 
+                                   TextColor="White" />
+
+                            <!-- Activité 1 -->
+                            <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto">
+                                <Frame Padding="10" CornerRadius="10" HasShadow="False"
+                                       BackgroundColor="#4361EE" Opacity="0.2" BorderColor="Transparent"
+                                       WidthRequest="40" HeightRequest="40" VerticalOptions="Start">
+                                    <Image Source="ticket_icon.png" WidthRequest="20" HeightRequest="20" />
+                                </Frame>
+
+                                <VerticalStackLayout Grid.Column="1" Margin="15,0,0,0">
+                                    <Label Text="Nouveau ticket créé" FontSize="16" FontAttributes="Bold" 
+                                           TextColor="White" />
+                                    <Label Text="Problème de connexion à l'application mobile" FontSize="14" 
+                                           TextColor="#8D93A6" />
+                                </VerticalStackLayout>
+
+                                <Label Grid.Column="2" Text="Il y a 2h" FontSize="12" 
+                                       TextColor="#8D93A6"
+                                       VerticalOptions="Center" />
+
+                                <BoxView Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1"
+                                         Color="#353A50"
+                                         HeightRequest="1" Margin="0,15,0,0" />
+                            </Grid>
+
+                            <!-- Activité 2 -->
+                            <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto">
+                                <Frame Padding="10" CornerRadius="10" HasShadow="False"
+                                       BackgroundColor="#FF9F1C" Opacity="0.2" BorderColor="Transparent"
+                                       WidthRequest="40" HeightRequest="40" VerticalOptions="Start">
+                                    <Image Source="user_icon.png" WidthRequest="20" HeightRequest="20" />
+                                </Frame>
+
+                                <VerticalStackLayout Grid.Column="1" Margin="15,0,0,0">
+                                    <Label Text="Nouvel utilisateur inscrit" FontSize="16" FontAttributes="Bold" 
+                                           TextColor="White" />
+                                    <Label Text="Jean Dupont a rejoint la plateforme" FontSize="14" 
+                                           TextColor="#8D93A6" />
+                                </VerticalStackLayout>
+
+                                <Label Grid.Column="2" Text="Il y a 5h" FontSize="12" 
+                                       TextColor="#8D93A6"
+                                       VerticalOptions="Center" />
+
+                                <BoxView Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1"
+                                         Color="#353A50"
+                                         HeightRequest="1" Margin="0,15,0,0" />
+                            </Grid>
+
+                            <!-- Activité 3 -->
+                            <Grid ColumnDefinitions="Auto,*,Auto">
+                                <Frame Padding="10" CornerRadius="10" HasShadow="False"
+                                       BackgroundColor="#2EC4B6" Opacity="0.2" BorderColor="Transparent"
+                                       WidthRequest="40" HeightRequest="40" VerticalOptions="Start">
+                                    <Image Source="shop_icon.png" WidthRequest="20" HeightRequest="20" />
+                                </Frame>
+
+                                <VerticalStackLayout Grid.Column="1" Margin="15,0,0,0">
+                                    <Label Text="Nouvelle commande" FontSize="16" FontAttributes="Bold" 
+                                           TextColor="White" />
+                                    <Label Text="Commande #1234 - 3 articles" FontSize="14" 
+                                           TextColor="#8D93A6" />
+                                </VerticalStackLayout>
+
+                                <Label Grid.Column="2" Text="Il y a 8h" FontSize="12" 
+                                       TextColor="#8D93A6"
+                                       VerticalOptions="Center" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Accès rapides -->
+                    <Frame Grid.Row="3" Padding="20" HasShadow="False" BorderColor="Transparent" 
+                           CornerRadius="15" BackgroundColor="#2D3142">
+                        <VerticalStackLayout Spacing="15">
+                            <Label Text="Accès rapides" FontSize="20" FontAttributes="Bold" 
+                                   TextColor="White" />
+
+                            <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="15">
+                                <!-- Accès 1 -->
+                                <Frame Padding="15" HasShadow="False" BorderColor="Transparent" 
+                                       CornerRadius="10" BackgroundColor="#353A50">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding NavigateToTicketCommand}" />
+                                    </Frame.GestureRecognizers>
+                                    <VerticalStackLayout HorizontalOptions="Center">
+                                        <Frame Padding="12" CornerRadius="10" HasShadow="False"
+                                               BackgroundColor="#4361EE" Opacity="0.2" BorderColor="Transparent"
+                                               HorizontalOptions="Center">
+                                            <Image Source="ticket_icon.png" WidthRequest="24" HeightRequest="24" />
+                                        </Frame>
+                                        <Label Text="Tickets" FontSize="14" FontAttributes="Bold" 
+                                               TextColor="White"
+                                               HorizontalOptions="Center" Margin="0,10,0,0" />
+                                    </VerticalStackLayout>
+                                </Frame>
+
+                                <!-- Accès 2 -->
+                                <Frame Grid.Column="1" Padding="15" HasShadow="False" BorderColor="Transparent" 
+                                       CornerRadius="10" BackgroundColor="#353A50">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding NavigateToFoodCommand}" />
+                                    </Frame.GestureRecognizers>
+                                    <VerticalStackLayout HorizontalOptions="Center">
+                                        <Frame Padding="12" CornerRadius="10" HasShadow="False"
+                                               BackgroundColor="#FF9F1C" Opacity="0.2" BorderColor="Transparent"
+                                               HorizontalOptions="Center">
+                                            <Image Source="food_icon.png" WidthRequest="24" HeightRequest="24" />
+                                        </Frame>
+                                        <Label Text="Restauration" FontSize="14" FontAttributes="Bold" 
+                                               TextColor="White"
+                                               HorizontalOptions="Center" Margin="0,10,0,0" />
+                                    </VerticalStackLayout>
+                                </Frame>
+
+                                <!-- Accès 3 -->
+                                <Frame Grid.Column="2" Padding="15" HasShadow="False" BorderColor="Transparent" 
+                                       CornerRadius="10" BackgroundColor="#353A50">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding NavigateToShopCommand}" />
+                                    </Frame.GestureRecognizers>
+                                    <VerticalStackLayout HorizontalOptions="Center">
+                                        <Frame Padding="12" CornerRadius="10" HasShadow="False"
+                                               BackgroundColor="#2EC4B6" Opacity="0.2" BorderColor="Transparent"
+                                               HorizontalOptions="Center">
+                                            <Image Source="shop_icon.png" WidthRequest="24" HeightRequest="24" />
+                                        </Frame>
+                                        <Label Text="Boutique" FontSize="14" FontAttributes="Bold" 
+                                               TextColor="White"
+                                               HorizontalOptions="Center" Margin="0,10,0,0" />
+                                    </VerticalStackLayout>
+                                </Frame>
+
+                                <!-- Accès 4 -->
+                                <Frame Grid.Column="3" Padding="15" HasShadow="False" BorderColor="Transparent" 
+                                       CornerRadius="10" BackgroundColor="#353A50">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding NavigateToSupervisionCommand}" />
+                                    </Frame.GestureRecognizers>
+                                    <VerticalStackLayout HorizontalOptions="Center">
+                                        <Frame Padding="12" CornerRadius="10" HasShadow="False"
+                                               BackgroundColor="#E71D36" Opacity="0.2" BorderColor="Transparent"
+                                               HorizontalOptions="Center">
+                                            <Image Source="supervision_icon.png" WidthRequest="24" HeightRequest="24" />
+                                        </Frame>
+                                        <Label Text="Supervision" FontSize="14" FontAttributes="Bold" 
+                                               TextColor="White"
+                                               HorizontalOptions="Center" Margin="0,10,0,0" />
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Frame>
+                </Grid>
+            </ScrollView>
+        </Grid>
     </Grid>
 </ContentPage>

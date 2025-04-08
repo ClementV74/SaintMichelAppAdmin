@@ -10,7 +10,7 @@
             DependencyService.Register<OffreAPI>();
             DependencyService.Register<EventAPI>();
             UserAppTheme = AppTheme.Dark;
-
+            DependencyService.Register<TicketApi>();
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

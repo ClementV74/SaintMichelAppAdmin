@@ -18,16 +18,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SaintMichel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+fdf00167ccf006b018b46410211aee55953d5d91")]
-=======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+9deacc10a3ed821cedb8e60c43defe112bd4fde0")]
->>>>>>> origin/clement
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+bf053907cf0bbc9ce82147baa426b8997d537d99")]
 [assembly: System.Reflection.AssemblyProductAttribute("SaintMichel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SaintMichel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows10.0.19041.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows10.0.17763.0")]
-
-// Généré par la classe MSBuild WriteCodeFragment.
-

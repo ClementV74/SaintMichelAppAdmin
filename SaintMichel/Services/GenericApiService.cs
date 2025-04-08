@@ -1,3 +1,4 @@
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,14 @@ namespace SaintMichel.Services
     {
         private readonly HttpClient _httpClient;
         private readonly string _baseUrl;
+        protected string GetUrl(string method) => $"{_baseUrl}/{method}";
 
         public GenericApiService(string baseUrl)
         {
             _httpClient = new HttpClient();
             _baseUrl = baseUrl;
         }
+
 
         public async Task<bool> AddItemAsync(T item)
         {
@@ -49,20 +52,19 @@ namespace SaintMichel.Services
         public async Task<T> GetItemAsync(string id)
         {
             var response = await _httpClient.GetAsync($"{_baseUrl}/Get{typeof(T).Name}ById/{id}");
-
-
+      
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
                 return JsonSerializer.Deserialize<T>(json);
             }
-
             return null;
         }
 
         public async Task<IEnumerable<T>> GetItemsAsync()
         {
             var response = await _httpClient.GetAsync($"{_baseUrl}/GetAll{typeof(T).Name}");
+
 
             if (response.IsSuccessStatusCode)
             {
@@ -123,3 +125,4 @@ namespace SaintMichel.Services
         
     }
 }
+

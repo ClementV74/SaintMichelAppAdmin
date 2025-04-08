@@ -7,14 +7,15 @@ namespace SaintMichel.ViewModel
         protected readonly EventAPI EventService;
         protected readonly OffreAPI OffreService;
         protected readonly UserAPI UserService;
+        protected readonly TicketApi TicketApiService;  
 
         public BaseViewModel()
         {
             EventService = DependencyService.Get<EventAPI>();
             OffreService = DependencyService.Get<OffreAPI>();
             UserService = DependencyService.Get<UserAPI>();
+            TicketApiService = DependencyService.Get<TicketApi>();
         }
-
 
         bool isBusy = false;
         public bool IsBusy
