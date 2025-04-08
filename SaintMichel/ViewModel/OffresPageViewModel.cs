@@ -9,7 +9,7 @@ namespace SaintMichel.ViewModel
     public partial class OffresPageViewModel : BaseViewModel
     {
         [ObservableProperty] // Private backing field for ObsItems
-        private ObservableCollection<Offre> _obsItems;
+        private ObservableCollection<OffrePro> _obsItems;
 
         //DAO_SaintMichelAPI dao_SaintMichelAPI;
 

@@ -10,8 +10,7 @@ namespace SaintMichel.Services
         // Obtenir tous les tickets
         public async Task<IEnumerable<Ticket>> GetAllTicketsAsync()
         {
-            var url = GetUrl("GetAllTicket");
-            return await GetItemsAsync(url);
+            return await GetItemsAsync();
         }
 
         // Obtenir un ticket par ID
@@ -31,8 +30,7 @@ namespace SaintMichel.Services
         // Ajouter un ticket
         public async Task<bool> AddTicketAsync(Ticket ticket)
         {
-            var url = GetUrl("AddTicket");
-            return await AddItemAsync(url, ticket);
+            return await AddItemAsync(ticket);
         }
 
         // Supprimer un ticket

@@ -7,15 +7,14 @@
         // Obtenir tous les messages d'un ticket
         public async Task<IEnumerable<Message>> GetTicketMessagesAsync(int ticketId)
         {
-            var url = GetUrl($"GetTicketMessages/{ticketId}");
-            return await GetItemsAsync(url);
+            return await GetItemsAsync();
         }
 
         // Envoyer un nouveau message
         public async Task<bool> SendMessageAsync(Message message)
         {
             var url = GetUrl("AddMessage");
-            return await AddItemAsync(url, message);
+            return await AddItemAsync(message);
         }
     }
 }

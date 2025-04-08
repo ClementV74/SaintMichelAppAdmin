@@ -103,6 +103,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.Supervisi
 build_metadata.AdditionalFiles.TargetPath = View\SupervisionPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\SupervisionPage.xaml
 
+[C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/TicketDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.TicketDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TicketDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TicketDetailPage.xaml
+
 [C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/TicketPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.TicketPage.xaml
