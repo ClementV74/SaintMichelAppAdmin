@@ -58,7 +58,7 @@ namespace SaintMichel.Services
         /// <returns>A list of all shops.</returns>
         public async Task<IEnumerable<User>> GetAllUsersAsync()
         {
-            var toto = await GetItemsAsync();
+            var toto = await GetItemsUsers();
             return toto;
         }
 

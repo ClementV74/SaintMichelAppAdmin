@@ -10,7 +10,7 @@
             <RowDefinition/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-
+        <Label Text="Test"> </Label>
         <!-- Main Content -->
         <ListView ItemsSource="{Binding ObsItems}" Grid.RowSpan="2" IsVisible="{Binding EventVisibility}">
             <ListView.ItemTemplate>

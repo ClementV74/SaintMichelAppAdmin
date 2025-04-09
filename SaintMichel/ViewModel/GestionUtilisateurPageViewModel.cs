@@ -34,8 +34,9 @@ namespace SaintMichel.ViewModel
             {
                 ObsItems.Clear();
 
+                App.Current.MainPage.DisplayAlert("List", "test", "OK");
                 var List = await UserService.GetAllUsersAsync();
-
+                Console.WriteLine(List.ToString()); // Prints the name of the user
                 foreach (var item in List)
                 {   
                     ObsItems.Add(item);

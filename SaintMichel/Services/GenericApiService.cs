@@ -74,7 +74,20 @@ namespace SaintMichel.Services
 
             return Enumerable.Empty<T>();
         }
-    
+
+        public async Task<IEnumerable<T>> GetItemsUsers()
+        {
+            var response = await _httpClient.GetAsync($"https://saintmichel.alwaysdata.net/getAllUsers");
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                return JsonSerializer.Deserialize<IEnumerable<T>>(json);
+            }
+
+            return Enumerable.Empty<T>();
+        }
 
 
         // Méthodes Spécifiques à ShopItem
