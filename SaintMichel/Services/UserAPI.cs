@@ -8,7 +8,7 @@ namespace SaintMichel.Services
 {
     public class UserAPI : GenericApiService<User>
     {
-        public UserAPI() : base("https://saintmichel.alwaysdata.net/getAllUsers")
+        public UserAPI() : base("https://saintmichel.alwaysdata.net/")
         {
         }
 

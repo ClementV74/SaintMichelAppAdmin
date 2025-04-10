@@ -34,9 +34,9 @@ namespace SaintMichel.ViewModel
             {
                 ObsItems.Clear();
 
-                App.Current.MainPage.DisplayAlert("List", "test", "OK");
                 var List = await UserService.GetAllUsersAsync();
-                Console.WriteLine(List.ToString()); // Prints the name of the user
+             //   App.Current.MainPage.DisplayAlert("List", List.ToString(), "OK");
+               // Console.WriteLine(List.ToString()); // Prints the name of the user
                 foreach (var item in List)
                 {   
                     ObsItems.Add(item);
@@ -49,7 +49,7 @@ namespace SaintMichel.ViewModel
             {
             }
             finally
-            {
+             {
                 IsBusy = false;
 
             }

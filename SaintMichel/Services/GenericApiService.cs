@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using System.Net.Http;
 using System.Text.Json;
+using SaintMichel.Model;
 
 namespace SaintMichel.Services
 {
@@ -77,15 +78,17 @@ namespace SaintMichel.Services
 
         public async Task<IEnumerable<T>> GetItemsUsers()
         {
-            var response = await _httpClient.GetAsync($"https://saintmichel.alwaysdata.net/getAllUsers");
+            var response = await _httpClient.GetAsync($"{_baseUrl}/getAll{typeof(T).Name}s");
 
 
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<IEnumerable<T>>(json);
+                return JsonSerializer.Deserialize<IEnumerable<T>>(json, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                }); 
             }
-
             return Enumerable.Empty<T>();
         }
 
