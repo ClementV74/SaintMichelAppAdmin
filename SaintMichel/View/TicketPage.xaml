@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SaintMichel.View.TicketPage"
              Title="TicketPage"
+             xmlns:viewmodel="clr-namespace:SaintMichel.ViewModel"
+             xmlns:model="clr-namespace:SaintMichel.Model"
              BackgroundColor="{AppThemeBinding Light=#F8F9FA, Dark=#212529}">
 
 
@@ -44,10 +46,9 @@
         </Grid>
 
         <!-- Liste des tickets -->
-        <RefreshView Grid.Row="2" Command="{Binding RefreshCommand}" IsRefreshing="{Binding IsRefreshing}">
+        <RefreshView x:DataType="viewmodel:TicketPageViewModel" Grid.Row="2" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
             <CollectionView ItemsSource="{Binding Ticketsitems}"
                             SelectionMode="Single"
-                            SelectionChanged="OnTicketSelected"
                             Margin="15,10">
                 <CollectionView.EmptyView>
                     <Grid VerticalOptions="Center" Margin="0,50,0,0">
@@ -69,7 +70,7 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="0" HasShadow="True" CornerRadius="12" 
+                        <Frame x:DataType="model:Ticket" Padding="0" HasShadow="True" CornerRadius="12" 
                                BorderColor="Transparent"
                                BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#343A40}">
                             <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto" Padding="15">
@@ -126,9 +127,10 @@
                             <!-- Gesture pour sélectionner le ticket -->
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer 
-                                    NumberOfTapsRequired="1"
-                                    Command="{Binding Path=BindingContext.ItemTappedCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
-                                    CommandParameter="{Binding .}" />
+                                  NumberOfTapsRequired="1"
+                                  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:TicketPageViewModel}}, Path=ItemTappedCommand}"
+                                  CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
                             </Frame.GestureRecognizers>
                         </Frame>
                     </DataTemplate>

@@ -1,195 +1,272 @@
-﻿
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.Maui.Controls;
+using SaintMichel.Model;
 
-
-public class TicketDetailViewModel : BaseViewModel
+namespace SaintMichel.ViewModel
 {
-    public Ticket Ticket { get; set; }
-    public ICommand ToggleStatusCommand { get; set; }
-    public ICommand SendMessageCommand { get; set; }
-    public ICommand RefreshMessagesCommand { get; set; }
-
-    public string Title => Ticket.titre;
-    public string Description => Ticket.description;
-
-    public string Status => Ticket.status == 0 ? "Open" : "Closed";
-    public string StatusColor => Ticket.status == 0 ? "Green" : "Red";
-
-    private string _newMessage;
-    public string NewMessage
+    [QueryProperty(nameof(TicketId), nameof(TicketId))]
+    public partial class TicketDetailViewModel : BaseViewModel
     {
-        get => _newMessage;
-        set => SetProperty(ref _newMessage, value);
-    }
-
-    private ObservableCollection<Message> _messages;
-    public ObservableCollection<Message> Messages
-    {
-        get => _messages;
-        set => SetProperty(ref _messages, value);
-    }
-
-    private bool _isRefreshing;
-    public bool IsRefreshing
-    {
-        get => _isRefreshing;
-        set => SetProperty(ref _isRefreshing, value);
-    }
-
-    private readonly TicketApi _ticketApi;
-    private readonly MessageApi _messageApi;
-    private readonly string _supportName;
-
-    public TicketDetailViewModel(Ticket ticket)
-    {
-        Ticket = ticket;
-        _ticketApi = new TicketApi();
-        _messageApi = new MessageApi();
-        _supportName = "Support"; // À remplacer par le nom réel du support
-
-        Messages = new ObservableCollection<Message>();
-
-        ToggleStatusCommand = new Command(ToggleStatus);
-        SendMessageCommand = new Command(SendMessage, CanSendMessage);
-        RefreshMessagesCommand = new Command(LoadMessages);
-
-        // Charger les messages au démarrage
-        LoadMessages();
-
-        // Configurer un timer pour rafraîchir les messages périodiquement (toutes les 30 secondes)
-        Device.StartTimer(TimeSpan.FromSeconds(30), () =>
+        private readonly TicketApi _ticketApi;
+        // Propriétés
+        [ObservableProperty]
+        private string ticketId;
+        [ObservableProperty]
+        private Ticket currentTicket;
+        [ObservableProperty]
+        private ObservableCollection<Message> messages = new();
+        [ObservableProperty]
+        private string newMessage = string.Empty;
+        [ObservableProperty]
+        private bool isRefreshing;
+        [ObservableProperty]
+        private bool isSaving;
+        [ObservableProperty]
+        private bool isTicketFound = true;
+        public TicketDetailViewModel(TicketApi ticketApi)
         {
-            LoadMessages();
-            return true; // Continuer le timer
-        });
-    }
+            _ticketApi = ticketApi;
+            CurrentTicket = new Ticket(); // Initialiser avec un ticket vide
+            Debug.WriteLine("TicketDetailViewModel constructor called");
+        }
 
-    private async void ToggleStatus()
-    {
-        Ticket.status = Ticket.status == 0 ? 1 : 0;
-
-        bool success = await _ticketApi.UpdateTicketAsync(Ticket);
-
-        if (success)
+        // Constructeur par défaut pour le designer
+        public TicketDetailViewModel() : this(new TicketApi())
         {
-            OnPropertyChanged(nameof(Status));
-            OnPropertyChanged(nameof(StatusColor));
-            await Application.Current.MainPage.DisplayAlert(
-                "Status Updated",
-                "The ticket status has been updated successfully.",
-                "OK"
-            );
-
-            // Ajouter un message système pour informer du changement de statut
-            var statusMessage = new Message
+        }
+        partial void OnTicketIdChanged(string value)
+        {
+            Debug.WriteLine($"TicketId changed to: {value}");
+            if (!string.IsNullOrEmpty(value))
             {
-                ticket_id = Ticket.id_ticket,
-                content = $"Le statut du ticket a été changé à '{Status}'",
-                timestamp = DateTime.Now,
-                is_support = true,
-                sender_name = "Système"
-            };
-
-            await _messageApi.SendMessageAsync(statusMessage);
-            LoadMessages(); // Recharger les messages pour afficher le message système
+                LoadTicketAsync(value);
+            }
         }
-        else
+        private async void LoadTicketAsync(string id)
         {
-            Ticket.status = Ticket.status == 0 ? 1 : 0;
-            await Application.Current.MainPage.DisplayAlert(
-                "Error",
-                "Failed to update the ticket status.",
-                "OK"
-            );
-        }
-    }
+            try
+            {
+                if (IsBusy)
+                    return;
 
-    private async void LoadMessages()
-    {
-        try
+                IsBusy = true;
+                Debug.WriteLine($"Loading ticket with ID: {id}");
+
+                // Charger les données du ticket depuis l'API
+                var ticket = await _ticketApi.GetTicketAsync(id);
+
+                if (ticket != null)
+                {
+                    Debug.WriteLine($"Ticket loaded successfully: {ticket.titre}");
+                    CurrentTicket = ticket;
+                    IsTicketFound = true;
+
+                    // Charger les messages
+                    await LoadMessagesAsync();
+                }
+                else
+                {
+                    Debug.WriteLine("Ticket not found");
+                    IsTicketFound = false;
+
+                    // Créer un ticket par défaut pour éviter les erreurs d'affichage
+                    CurrentTicket = new Ticket
+                    {
+                        id_ticket = int.TryParse(id, out int ticketIdInt) ? ticketIdInt : 0,
+                        titre = "Ticket non trouvé",
+                        description = "Impossible de charger les détails de ce ticket.",
+                        status = 1
+                    };
+
+                    await Shell.Current.DisplayAlert("Erreur", "Ticket non trouvé. Vérifiez l'ID du ticket et votre connexion réseau.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error loading ticket: {ex.Message}");
+                Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+
+                IsTicketFound = false;
+                CurrentTicket = new Ticket
+                {
+                    id_ticket = int.TryParse(id, out int ticketIdInt) ? ticketIdInt : 0,
+                    titre = "Erreur",
+                    description = $"Une erreur s'est produite: {ex.Message}",
+                    status = 1
+                };
+
+                await Shell.Current.DisplayAlert("Erreur", $"Impossible de charger les détails du ticket: {ex.Message}", "OK");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+        private async Task LoadMessagesAsync()
+        {
+            try
+            {
+                // Ici, vous devriez charger les messages depuis votre API
+                // Pour l'instant, nous utilisons des données simulées
+                Messages.Clear();
+
+                // Ajouter des messages de test uniquement si le ticket est valide
+                if (CurrentTicket != null && CurrentTicket.id_ticket > 0)
+                {
+                    Messages.Add(new Message
+                    {
+                        Id = 1,
+                        TicketId = CurrentTicket.id_ticket,
+                        SenderId = 1,
+                        SenderName = "Jean Dupont",
+                        Content = "Bonjour, j'ai un problème avec mon application.",
+                        Timestamp = DateTime.Now.AddHours(-2),
+                        IsFromCurrentUser = true
+                    });
+
+                    Messages.Add(new Message
+                    {
+                        Id = 2,
+                        TicketId = CurrentTicket.id_ticket,
+                        SenderId = 2,
+                        SenderName = "Support Technique",
+                        Content = "Bonjour, pouvez-vous me donner plus de détails?",
+                        Timestamp = DateTime.Now.AddHours(-1),
+                        IsFromCurrentUser = false
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error loading messages: {ex.Message}");
+            }
+        }
+
+        [RelayCommand]
+        private async Task GoBackAsync()
+        {
+            await Shell.Current.GoToAsync("..");
+        }
+
+        [RelayCommand]
+        private async Task ToggleStatusAsync()
+        {
+            try
+            {
+                if (CurrentTicket == null || CurrentTicket.id_ticket <= 0)
+                {
+                    await Shell.Current.DisplayAlert("Erreur", "Ticket invalide ou non chargé.", "OK");
+                    return;
+                }
+
+                IsSaving = true;
+
+                // Inverser le statut (1 = En cours, 2 = Fermé)
+                int oldStatus = CurrentTicket.status;
+                CurrentTicket.status = CurrentTicket.status == 1 ? 2 : 1;
+
+                // Sauvegarder le changement via l'API
+                bool success = await _ticketApi.UpdateTicketAsync(CurrentTicket);
+
+                if (success)
+                {
+                    // Afficher un message de confirmation
+                    await Shell.Current.DisplayAlert("Succès", $"Le statut du ticket a été changé.", "OK");
+
+                    // Ajouter un message système dans la conversation
+                    Messages.Add(new Message
+                    {
+                        Id = Messages.Count + 1,
+                        TicketId = CurrentTicket.id_ticket,
+                        SenderId = 0, // ID système
+                        SenderName = "Système",
+                        Content = $"Le statut du ticket a été changé.",
+                        Timestamp = DateTime.Now,
+                        IsFromCurrentUser = false
+                    });
+                }
+                else
+                {
+                    // En cas d'échec, rétablir le statut précédent
+                    CurrentTicket.status = oldStatus;
+                    await Shell.Current.DisplayAlert("Erreur", "Impossible de mettre à jour le statut du ticket.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error updating status: {ex.Message}");
+                await Shell.Current.DisplayAlert("Erreur", $"Une erreur s'est produite lors de la mise à jour du statut: {ex.Message}", "OK");
+            }
+            finally
+            {
+                IsSaving = false;
+            }
+        }
+
+        [RelayCommand]
+        private async Task SendMessageAsync()
+        {
+            if (string.IsNullOrWhiteSpace(NewMessage))
+                return;
+
+            try
+            {
+                // Créer le nouveau message
+                var message = new Message
+                {
+                    Id = Messages.Count + 1,
+                    TicketId = CurrentTicket.id_ticket,
+                    SenderId = 1, // ID de l'utilisateur actuel
+                    SenderName = "Jean Dupont", // Nom de l'utilisateur actuel
+                    Content = NewMessage,
+                    Timestamp = DateTime.Now,
+                    IsFromCurrentUser = true
+                };
+
+                // Ici, vous devriez sauvegarder le message via votre API
+                // Pour l'instant, nous l'ajoutons simplement à la collection
+                Messages.Add(message);
+
+                // Effacer le champ de saisie
+                NewMessage = string.Empty;
+
+                // Simuler une réponse du support
+                await Task.Delay(2000);
+
+                // Créer la réponse
+                var response = new Message
+                {
+                    Id = Messages.Count + 1,
+                    TicketId = CurrentTicket.id_ticket,
+                    SenderId = 2, // ID du support
+                    SenderName = "Support Technique",
+                    Content = "Merci pour ces informations. Nous allons examiner votre problème et revenir vers vous dès que possible.",
+                    Timestamp = DateTime.Now,
+                    IsFromCurrentUser = false
+                };
+
+                // Ajouter la réponse à la collection
+                Messages.Add(response);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error sending message: {ex.Message}");
+                await Shell.Current.DisplayAlert("Erreur", "Une erreur s'est produite lors de l'envoi du message.", "OK");
+            }
+        }
+
+        [RelayCommand]
+        private async Task RefreshAsync()
         {
             IsRefreshing = true;
-
-            var messages = await _messageApi.GetTicketMessagesAsync(Ticket.id_ticket);
-
-            // Mettre à jour la collection de messages
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                Messages.Clear();
-                foreach (var message in messages.OrderBy(m => m.timestamp))
-                {
-                    Messages.Add(message);
-                }
-            });
-        }
-        catch (Exception ex)
-        {
-            // Gérer l'erreur
-            Debug.WriteLine($"Erreur lors du chargement des messages: {ex.Message}");
-        }
-        finally
-        {
+            await LoadMessagesAsync();
             IsRefreshing = false;
-        }
-    }
-
-    private bool CanSendMessage()
-    {
-        return !string.IsNullOrWhiteSpace(NewMessage);
-    }
-
-    private async void SendMessage()
-    {
-        if (string.IsNullOrWhiteSpace(NewMessage))
-            return;
-
-        try
-        {
-            var message = new Message
-            {
-                ticket_id = Ticket.id_ticket,
-                content = NewMessage,
-                timestamp = DateTime.Now,
-                is_support = true, // Message envoyé par le support
-                sender_name = _supportName
-            };
-
-            // Ajouter le message localement d'abord pour une UI réactive
-            Messages.Add(message);
-
-            // Effacer le champ de saisie
-            string sentMessage = NewMessage;
-            NewMessage = string.Empty;
-
-            // Envoyer le message à l'API
-            bool success = await _messageApi.SendMessageAsync(message);
-
-            if (!success)
-            {
-                // Si l'envoi échoue, informer l'utilisateur
-                await Application.Current.MainPage.DisplayAlert(
-                    "Erreur",
-                    "Impossible d'envoyer le message. Veuillez réessayer.",
-                    "OK"
-                );
-
-                // Recharger les messages pour s'assurer que l'UI est synchronisée
-                LoadMessages();
-            }
-            else
-            {
-                // Journaliser le message envoyé (pour compatibilité avec l'ancien code)
-                Console.WriteLine($"Response sent: {sentMessage}");
-            }
-        }
-        catch (Exception ex)
-        {
-            // Gérer l'erreur
-            await Application.Current.MainPage.DisplayAlert(
-                "Erreur",
-                $"Une erreur s'est produite: {ex.Message}",
-                "OK"
-            );
         }
     }
 }

@@ -14,23 +14,15 @@ namespace SaintMichel.ViewModel
         {
             _ticketApi = new TicketApi();
             Ticketsitems = new ObservableCollection<Ticket>();
-            LoadEventCommand.Execute(null);
+        }
 
-            // Abonnez-vous à l'événement envoyé par la page de détail
-            MessagingCenter.Subscribe<TicketDetailViewModel, Ticket>(this, "TicketUpdated", (sender, updatedTicket) =>
-            {
-                // Met à jour le ticket correspondant dans la liste
-                var ticket = Ticketsitems.FirstOrDefault(t => t.id_ticket == updatedTicket.id_ticket);
-                if (ticket != null)
-                {
-                    ticket.status = updatedTicket.status;
-                    OnPropertyChanged(nameof(Ticketsitems));
-                }
-            });
+        public void OnAppearing()
+        {
+            IsBusy = true;
         }
 
         [RelayCommand]
-        async Task LoadEvent()
+        async Task LoadItems()
         {
             IsBusy = true;
             try
@@ -51,5 +43,18 @@ namespace SaintMichel.ViewModel
                 IsBusy = false;
             }
         }
+
+        [RelayCommand]
+        async void ItemTapped(Ticket ticket)
+        {
+            if (ticket == null)
+            {
+
+                return;
+            }
+            //await Shell.Current.GoToAsync($"{nameof(TicketDetailPage)}?{nameof(TicketDetailViewModel.TicketId)}={ticket.id_ticket}");
+            //await Shell.Current.GoToAsync($"{nameof(ShopPage)}");
+        }
+
     }
 }
