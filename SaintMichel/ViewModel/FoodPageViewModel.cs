@@ -15,49 +15,36 @@ namespace SaintMichel.ViewModel
         private readonly API_Menu _menuService;
 
         [ObservableProperty]
-        private ObservableCollection<CantineMenuItem> mondayMenus;
+        private ObservableCollection<CantineMenuItem> mondayMenus = new();
+
         [ObservableProperty]
-        private ObservableCollection<CantineMenuItem> tuesdayMenus;
+        private ObservableCollection<CantineMenuItem> tuesdayMenus = new();
+
         [ObservableProperty]
-        private ObservableCollection<CantineMenuItem> wednesdayMenus;
+        private ObservableCollection<CantineMenuItem> wednesdayMenus = new();
+
         [ObservableProperty]
-        private ObservableCollection<CantineMenuItem> thursdayMenus;
+        private ObservableCollection<CantineMenuItem> thursdayMenus = new();
+
         [ObservableProperty]
-        private ObservableCollection<CantineMenuItem> fridayMenus;
+        private ObservableCollection<CantineMenuItem> fridayMenus = new();
 
         [ObservableProperty]
         private string currentWeek;
 
-        private DateTime currentDate;
-
-        public IAsyncRelayCommand PreviousWeekCommand { get; }
-        public IAsyncRelayCommand NextWeekCommand { get; }
+        private DateTime _currentDate = DateTime.Today;
 
         public FoodPageViewModel()
         {
             _menuService = new API_Menu();
-            mondayMenus = new ObservableCollection<CantineMenuItem>();
-            tuesdayMenus = new ObservableCollection<CantineMenuItem>();
-            wednesdayMenus = new ObservableCollection<CantineMenuItem>();
-            thursdayMenus = new ObservableCollection<CantineMenuItem>();
-            fridayMenus = new ObservableCollection<CantineMenuItem>();
-
-            currentDate = DateTime.Today;
-
-            // Initialiser la date actuelle et charger les menus
             UpdateCurrentWeek();
-            _ = LoadMenusAsync();
-
-            PreviousWeekCommand = new AsyncRelayCommand(PreviousWeek);
-            NextWeekCommand = new AsyncRelayCommand(NextWeek);
+            Task.Run(LoadMenusAsync); // plus safe que async void
         }
 
         private void UpdateCurrentWeek()
         {
-            var startOfWeek = currentDate.AddDays(-(int)currentDate.DayOfWeek + (int)DayOfWeek.Monday);
-            var endOfWeek = startOfWeek.AddDays(4); // Fin de la semaine (vendredi)
-
-            // Enlever l'année du format de la semaine
+            var startOfWeek = _currentDate.AddDays(-(int)_currentDate.DayOfWeek + (int)DayOfWeek.Monday);
+            var endOfWeek = startOfWeek.AddDays(4); // Vendredi
             CurrentWeek = $"{startOfWeek:dd MMM} - {endOfWeek:dd MMM}";
         }
 
@@ -65,35 +52,35 @@ namespace SaintMichel.ViewModel
         {
             try
             {
-                var startDate = currentDate.AddDays(-(int)currentDate.DayOfWeek + (int)DayOfWeek.Monday).ToString("yyyy-MM-dd");
-                var endDate = currentDate.AddDays(-(int)currentDate.DayOfWeek + (int)DayOfWeek.Friday).ToString("yyyy-MM-dd");
+                var startDate = _currentDate.AddDays(-(int)_currentDate.DayOfWeek + (int)DayOfWeek.Monday).ToString("yyyy-MM-dd");
+                var endDate = _currentDate.AddDays(-(int)_currentDate.DayOfWeek + (int)DayOfWeek.Friday).ToString("yyyy-MM-dd");
 
                 var menus = await _menuService.GetMenusWeekAsync(startDate, endDate);
 
-                mondayMenus.Clear();
-                tuesdayMenus.Clear();
-                wednesdayMenus.Clear();
-                thursdayMenus.Clear();
-                fridayMenus.Clear();
+                MondayMenus.Clear();
+                TuesdayMenus.Clear();
+                WednesdayMenus.Clear();
+                ThursdayMenus.Clear();
+                FridayMenus.Clear();
 
                 foreach (var menu in menus)
                 {
                     switch (menu.Jour.ToLower())
                     {
                         case "lundi":
-                            mondayMenus.Add(menu);
+                            MondayMenus.Add(menu);
                             break;
                         case "mardi":
-                            tuesdayMenus.Add(menu);
+                            TuesdayMenus.Add(menu);
                             break;
                         case "mercredi":
-                            wednesdayMenus.Add(menu);
+                            WednesdayMenus.Add(menu);
                             break;
                         case "jeudi":
-                            thursdayMenus.Add(menu);
+                            ThursdayMenus.Add(menu);
                             break;
                         case "vendredi":
-                            fridayMenus.Add(menu);
+                            FridayMenus.Add(menu);
                             break;
                     }
                 }
@@ -104,16 +91,18 @@ namespace SaintMichel.ViewModel
             }
         }
 
-        private async Task PreviousWeek()
+        [RelayCommand]
+        private async Task PreviousWeekAsync()
         {
-            currentDate = currentDate.AddDays(-7);
+            _currentDate = _currentDate.AddDays(-7);
             UpdateCurrentWeek();
             await LoadMenusAsync();
         }
 
-        private async Task NextWeek()
+        [RelayCommand]
+        private async Task NextWeekAsync()
         {
-            currentDate = currentDate.AddDays(7);
+            _currentDate = _currentDate.AddDays(7);
             UpdateCurrentWeek();
             await LoadMenusAsync();
         }

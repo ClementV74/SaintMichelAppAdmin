@@ -16,14 +16,12 @@
             <Entry Text="{Binding SelectedItem.Prix}" Keyboard="Numeric" />
 
             <Label Text="Image actuelle" />
-            <!-- Affiche l'image liée à l'URL -->
             <Image Source="{Binding SelectedItem.ImageUrl}" HeightRequest="90" WidthRequest="90" Aspect="AspectFit" />
-
 
             <Label Text="URL de l'image" />
             <Entry Text="{Binding SelectedItem.ImageUrl}" />
 
-            <Button Text="Sauvegarder" Command="{Binding SaveCommand}" />
+            <Button Text="Sauvegarder" Command="{Binding SaveCommand}" BackgroundColor="Green" TextColor="White" />
 
             <Button Text="Supprimer" Command="{Binding DeleteCommand}" BackgroundColor="Red" TextColor="White"/>
         </StackLayout>

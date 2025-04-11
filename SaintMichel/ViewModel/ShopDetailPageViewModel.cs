@@ -1,55 +1,55 @@
-﻿using System.Windows.Input;
-using Microsoft.Maui.Controls;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System.Threading.Tasks;
 
-public class ShopDetailPageViewModel : BindableObject
+public partial class ShopDetailPageViewModel : ObservableObject
 {
-    private ShopItem _selectedItem;
     private readonly API_Shop _apiShop = new API_Shop();
 
-    public ShopItem SelectedItem
-    {
-        get => _selectedItem;
-        set
-        {
-            _selectedItem = value;
-            OnPropertyChanged();
-        }
-    }
-
-    public ICommand SaveCommand { get; }
-    public ICommand DeleteCommand { get; }
+    [ObservableProperty]
+    private ShopItem selectedItem;
 
     public ShopDetailPageViewModel(int itemId)
     {
-        LoadShopItemDetails(itemId);
-
-        // Commande pour sauvegarder
-        SaveCommand = new Command(OnSave);
-
-        // Commande pour supprimer
-        DeleteCommand = new Command(OnDelete);
+        LoadShopItemDetailsAsync(itemId);
     }
 
-    private async void LoadShopItemDetails(int itemId)
+    private async void LoadShopItemDetailsAsync(int itemId)
     {
         var item = await _apiShop.GetShopItemByIdAsync(itemId);
         SelectedItem = item;
     }
 
-    // Méthode de sauvegarde
-    private async void OnSave()
+    [RelayCommand]
+    private async Task SaveAsync()
     {
-        // Logique pour sauvegarder les modifications (si nécessaire)
+        if (SelectedItem == null)
+            return;
+
         await _apiShop.UpdateShopItemAsync(SelectedItem);
+
+        await Shell.Current.DisplayAlert("Succès", "Article sauvegardé avec succès !", "OK");
     }
 
-    // Méthode de suppression
-    private async void OnDelete()
+    [RelayCommand]
+    private async Task DeleteAsync()
     {
-        // Appel de l'API pour supprimer l'élément
+        if (SelectedItem == null)
+            return;
+
+        bool confirm = await Shell.Current.DisplayAlert(
+            "Confirmation",
+            "Es-tu sûr de vouloir supprimer cet article ?",
+            "Oui", "Non");
+
+        if (!confirm)
+            return;
+
         await _apiShop.DeleteShopItemAsync(SelectedItem.IdShop);
 
-        // Redirige vers la page ShopPage
-        await Shell.Current.GoToAsync(nameof(ShopPage));
+        await Shell.Current.DisplayAlert("Succès", "Article supprimé.", "OK");
+
+        // Retour à la page précédente
+        await Shell.Current.GoToAsync("..");
     }
 }
