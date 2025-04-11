@@ -2,57 +2,154 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SaintMichel.View.GestionUtilisateurPage"
+
+             xmlns:model="clr-namespace:SaintMichel.Model"       
+             xmlns:viewmodel="clr-namespace:SaintMichel.ViewModel"
+             
              Title="Gestion des Utilisateurs">
 
-    <Grid>
+    <Grid RowDefinitions="Auto,*" Padding="0,0,0,0">
+        <!-- En-tête -->
+        <Grid ColumnDefinitions="*,Auto" Padding="20,15" 
+              BackgroundColor="{AppThemeBinding Light=#4361EE, Dark=#2D3142}">
+            <Label Text="Gestion des Utilisateurs" 
+                   FontSize="22" 
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   VerticalOptions="Center"/>
 
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="10*"/>
-        </Grid.RowDefinitions>
-        <Label Text="Test"> </Label>
-        <CollectionView ItemsSource="{Binding ObsItems}" Grid.Row="1" IsVisible="{Binding EventVisibility}" SelectionMode="Single" SelectedItem="{Binding SelectedItem}"
-                SelectionChangedCommand="{Binding EventSelectedCommand}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Frame Margin="10"
-Padding="15"
-CornerRadius="10"
-BackgroundColor="LightBlue"
-HasShadow="True">
-                        <VerticalStackLayout Spacing="5">
-                            <!-- Full Name -->
-                            <Label Text="{Binding nom}" 
-FontSize="20" 
-FontAttributes="Bold" 
-TextColor="Navy" />
+            <Button Grid.Column="1" 
+                    Text="+ Ajouter" 
+                    BackgroundColor="White"
+                    TextColor="{AppThemeBinding Light=#4361EE, Dark=#2D3142}"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    Padding="15,8"/>
+        </Grid>
 
-                            <!-- Email -->
-                            <Label Text="{Binding email}" 
-FontSize="16" 
-TextColor="DarkSlateGray" />
+        <!-- Liste des utilisateurs -->
+        <RefreshView Grid.Row="1" Command="{Binding RefreshCommand}" IsRefreshing="{Binding IsRefreshing}">
+            <CollectionView ItemsSource="{Binding ObsItems}" 
+                            SelectionMode="Single" 
+                            SelectedItem="{Binding SelectedItem}"
+                            SelectionChangedCommand="{Binding EventSelectedCommand}"
+                            Margin="0,0,0,0">
 
-                            <!-- Role -->
-                            <Label Text="{Binding role}" 
-FontSize="14" 
-FontAttributes="Italic" 
-TextColor="Gray" />
+                <!-- État vide -->
+                <CollectionView.EmptyView>
+                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20" Padding="20">
+                        <Image Source="user_empty.png" HeightRequest="100" WidthRequest="100" Opacity="0.6"/>
+                        <Label Text="Aucun utilisateur trouvé" 
+                               FontSize="18" 
+                               TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"
+                               HorizontalOptions="Center"/>
+                        <Button Text="Actualiser" 
+                                Command="{Binding RefreshCommand}"
+                                BackgroundColor="{AppThemeBinding Light=#4361EE, Dark=#3D4785}"
+                                TextColor="White"
+                                CornerRadius="20"
+                                Padding="20,10"
+                                HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </CollectionView.EmptyView>
 
-                            <!-- Pseudo -->
-                            <Label Text="{Binding pseudo}" 
-FontSize="14" 
-TextColor="SlateBlue" />
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="15,10">
+                            <Frame Margin="0,5,0,5"
+                                   Padding="0"
+                                   CornerRadius="12"
+                                   HasShadow="True"
+                                   BorderColor="Transparent"
+                                   BackgroundColor="{AppThemeBinding Light=White, Dark=#2A2E33}">
+                                <Grid ColumnDefinitions="Auto,*,Auto" Padding="0">
+                                    <!-- Indicateur de rôle (barre colorée) -->
+                                    <BoxView WidthRequest="6" 
+                                             BackgroundColor="{Binding role, Converter={StaticResource RoleColorConverter}}"
+                                             VerticalOptions="Fill"
+                                             HorizontalOptions="Start"/>
 
-                            <!-- Phone -->
-                            <Label Text="{Binding telephone}" 
-FontSize="14" 
-TextColor="DimGray" />
-                        </VerticalStackLayout>
-                    </Frame>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
+                                    <!-- Informations de l'utilisateur -->
+                                    <Grid Grid.Column="1" RowDefinitions="Auto,Auto,Auto" Padding="15,12" RowSpacing="5">
+                                        <!-- Nom et rôle -->
+                                        <Grid ColumnDefinitions="*,Auto">
+                                            <Label Text="{Binding nom}" 
+                                                   FontSize="18" 
+                                                   FontAttributes="Bold" 
+                                                   TextColor="{AppThemeBinding Light=#212529, Dark=White}"/>
 
-        </CollectionView>
+                                            <Frame Grid.Column="1"
+                                                   Padding="8,3"
+                                                   CornerRadius="12"
+                                                   BackgroundColor="{Binding role, Converter={StaticResource RoleBackgroundConverter}}"
+                                                   BorderColor="Transparent"
+                                                   HasShadow="False">
+                                                <Label Text="{Binding role}" 
+                                                       FontSize="12" 
+                                                       FontAttributes="Bold" 
+                                                       TextColor="{Binding role, Converter={StaticResource RoleTextColorConverter}}"/>
+                                            </Frame>
+                                        </Grid>
 
+                                        <!-- Email et pseudo -->
+                                        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="5">
+                                            <Label Text="Email:" 
+                                                   FontSize="14" 
+                                                   FontAttributes="Bold"
+                                                   TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"/>
+                                            <Label Text="{Binding email}" 
+                                                   FontSize="14" 
+                                                   TextColor="{AppThemeBinding Light=#495057, Dark=#CED4DA}"/>
+                                        </StackLayout>
+
+                                        <Grid Grid.Row="2" ColumnDefinitions="Auto,*,Auto,*">
+                                            <!-- Pseudo -->
+                                            <Label Text="Pseudo:" 
+                                                   FontSize="14" 
+                                                   FontAttributes="Bold"
+                                                   TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"/>
+                                            <Label Grid.Column="1"
+                                                   Text="{Binding pseudo}" 
+                                                   FontSize="14" 
+                                                   TextColor="{AppThemeBinding Light=#495057, Dark=#CED4DA}"/>
+
+                                            <!-- Téléphone -->
+                                            <Label Grid.Column="2"
+                                                   Text="Tél:" 
+                                                   FontSize="14" 
+                                                   FontAttributes="Bold"
+                                                   TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"/>
+                                            <Label Grid.Column="3"
+                                                   Text="{Binding telephone}" 
+                                                   FontSize="14" 
+                                                   TextColor="{AppThemeBinding Light=#495057, Dark=#CED4DA}"/>
+                                        </Grid>
+                                    </Grid>
+
+                                    <!-- Bouton d'action -->
+                                    <Button Grid.Column="2"
+                                            Text="⋮"
+                                            FontSize="20"
+                                            BackgroundColor="Transparent"
+                                            TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"
+                                            VerticalOptions="Center"
+                                            Margin="0,0,10,0"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GestionUtilisateurPageViewModel}}, Path=ShowOptionsCommand}"
+                                            CommandParameter="{Binding .}"/>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+
+        <!-- Indicateur de chargement -->
+        <ActivityIndicator Grid.Row="1"
+                          IsRunning="{Binding IsBusy}"
+                          IsVisible="{Binding IsBusy}"
+                          HorizontalOptions="Center"
+                          VerticalOptions="Center"
+                          Color="{AppThemeBinding Light=#4361EE, Dark=#3D4785}"/>
     </Grid>
 </ContentPage>

@@ -1,327 +1,186 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:model="clr-namespace:SaintMichel.Model"
              x:Class="SaintMichel.View.TicketDetailPage"
+             
+             xmlns:model="clr-namespace:SaintMichel.Model"       
+             xmlns:viewmodel="clr-namespace:SaintMichel.ViewModel"
+             
+
              BackgroundColor="{AppThemeBinding Light=#F8F9FA, Dark=#212529}"
              Title="Détail du Ticket">
 
-    <!-- Page entière avec effet d'ombre global -->
-    <Grid RowDefinitions="Auto,*,Auto">
-        <!-- En-tête principal avec informations du ticket -->
-        <Grid RowDefinitions="Auto,Auto,Auto" Padding="0,0,0,15"
+    <Grid RowDefinitions="Auto,Auto,*,Auto">
+        <!-- En-tête avec titre et bouton retour -->
+        <Grid ColumnDefinitions="Auto,*,Auto" Padding="15,10"
               BackgroundColor="{AppThemeBinding Light=#4361EE, Dark=#2D3142}">
+            <ImageButton Source="back_arrow.png" 
+                         HeightRequest="24" WidthRequest="24"
+                         BackgroundColor="Transparent"
+                         Command="{Binding GoBackCommand}"/>
 
-            <!-- Barre supérieure avec navigation et actions -->
-            <Grid ColumnDefinitions="Auto,*,Auto" Padding="20,15">
-                <ImageButton Source="back_arrow.png" 
-                             HeightRequest="24" WidthRequest="24"
-                             BackgroundColor="Transparent"
-                             Command="{Binding GoBackCommand}"/>
-
-                <Label Grid.Column="1" 
-                       Text="Détail du Ticket" 
-                       FontSize="18" 
-                       FontAttributes="Bold"
-                       TextColor="White"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
-
-                <ImageButton Grid.Column="2" 
-                             Source="more_options.png"
-                             HeightRequest="24" WidthRequest="24"
-                             BackgroundColor="Transparent"
-                             Command="{Binding ShowOptionsCommand}"/>
-            </Grid>
-
-            <!-- Carte d'information du ticket -->
-            <Frame Grid.Row="1" Margin="15,5,15,0" Padding="0" HasShadow="True"
-                   CornerRadius="15" BorderColor="Transparent"
-                   BackgroundColor="{AppThemeBinding Light=White, Dark=#2A2E33}">
-
-                <Grid RowDefinitions="Auto,Auto,Auto" Padding="0">
-                    <!-- En-tête de la carte avec numéro et date -->
-                    <Grid ColumnDefinitions="*,Auto" Padding="20,15,20,10">
-                        <VerticalStackLayout Spacing="2">
-                            <Label Text="Ticket #1234" 
-                                   FontSize="13" 
-                                   TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"/>
-                            <Label Text="{Binding Title}" 
-                                   FontSize="22" 
-                                   FontAttributes="Bold"
-                                   TextColor="{AppThemeBinding Light=#212529, Dark=White}"
-                                   LineBreakMode="TailTruncation"/>
-                        </VerticalStackLayout>
-
-                        <Frame Grid.Column="1" 
-                               Padding="10,5" 
-                               CornerRadius="8" 
-                               HasShadow="False"
-                               BackgroundColor="{AppThemeBinding Light=#F0F2F5, Dark=#353A50}"
-                               BorderColor="Transparent">
-                            <Label Text="{Binding DateCreation, StringFormat='{0:dd MMM yyyy}'}" 
-                                   FontSize="13" 
-                                   TextColor="{AppThemeBinding Light=#495057, Dark=#CED4DA}"/>
-                        </Frame>
-                    </Grid>
-
-                    <!-- Séparateur -->
-                    <BoxView Grid.Row="1" 
-                             HeightRequest="1" 
-                             Color="{AppThemeBinding Light=#EBEEF2, Dark=#353A50}"
-                             Margin="20,0"/>
-
-                    <!-- Description du ticket -->
-                    <VerticalStackLayout Grid.Row="2" Padding="20,10,20,20" Spacing="10">
-                        <Label Text="Description" 
-                               FontSize="14" 
-                               FontAttributes="Bold"
-                               TextColor="{AppThemeBinding Light=#495057, Dark=#ADB5BD}"/>
-
-                        <Label Text="{Binding Description}" 
-                               FontSize="15" 
-                               LineBreakMode="WordWrap"
-                               TextColor="{AppThemeBinding Light=#212529, Dark=#E9ECEF}"/>
-                    </VerticalStackLayout>
-                </Grid>
-            </Frame>
-
-            <!-- Section statut avec badge et bouton -->
-            <Frame Grid.Row="2" Margin="15,15,15,0" Padding="0" HasShadow="True"
-                   CornerRadius="15" BorderColor="Transparent"
-                   BackgroundColor="{AppThemeBinding Light=White, Dark=#2A2E33}">
-
-                <Grid ColumnDefinitions="Auto,*,Auto" Padding="20,15">
-                    <VerticalStackLayout Spacing="2">
-                        <Label Text="Statut actuel" 
-                               FontSize="13" 
-                               TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"/>
-
-                        <Border BackgroundColor="{Binding StatusColor}"
-                                StrokeThickness="0"
-                                Padding="12,6" 
-                                Margin="0,5,0,0"
-                                StrokeShape="RoundRectangle 20,20,20,20">
-                            <Label Text="{Binding Status}" 
-                                   FontSize="14" 
-                                   FontAttributes="Bold"
-                                   TextColor="White"/>
-                        </Border>
-                    </VerticalStackLayout>
-
-                    <Button Grid.Column="2" 
-                            Text="Changer" 
-                            Command="{Binding ToggleStatusCommand}"
-                            BackgroundColor="#4361EE" 
-                            TextColor="White"
-                            FontAttributes="Bold"
-                            CornerRadius="10"
-                            Padding="15,8"/>
-                </Grid>
-            </Frame>
+            <Label Grid.Column="1" 
+                   Text="Détail du Ticket" 
+                   FontSize="18" 
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"/>
         </Grid>
 
-        <!-- Section chat avec messages -->
-        <Grid Grid.Row="1" RowDefinitions="Auto,*">
-            <!-- En-tête de la section chat -->
-            <Grid Padding="20,20,20,10" ColumnDefinitions="*,Auto"
-                  BackgroundColor="{AppThemeBinding Light=#EBEEF2, Dark=#121418}">
-                <Label Text="Conversation" 
-                       FontSize="18" 
+        <!-- Indicateur de chargement -->
+        <ActivityIndicator Grid.Row="1" Grid.RowSpan="2"
+                          IsRunning="{Binding IsBusy}"
+                          IsVisible="{Binding IsBusy}"
+                          HorizontalOptions="Center"
+                          VerticalOptions="Center"
+                          Color="#4361EE"/>
+
+        <!-- Message d'erreur -->
+        <StackLayout Grid.Row="1" Grid.RowSpan="2" 
+                     IsVisible="{Binding IsTicketFound, Converter={StaticResource InverseBoolConverter}}"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Padding="20"
+                     Spacing="10">
+            <Image Source="error.png" 
+                   HeightRequest="100" 
+                   WidthRequest="100"
+                   HorizontalOptions="Center"/>
+            <Label Text="Ticket non trouvé" 
+                   FontSize="20" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="{AppThemeBinding Light=#DC3545, Dark=#F06470}"/>
+            <Label Text="Impossible de charger les détails de ce ticket. Vérifiez l'ID du ticket et votre connexion réseau."
+                   HorizontalOptions="Center"
+                   TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"
+                   HorizontalTextAlignment="Center"/>
+            <Button Text="Réessayer" 
+                    Command="{Binding RefreshCommand}"
+                    BackgroundColor="#4361EE"
+                    TextColor="White"
+                    CornerRadius="8"
+                    Margin="0,10,0,0"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <!-- Informations du ticket -->
+        <StackLayout Grid.Row="1" Padding="15" Spacing="15"
+                     BackgroundColor="{AppThemeBinding Light=White, Dark=#2A2E33}"
+                     IsVisible="{Binding IsTicketFound}">
+            <!-- Titre et ID -->
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="{Binding CurrentTicket.titre, FallbackValue='Chargement...'}" 
+                       FontSize="20" 
                        FontAttributes="Bold"
                        TextColor="{AppThemeBinding Light=#212529, Dark=White}"/>
 
-                <Frame Grid.Column="1" 
-                       Padding="10,5" 
-                       CornerRadius="20" 
-                       HasShadow="False"
-                       BackgroundColor="{AppThemeBinding Light=#4361EE, Dark=#4361EE}"
-                       Opacity="0.9"
-                       BorderColor="Transparent">
-                    <Label Text="{Binding Messages.Count, StringFormat='{0} messages'}"
-                           TextColor="White"
-                           FontSize="13" 
-                           FontAttributes="Bold"/>
-                </Frame>
+                <Label Grid.Column="1" 
+                       Text="{Binding CurrentTicket.id_ticket, StringFormat='#{0}'}" 
+                       TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"/>
             </Grid>
 
-            <!-- Liste des messages -->
-            <RefreshView Grid.Row="1" Command="{Binding RefreshMessagesCommand}" IsRefreshing="{Binding IsRefreshing}">
-                <CollectionView ItemsSource="{Binding Messages}" 
-                                Margin="15,0,15,0" 
-                                ItemsUpdatingScrollMode="KeepLastItemInView">
-                    <CollectionView.EmptyView>
-                        <Grid VerticalOptions="Center" HorizontalOptions="Center" Padding="0,50,0,0">
-                            <Frame WidthRequest="250" 
-                                   HeightRequest="200" 
-                                   CornerRadius="20" 
-                                   HasShadow="True"
-                                   BorderColor="Transparent"
-                                   BackgroundColor="{AppThemeBinding Light=White, Dark=#2A2E33}"
-                                   Opacity="0.9">
-                                <VerticalStackLayout Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
-                                    <Frame WidthRequest="70" 
-                                           HeightRequest="70" 
-                                           CornerRadius="35" 
-                                           HasShadow="False"
-                                           HorizontalOptions="Center"
-                                           BackgroundColor="{AppThemeBinding Light=#F0F2F5, Dark=#353A50}"
-                                           BorderColor="Transparent">
-                                        <Image Source="chat_icon.png" 
-                                               WidthRequest="35" 
-                                               HeightRequest="35"
-                                               HorizontalOptions="Center" 
-                                               VerticalOptions="Center"/>
-                                    </Frame>
+            <!-- Description -->
+            <Label Text="{Binding CurrentTicket.description, FallbackValue='Chargement de la description...'}" 
+                   TextColor="{AppThemeBinding Light=#212529, Dark=#E9ECEF}"
+                   LineBreakMode="WordWrap"/>
 
-                                    <Label Text="Aucun message" 
-                                           FontSize="18" 
-                                           FontAttributes="Bold"
-                                           TextColor="{AppThemeBinding Light=#212529, Dark=White}" 
-                                           HorizontalOptions="Center"/>
+            <!-- Statut -->
+            <Grid ColumnDefinitions="Auto,*,Auto">
+                <Frame Padding="10,5" 
+                       CornerRadius="8" 
+                       BackgroundColor="{Binding CurrentTicket.StatusColor, FallbackValue='Gray'}"
+                       BorderColor="Transparent"
+                       HasShadow="False">
+                    <Label Text="{Binding CurrentTicket.StatusText, FallbackValue='Inconnu'}" 
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+                </Frame>
 
-                                    <Label Text="Démarrez la conversation en envoyant un message" 
-                                           FontSize="14" 
-                                           TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}" 
-                                           HorizontalOptions="Center"
-                                           HorizontalTextAlignment="Center"/>
-                                </VerticalStackLayout>
-                            </Frame>
-                        </Grid>
-                    </CollectionView.EmptyView>
+                <ActivityIndicator Grid.Column="1"
+                                  IsRunning="{Binding IsSaving}"
+                                  IsVisible="{Binding IsSaving}"
+                                  Color="#4361EE"
+                                  HorizontalOptions="Start"
+                                  Margin="10,0,0,0"/>
 
-                    <CollectionView.ItemsLayout>
-                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="15"/>
-                    </CollectionView.ItemsLayout>
+                <Button Grid.Column="2" 
+                        Text="Changer le statut" 
+                        Command="{Binding ToggleStatusCommand}"
+                        IsEnabled="{Binding IsSaving, Converter={StaticResource InverseBoolConverter}}"
+                        BackgroundColor="#4361EE" 
+                        TextColor="White"
+                        CornerRadius="8"
+                        Padding="10,5"/>
+            </Grid>
+        </StackLayout>
 
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="model:Message">
-                            <Grid>
-                                <!-- Message du support (à droite) ou de l'utilisateur (à gauche) -->
-                                <Frame Margin="{Binding IsFromCurrentUser, Converter={StaticResource MessageMarginConverter}}"
-                                       BackgroundColor="{Binding IsFromCurrentUser, Converter={StaticResource MessageColorConverter}}"
-                                       BorderColor="Transparent"
-                                       CornerRadius="20"
-                                       Padding="18,12"
-                                       HasShadow="True"
-                                       MaximumWidthRequest="280"
-                                       HorizontalOptions="{Binding IsFromCurrentUser, Converter={StaticResource MessageAlignmentConverter}}">
-                                    <VerticalStackLayout Spacing="8">
-                                        <Grid ColumnDefinitions="Auto,*,Auto">
-                                            <Frame WidthRequest="28" 
-                                                   HeightRequest="28" 
-                                                   CornerRadius="14" 
-                                                   Padding="0"
-                                                   HasShadow="False"
-                                                   IsClippedToBounds="True"
-                                                   BorderColor="Transparent">
-                                                <Image Source="{Binding IsFromCurrentUser, Converter={StaticResource UserAvatarConverter}}"
-                                                       Aspect="AspectFill"/>
-                                            </Frame>
+        <!-- Messages -->
+        <CollectionView Grid.Row="2" 
+                        ItemsSource="{Binding Messages}" 
+                        Margin="15,10"
+                        ItemsUpdatingScrollMode="KeepLastItemInView"
+                        IsVisible="{Binding IsTicketFound}">
+            <CollectionView.EmptyView>
+                <Label Text="Aucun message" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"/>
+            </CollectionView.EmptyView>
 
-                                            <Label Grid.Column="1" 
-                                                   Text="{Binding sender_name}" 
-                                                   FontSize="14" 
-                                                   FontAttributes="Bold"
-                                                   Margin="8,0,0,0"
-                                                   VerticalOptions="Center"
-                                                   TextColor="{Binding IsFromCurrentUser, Converter={StaticResource MessageTextColorConverter}}"/>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Message">
+                    <Frame Margin="0,5"
+                           Padding="15,10"
+                           BackgroundColor="{Binding IsFromCurrentUser, Converter={StaticResource MessageColorConverter}}"
+                           BorderColor="Transparent"
+                           CornerRadius="10"
+                           HasShadow="False"
+                           HorizontalOptions="{Binding IsFromCurrentUser, Converter={StaticResource MessageAlignmentConverter}}">
+                        <StackLayout Spacing="5">
+                            <Label Text="{Binding SenderName}" 
+                                   FontAttributes="Bold"
+                                   TextColor="{Binding IsFromCurrentUser, Converter={StaticResource MessageTextColorConverter}}"/>
 
-                                            <Label Grid.Column="2" 
-                                                   Text="{Binding timestamp, StringFormat='{0:HH:mm}'}" 
-                                                   FontSize="12" 
-                                                   VerticalOptions="Center"
-                                                   TextColor="{Binding IsFromCurrentUser, Converter={StaticResource MessageTimeColorConverter}}"/>
-                                        </Grid>
+                            <Label Text="{Binding Content}" 
+                                   TextColor="{Binding IsFromCurrentUser, Converter={StaticResource MessageTextColorConverter}}"/>
 
-                                        <Label Text="{Binding content}" 
-                                               TextColor="{Binding IsFromCurrentUser, Converter={StaticResource MessageTextColorConverter}}"
-                                               FontSize="15"/>
+                            <Label Text="{Binding Timestamp, StringFormat='{0:HH:mm}'}" 
+                                   FontSize="11" 
+                                   HorizontalOptions="End"
+                                   TextColor="{Binding IsFromCurrentUser, Converter={StaticResource MessageTimeColorConverter}}"/>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
-                                        <Label Text="{Binding timestamp, StringFormat='{0:dd MMM}'}" 
-                                               FontSize="11" 
-                                               TextColor="{Binding IsFromCurrentUser, Converter={StaticResource MessageTimeColorConverter}}"
-                                               HorizontalOptions="End"/>
-                                    </VerticalStackLayout>
-                                </Frame>
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </RefreshView>
-        </Grid>
-
-        <!-- Zone de saisie de message -->
-        <Grid Grid.Row="2" ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto" Padding="15,10,15,15" 
-              BackgroundColor="{AppThemeBinding Light=White, Dark=#2A2E33}">
-
-            <!-- Indicateur de saisie (optionnel) -->
-            <Label Grid.ColumnSpan="2" 
-                   Text="Support technique est en train d'écrire..." 
-                   FontSize="12" 
-                   TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"
-                   Margin="5,0,0,5"
-                   IsVisible="{Binding IsTyping}"/>
-
-            <!-- Zone de saisie et bouton d'envoi -->
-            <Frame Grid.Row="1" 
-                   BorderColor="Transparent"
+        <!-- Zone de saisie -->
+        <Grid Grid.Row="3" ColumnDefinitions="*,Auto" Padding="15,10"
+              BackgroundColor="{AppThemeBinding Light=White, Dark=#2A2E33}"
+              IsVisible="{Binding IsTicketFound}">
+            <Frame BorderColor="Transparent"
                    BackgroundColor="{AppThemeBinding Light=#F0F2F5, Dark=#353A50}"
-                   CornerRadius="25"
-                   Padding="5,0,20,0"
-                   HasShadow="False"
-                   HeightRequest="50">
-                <Grid ColumnDefinitions="Auto,*">
-                    <Button WidthRequest="40" 
-                            HeightRequest="40" 
-                            CornerRadius="20"
-                            Margin="5,0,5,0"
-                            Padding="0"
-                            BackgroundColor="Transparent"
-                            Command="{Binding AttachFileCommand}">
-                        <Button.ImageSource>
-                            <FontImageSource Glyph="&#x1F4CE;" 
-                                             FontFamily="Arial" 
-                                             Size="18" 
-                                             Color="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"/>
-                        </Button.ImageSource>
-                    </Button>
-
-                    <Entry Grid.Column="1" 
-                           Text="{Binding NewMessage}" 
-                           Placeholder="Tapez votre message..." 
-                           PlaceholderColor="{AppThemeBinding Light=#ADB5BD, Dark=#6C757D}"
-                           TextColor="{AppThemeBinding Light=#212529, Dark=White}"
-                           BackgroundColor="Transparent"
-                           ReturnCommand="{Binding SendMessageCommand}"
-                           ReturnType="Send"
-                           VerticalOptions="Center"/>
-                </Grid>
+                   CornerRadius="20"
+                   Padding="15,0"
+                   HeightRequest="40">
+                <Entry Text="{Binding NewMessage}" 
+                       Placeholder="Tapez votre message..." 
+                       ReturnCommand="{Binding SendMessageCommand}"
+                       BackgroundColor="Transparent"
+                       VerticalOptions="Center"/>
             </Frame>
 
-            <Button Grid.Row="1" 
-                    Grid.Column="1" 
+            <Button Grid.Column="1" 
+                    Text="→"
+                    FontSize="18"
                     BackgroundColor="#4361EE" 
                     TextColor="White"
-                    CornerRadius="25"
+                    CornerRadius="20"
                     Margin="10,0,0,0"
-                    HeightRequest="50"
-                    WidthRequest="50"
-                    Padding="0"
-                    Command="{Binding SendMessageCommand}">
-                <Button.Shadow>
-                    <Shadow Brush="#4361EE"
-                            Offset="0,3"
-                            Opacity="0.3"
-                            Radius="5"/>
-                </Button.Shadow>
-                <Button.ImageSource>
-                    <FontImageSource Glyph="&#x27A4;" 
-                                     FontFamily="Arial" 
-                                     Size="20" 
-                                     Color="White"/>
-                </Button.ImageSource>
-            </Button>
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    Command="{Binding SendMessageCommand}"/>
         </Grid>
     </Grid>
 </ContentPage>

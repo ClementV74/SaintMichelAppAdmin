@@ -2,9 +2,9 @@ namespace SaintMichel.View;
 
 public partial class TicketDetailPage : ContentPage
 {
-    public TicketDetailPage(Ticket ticket)
+    public TicketDetailPage()
     {
         InitializeComponent();
-        BindingContext = new TicketDetailViewModel(ticket);
+        BindingContext = new TicketDetailViewModel();
     }
 }

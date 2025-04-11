@@ -8,11 +8,14 @@ public partial class TicketPage : ContentPage
         BindingContext = new TicketPageViewModel();
     }
 
-    private async void OnTicketSelected(object sender, SelectionChangedEventArgs e)
+    protected override void OnAppearing()
     {
-        if (e.CurrentSelection.FirstOrDefault() is Ticket selectedTicket)
+        base.OnAppearing();
+
+        if (this.BindingContext is TicketPageViewModel itemViewModel)
         {
-            await Navigation.PushAsync(new TicketDetailPage(selectedTicket));
+
+            itemViewModel.OnAppearing();
         }
     }
 }

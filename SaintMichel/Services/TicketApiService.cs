@@ -16,7 +16,7 @@ namespace SaintMichel.Services
         // Obtenir un ticket par ID
         public async Task<Ticket> GetTicketAsync(string idticket)
         {
-            var url = GetUrl($"GetTicket/{idticket}");
+            var url = GetUrl($"GetTicketById/{idticket}");
             return await GetItemAsync(url);
         }
 
