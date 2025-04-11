@@ -54498,26 +54498,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Suzuki\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\clemv\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
+      "projectUniqueName": "C:\\Users\\clemv\\Source\\Repos\\SaintMichelAppAdmin3\\SaintMichel\\SaintMichel.csproj",
       "projectName": "SaintMichel",
-      "projectPath": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\SaintMichel.csproj",
-      "packagesPath": "C:\\Users\\Suzuki\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\obj\\",
+      "projectPath": "C:\\Users\\clemv\\Source\\Repos\\SaintMichelAppAdmin3\\SaintMichel\\SaintMichel.csproj",
+      "packagesPath": "C:\\Users\\clemv\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\clemv\\Source\\Repos\\SaintMichelAppAdmin3\\SaintMichel\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Suzuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\clemv\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -54529,7 +54527,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0-android35.0": {
@@ -54964,10 +54963,76 @@
   },
   "logs": [
     {
-      "code": "Undefined",
+      "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\Suzuki\\source\\repos\\ClementV74\\SaintMichelAppAdmin\\SaintMichel\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-5f2m-466j-3848.",
+      "libraryId": "System.Private.Uri",
+      "targetGraphs": [
+        "net9.0-ios18.0/android-arm64",
+        "net9.0-ios18.0/android-x64",
+        "net9.0-ios18.0/iossimulator-x64",
+        "net9.0-ios18.0/maccatalyst-x64",
+        "net9.0-ios18.0/win10-x64",
+        "net9.0-maccatalyst18.0/android-arm64",
+        "net9.0-maccatalyst18.0/android-x64",
+        "net9.0-maccatalyst18.0/iossimulator-x64",
+        "net9.0-maccatalyst18.0/maccatalyst-x64",
+        "net9.0-maccatalyst18.0/win10-x64",
+        "net9.0-windows10.0.19041/android-arm64",
+        "net9.0-windows10.0.19041/android-x64",
+        "net9.0-windows10.0.19041/iossimulator-x64",
+        "net9.0-windows10.0.19041/maccatalyst-x64",
+        "net9.0-windows10.0.19041/win10-x64"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité moyenne connue, https://github.com/advisories/GHSA-x5qj-9vmx-7g6g.",
+      "libraryId": "System.Private.Uri",
+      "targetGraphs": [
+        "net9.0-ios18.0/android-arm64",
+        "net9.0-ios18.0/android-x64",
+        "net9.0-ios18.0/iossimulator-x64",
+        "net9.0-ios18.0/maccatalyst-x64",
+        "net9.0-ios18.0/win10-x64",
+        "net9.0-maccatalyst18.0/android-arm64",
+        "net9.0-maccatalyst18.0/android-x64",
+        "net9.0-maccatalyst18.0/iossimulator-x64",
+        "net9.0-maccatalyst18.0/maccatalyst-x64",
+        "net9.0-maccatalyst18.0/win10-x64",
+        "net9.0-windows10.0.19041/android-arm64",
+        "net9.0-windows10.0.19041/android-x64",
+        "net9.0-windows10.0.19041/iossimulator-x64",
+        "net9.0-windows10.0.19041/maccatalyst-x64",
+        "net9.0-windows10.0.19041/win10-x64"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-xhfc-gr8f-ffwc.",
+      "libraryId": "System.Private.Uri",
+      "targetGraphs": [
+        "net9.0-ios18.0/android-arm64",
+        "net9.0-ios18.0/android-x64",
+        "net9.0-ios18.0/iossimulator-x64",
+        "net9.0-ios18.0/maccatalyst-x64",
+        "net9.0-ios18.0/win10-x64",
+        "net9.0-maccatalyst18.0/android-arm64",
+        "net9.0-maccatalyst18.0/android-x64",
+        "net9.0-maccatalyst18.0/iossimulator-x64",
+        "net9.0-maccatalyst18.0/maccatalyst-x64",
+        "net9.0-maccatalyst18.0/win10-x64",
+        "net9.0-windows10.0.19041/android-arm64",
+        "net9.0-windows10.0.19041/android-x64",
+        "net9.0-windows10.0.19041/iossimulator-x64",
+        "net9.0-windows10.0.19041/maccatalyst-x64",
+        "net9.0-windows10.0.19041/win10-x64"
+      ]
     }
   ]
 }

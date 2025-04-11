@@ -1,113 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:SaintMichel.ViewModel"
-            Title="FoodPage"
-             x:Class="SaintMichel.View.FoodPage">
+             x:Class="SaintMichel.View.FoodPage"
+             Title="Menu de la Cantine"
+             BackgroundColor="#f5f5f7">
 
     <ContentPage.BindingContext>
         <vm:FoodPageViewModel />
     </ContentPage.BindingContext>
 
-    <ContentPage.Content>
-        <Grid Padding="10" RowDefinitions="Auto, *" ColumnDefinitions="*">
-            <!-- Première ligne pour les boutons -->
-            <Grid Grid.Row="0" Padding="10">
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Spacing="20">
-                    <!-- Bouton pour la semaine précédente -->
-                    <Button Text="&lt; Semaine Précédente"
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Style for day headers -->
+            <Style x:Key="DayHeaderStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="OpenSansExtraBold"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextColor" Value="#333333"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="0,0,0,10"/>
+            </Style>
+
+            <!-- Style for menu item frames -->
+            <Style x:Key="MenuItemFrameStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="Margin" Value="5,5,5,10"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+            </Style>
+
+            <!-- Style for menu item text -->
+            <Style x:Key="MenuItemTextStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="OpenSansRegular"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="#333333"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+            </Style>
+
+            <!-- Style for navigation buttons -->
+            <Style x:Key="NavigationButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#4a6da7"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="OpenSansSemiBold"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Padding" Value="15,10"/>
+                <Setter Property="MinimumWidthRequest" Value="180"/>
+            </Style>
+
+            <!-- Style for week display -->
+            <Style x:Key="WeekDisplayStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="OpenSansBold"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="#333333"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="10,0"/>
+            </Style>
+
+            <!-- Empty menu placeholder style -->
+            <Style x:Key="EmptyMenuStyle" TargetType="Label">
+                <Setter Property="Text" Value="Pas de menu disponible"/>
+                <Setter Property="FontFamily" Value="OpenSansItalic"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="#999999"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto, *" Padding="15">
+        <!-- Header section with title and navigation -->
+        <Frame Grid.Row="0" 
+               BackgroundColor="White" 
+               CornerRadius="15" 
+               HasShadow="True" 
+               Padding="20" 
+               Margin="0,10,0,20">
+            <StackLayout Spacing="15">
+                <!-- Title -->
+                <Label Text="Menu de la Semaine" 
+                       FontFamily="OpenSansBold" 
+                       FontSize="24" 
+                       TextColor="#4a6da7" 
+                       HorizontalOptions="Center"/>
+
+                <!-- Week navigation -->
+                <Grid ColumnDefinitions="Auto,*,Auto">
+                    <!-- Previous week button -->
+                    <Button Grid.Column="0"
+                            Text="◀ Semaine Précédente"
                             Command="{Binding PreviousWeekCommand}"
-                            HorizontalOptions="Start"
-                            BackgroundColor="LightBlue"
-                            TextColor="White"
-                            Padding="10"
-                            HeightRequest="40"/>
+                            Style="{StaticResource NavigationButtonStyle}"/>
 
-                    <!-- Label pour afficher la semaine actuelle -->
-                    <Label Text="{Binding CurrentWeek}"
-                           VerticalOptions="Center"
-                           HorizontalOptions="CenterAndExpand"
-                           FontSize="18"
-                           Padding="10"/>
+                    <!-- Current week display -->
+                    <Frame Grid.Column="1" 
+                           BackgroundColor="#f0f4f9" 
+                           CornerRadius="10" 
+                           HasShadow="False" 
+                           Padding="15,10" 
+                           HorizontalOptions="Center">
+                        <Label Text="{Binding CurrentWeek}" 
+                               Style="{StaticResource WeekDisplayStyle}"/>
+                    </Frame>
 
-                    <!-- Bouton pour la semaine suivante -->
-                    <Button Text="Semaine Suivante &gt;"
+                    <!-- Next week button -->
+                    <Button Grid.Column="2"
+                            Text="Semaine Suivante ▶"
                             Command="{Binding NextWeekCommand}"
-                            HorizontalOptions="End"
-                            BackgroundColor="LightBlue"
-                            TextColor="White"
-                            Padding="10"
-                            HeightRequest="40"/>
+                            Style="{StaticResource NavigationButtonStyle}"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+
+        <!-- Menu content -->
+        <ScrollView Grid.Row="1">
+            <Grid ColumnDefinitions="*,*,*,*,*" ColumnSpacing="10">
+                <!-- Monday Column -->
+                <StackLayout Grid.Column="0">
+                    <!-- Day header with visual indicator -->
+                    <Frame BackgroundColor="#4a6da7" CornerRadius="10" Padding="10,5" Margin="0,0,0,10">
+                        <Label Text="LUNDI" Style="{StaticResource DayHeaderStyle}" TextColor="White"/>
+                    </Frame>
+
+                    <!-- Menu items -->
+                    <CollectionView ItemsSource="{Binding MondayMenus}" EmptyView="{StaticResource EmptyMenuStyle}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Style="{StaticResource MenuItemFrameStyle}">
+                                    <Label Text="{Binding Contenu}" Style="{StaticResource MenuItemTextStyle}"/>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+
+                <!-- Tuesday Column -->
+                <StackLayout Grid.Column="1">
+                    <Frame BackgroundColor="#5d8fc9" CornerRadius="10" Padding="10,5" Margin="0,0,0,10">
+                        <Label Text="MARDI" Style="{StaticResource DayHeaderStyle}" TextColor="White"/>
+                    </Frame>
+                    <CollectionView ItemsSource="{Binding TuesdayMenus}" EmptyView="{StaticResource EmptyMenuStyle}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Style="{StaticResource MenuItemFrameStyle}">
+                                    <Label Text="{Binding Contenu}" Style="{StaticResource MenuItemTextStyle}"/>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+
+                <!-- Wednesday Column -->
+                <StackLayout Grid.Column="2">
+                    <Frame BackgroundColor="#70b2eb" CornerRadius="10" Padding="10,5" Margin="0,0,0,10">
+                        <Label Text="MERCREDI" Style="{StaticResource DayHeaderStyle}" TextColor="White"/>
+                    </Frame>
+                    <CollectionView ItemsSource="{Binding WednesdayMenus}" EmptyView="{StaticResource EmptyMenuStyle}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Style="{StaticResource MenuItemFrameStyle}">
+                                    <Label Text="{Binding Contenu}" Style="{StaticResource MenuItemTextStyle}"/>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+
+                <!-- Thursday Column -->
+                <StackLayout Grid.Column="3">
+                    <Frame BackgroundColor="#83d0ff" CornerRadius="10" Padding="10,5" Margin="0,0,0,10">
+                        <Label Text="JEUDI" Style="{StaticResource DayHeaderStyle}" TextColor="White"/>
+                    </Frame>
+                    <CollectionView ItemsSource="{Binding ThursdayMenus}" EmptyView="{StaticResource EmptyMenuStyle}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Style="{StaticResource MenuItemFrameStyle}">
+                                    <Label Text="{Binding Contenu}" Style="{StaticResource MenuItemTextStyle}"/>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+
+                <!-- Friday Column -->
+                <StackLayout Grid.Column="4">
+                    <Frame BackgroundColor="#96e0ff" CornerRadius="10" Padding="10,5" Margin="0,0,0,10">
+                        <Label Text="VENDREDI" Style="{StaticResource DayHeaderStyle}" TextColor="White"/>
+                    </Frame>
+                    <CollectionView ItemsSource="{Binding FridayMenus}" EmptyView="{StaticResource EmptyMenuStyle}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Style="{StaticResource MenuItemFrameStyle}">
+                                    <Label Text="{Binding Contenu}" Style="{StaticResource MenuItemTextStyle}"/>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </StackLayout>
             </Grid>
-
-            <!-- Deuxième ligne pour les menus -->
-            <Grid Grid.Row="1">
-                <ScrollView Padding="10">
-                    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*, *, *, *, *">
-                        <!-- En-têtes des jours -->
-                        <Label Text="Lundi" FontSize="18" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" />
-                        <Label Text="Mardi" FontSize="18" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1" />
-                        <Label Text="Mercredi" FontSize="18" HorizontalOptions="Center" Grid.Row="0" Grid.Column="2" />
-                        <Label Text="Jeudi" FontSize="18" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3" />
-                        <Label Text="Vendredi" FontSize="18" HorizontalOptions="Center" Grid.Row="0" Grid.Column="4" />
-
-                        <!-- Lundi -->
-                        <CollectionView ItemsSource="{Binding MondayMenus}" Grid.Row="1" Grid.Column="0">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <Frame BorderColor="LightGray" Padding="10" Margin="5">
-                                        <Label Text="{Binding Contenu}" FontSize="14"/>
-                                    </Frame>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-
-                        <!-- Mardi -->
-                        <CollectionView ItemsSource="{Binding TuesdayMenus}" Grid.Row="1" Grid.Column="1">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <Frame BorderColor="LightGray" Padding="10" Margin="5">
-                                        <Label Text="{Binding Contenu}" FontSize="14"/>
-                                    </Frame>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-
-                        <!-- Mercredi -->
-                        <CollectionView ItemsSource="{Binding WednesdayMenus}" Grid.Row="1" Grid.Column="2">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <Frame BorderColor="LightGray" Padding="10" Margin="5">
-                                        <Label Text="{Binding Contenu}" FontSize="14"/>
-                                    </Frame>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-
-                        <!-- Jeudi -->
-                        <CollectionView ItemsSource="{Binding ThursdayMenus}" Grid.Row="1" Grid.Column="3">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <Frame BorderColor="LightGray" Padding="10" Margin="5">
-                                        <Label Text="{Binding Contenu}" FontSize="14"/>
-                                    </Frame>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-
-                        <!-- Vendredi -->
-                        <CollectionView ItemsSource="{Binding FridayMenus}" Grid.Row="1" Grid.Column="4">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <Frame BorderColor="LightGray" Padding="10" Margin="5">
-                                        <Label Text="{Binding Contenu}" FontSize="14"/>
-                                    </Frame>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-                    </Grid>
-                </ScrollView>
-            </Grid>
-        </Grid>
-    </ContentPage.Content>
+        </ScrollView>
+    </Grid>
 </ContentPage>
