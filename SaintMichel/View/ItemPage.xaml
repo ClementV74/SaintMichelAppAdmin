@@ -79,14 +79,30 @@
                            BackgroundColor="#353A50"
                            CornerRadius="10" BorderColor="Transparent">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding NavigateToSupervisionCommand}" />
+                            <TapGestureRecognizer Command="{Binding NavigateToEvenementsCommand}" />
                         </Frame.GestureRecognizers>
                         <Grid ColumnDefinitions="Auto,*">
                             <Image Source="supervision_icon.png" WidthRequest="24" HeightRequest="24" 
                                    VerticalOptions="Center" />
-                            <Label Grid.Column="1" Text="Supervision" FontSize="16" 
+                            <Label Grid.Column="1" Text="Evenements" FontSize="16" 
                                    TextColor="White"
                                    VerticalOptions="Center" Margin="15,0,0,0" />
+                        </Grid>
+                    </Frame>
+
+                    <!-- Supervision -->
+                    <Frame Padding="15,12" Margin="0,5" HasShadow="False" 
+       BackgroundColor="#353A50"
+       CornerRadius="10" BorderColor="Transparent">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NavigateToOffresCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Grid ColumnDefinitions="Auto,*">
+                            <Image Source="supervision_icon.png" WidthRequest="24" HeightRequest="24" 
+               VerticalOptions="Center" />
+                            <Label Grid.Column="1" Text="Offres" FontSize="16" 
+               TextColor="White"
+               VerticalOptions="Center" Margin="15,0,0,0" />
                         </Grid>
                     </Frame>
 

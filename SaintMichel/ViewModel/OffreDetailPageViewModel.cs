@@ -62,18 +62,6 @@ namespace SaintMichel.ViewModel
             await OffreService.DeleteOffreAsync(IDInterim.ToString());
         }
 
-        //partial void OnIDInterimChanged(int value)
-        //{
-        //    if (value > 0) // Ensure ID is valid
-        //    {
-        //        LoadOffreDetails(value).ConfigureAwait(false);
-        //    }
-        //    else
-        //    {
-        //        Debug.WriteLine("Invalid InterimId provided");
-        //    }
-        //}
-
         private async Task LoadOffreDetails(int idInterim)
         {
             IsBusy = true;

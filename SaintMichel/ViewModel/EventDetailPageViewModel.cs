@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,13 @@ using System.Threading.Tasks;
 namespace SaintMichel.ViewModel
 {
 
-    [QueryProperty(nameof(IDEvent), nameof(IDEvent))]
+    [QueryProperty(nameof(IdEvent), nameof(IdEvent))]
 
     public partial class EventDetailPageViewModel : BaseViewModel
     {
 
         [ObservableProperty]
-        private int iDEvent;
+        private int idEvent;
 
         [ObservableProperty]
         private string _Name;
@@ -44,9 +45,9 @@ namespace SaintMichel.ViewModel
         [RelayCommand]
         public async Task Confirm()
         {
-            Event newEvent = new Event()
+            Event newEvent = new Event
             {
-                IDevent = iDEvent,
+                IDEvent = idEvent,
                 Name = Name,
                 Description = Description,
                 Date = Date,
@@ -62,11 +63,11 @@ namespace SaintMichel.ViewModel
         [RelayCommand]
         public async Task Delete()
         {
-            await EventService.DeleteEventAsync(iDEvent.ToString());
+            await EventService.DeleteEventAsync(idEvent.ToString());
         }
 
 
-        partial void OnIDEventChanged(int value)
+        partial void OnIdEventChanged(int value)
         {
             if (value > 0) // Si vous souhaitez vérifier que l'ID est valide
             {
@@ -83,7 +84,7 @@ namespace SaintMichel.ViewModel
             IsBusy = true;
             try
             {
-                int toto = iDEvent;
+                int toto = idEvent;
                 var _Event = await EventService.GetEventAsync(OnEventId.ToString());
 
                 Name = _Event.Name;
@@ -92,8 +93,6 @@ namespace SaintMichel.ViewModel
                 Lieu = _Event.Lieu;
                 State = _Event.state.ToString();
                 UserIdUser = _Event.user_iduser.ToString();
-
-              
             }
             catch (Exception ex)
             {

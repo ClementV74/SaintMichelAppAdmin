@@ -8,7 +8,7 @@ namespace SaintMichel.Model
 {
     public class Event
     {
-        public int IDevent { get; set; }
+        public int IDEvent { get; set; }
         public string Name { get; set; }
         public string Date { get; set; }
         public string Description { get; set; }

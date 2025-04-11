@@ -4,11 +4,229 @@
         <name>SaintMichel</name>
     </assembly>
     <members>
-        <member name="T:SaintMichel.ViewModel.EventPageViewModel">
+        <member name="M:SaintMichel.Services.EventAPI.AddEventAsync(SaintMichel.Model.Event)">
+            <summary>
+            Adds a new shop.
+            </summary>
+            <param name="shop">The shop to add.</param>
+            <returns>True if the shop was successfully added; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.EventAPI.UpdateEventAsync(SaintMichel.Model.Event)">
+            <summary>
+            Updates an existing shop.
+            </summary>
+            <param name="shop">The shop to update.</param>
+            <returns>True if the shop was successfully updated; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.EventAPI.DeleteEventAsync(System.String)">
+            <summary>
+            Deletes a shop by ID.
+            </summary>
+            <param name="idshop">The ID of the shop to delete.</param>
+            <returns>True if the shop was successfully deleted; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.EventAPI.GetEventAsync(System.String)">
+            <summary>
+            Retrieves a shop by ID.
+            </summary>
+            <param name="idshop">The ID of the shop to retrieve.</param>
+            <returns>The shop if found; otherwise, null.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.EventAPI.GetAllEventsAsync">
+            <summary>
+            Retrieves all shops.
+            </summary>
+            <returns>A list of all shops.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.EventAPI.SearchEventsAsync(System.String)">
+            <summary>
+            Searches for shops based on a filter.
+            </summary>
+            <param name="filter">The search filter.</param>
+            <returns>A list of matching shops.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.EventAPI.EventExistsAsync(System.String)">
+            <summary>
+            Checks if a shop exists by ID.
+            </summary>
+            <param name="idshop">The ID of the shop to check.</param>
+            <returns>True if the shop exists; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.OffreAPI.AddOffreAsync(SaintMichel.Model.OffrePro)">
+            <summary>
+            Adds a new shop.
+            </summary>
+            <param name="shop">The shop to add.</param>
+            <returns>True if the shop was successfully added; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.OffreAPI.UpdateOffreAsync(SaintMichel.Model.OffrePro)">
+            <summary>
+            Updates an existing shop.
+            </summary>
+            <param name="shop">The shop to update.</param>
+            <returns>True if the shop was successfully updated; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.OffreAPI.DeleteOffreAsync(System.String)">
+            <summary>
+            Deletes a shop by ID.
+            </summary>
+            <param name="idshop">The ID of the shop to delete.</param>
+            <returns>True if the shop was successfully deleted; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.OffreAPI.GetOffreAsync(System.String)">
+            <summary>
+            Retrieves a shop by ID.
+            </summary>
+            <param name="idshop">The ID of the shop to retrieve.</param>
+            <returns>The shop if found; otherwise, null.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.OffreAPI.GetAllOffresAsync">
+            <summary>
+            Retrieves all shops.
+            </summary>
+            <returns>A list of all shops.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.OffreAPI.SearchOffresAsync(System.String)">
+            <summary>
+            Searches for shops based on a filter.
+            </summary>
+            <param name="filter">The search filter.</param>
+            <returns>A list of matching shops.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.OffreAPI.OffreExistsAsync(System.String)">
+            <summary>
+            Checks if a shop exists by ID.
+            </summary>
+            <param name="idshop">The ID of the shop to check.</param>
+            <returns>True if the shop exists; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.UserAPI.AddUserAsync(SaintMichel.Model.User)">
+            <summary>
+            Adds a new shop.
+            </summary>
+            <param name="shop">The shop to add.</param>
+            <returns>True if the shop was successfully added; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.UserAPI.UpdateUserAsync(SaintMichel.Model.User)">
+            <summary>
+            Updates an existing shop.
+            </summary>
+            <param name="shop">The shop to update.</param>
+            <returns>True if the shop was successfully updated; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.UserAPI.DeleteUserAsync(System.String)">
+            <summary>
+            Deletes a shop by ID.
+            </summary>
+            <param name="idshop">The ID of the shop to delete.</param>
+            <returns>True if the shop was successfully deleted; otherwise, false.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.UserAPI.GetUserAsync(System.String)">
+            <summary>
+            Retrieves a shop by ID.
+            </summary>
+            <param name="idshop">The ID of the shop to retrieve.</param>
+            <returns>The shop if found; otherwise, null.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.UserAPI.GetAllUsersAsync">
+            <summary>
+            Retrieves all shops.
+            </summary>
+            <returns>A list of all shops.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.UserAPI.SearchUsersAsync(System.String)">
+            <summary>
+            Searches for shops based on a filter.
+            </summary>
+            <param name="filter">The search filter.</param>
+            <returns>A list of matching shops.</returns>
+        </member>
+        <member name="M:SaintMichel.Services.UserAPI.UserExistsAsync(System.String)">
+            <summary>
+            Checks if a shop exists by ID.
+            </summary>
+            <param name="idshop">The ID of the shop to check.</param>
+            <returns>True if the shop exists; otherwise, false.</returns>
+        </member>
+        <member name="T:SaintMichel.ViewModel.EventDetailPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:SaintMichel.ViewModel.EventPageViewModel.ObsItems">
-            <inheritdoc cref="F:SaintMichel.ViewModel.EventPageViewModel._obsItems"/>
+        <member name="P:SaintMichel.ViewModel.EventDetailPageViewModel.IdEvent">
+            <inheritdoc cref="F:SaintMichel.ViewModel.EventDetailPageViewModel.idEvent"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.EventDetailPageViewModel.Name">
+            <inheritdoc cref="F:SaintMichel.ViewModel.EventDetailPageViewModel._Name"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.EventDetailPageViewModel.Description">
+            <inheritdoc cref="F:SaintMichel.ViewModel.EventDetailPageViewModel._Description"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.EventDetailPageViewModel.Date">
+            <inheritdoc cref="F:SaintMichel.ViewModel.EventDetailPageViewModel._Date"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.EventDetailPageViewModel.Lieu">
+            <inheritdoc cref="F:SaintMichel.ViewModel.EventDetailPageViewModel._Lieu"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.EventDetailPageViewModel.State">
+            <inheritdoc cref="F:SaintMichel.ViewModel.EventDetailPageViewModel._State"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.EventDetailPageViewModel.UserIdUser">
+            <inheritdoc cref="F:SaintMichel.ViewModel.EventDetailPageViewModel._UserIdUser"/>
+        </member>
+        <member name="M:SaintMichel.ViewModel.EventDetailPageViewModel.OnIdEventChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:SaintMichel.ViewModel.EventDetailPageViewModel.IdEvent"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:SaintMichel.ViewModel.EventDetailPageViewModel.IdEvent"/> is changed.</remarks>
+        </member>
+        <member name="F:SaintMichel.ViewModel.EventDetailPageViewModel.confirmCommand">
+            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.EventDetailPageViewModel.ConfirmCommand"/>.</summary>
+        </member>
+        <member name="P:SaintMichel.ViewModel.EventDetailPageViewModel.ConfirmCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.EventDetailPageViewModel.Confirm"/>.</summary>
+        </member>
+        <member name="F:SaintMichel.ViewModel.EventDetailPageViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.EventDetailPageViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:SaintMichel.ViewModel.EventDetailPageViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.EventDetailPageViewModel.Delete"/>.</summary>
+        </member>
+        <member name="T:SaintMichel.ViewModel.FoodPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.FoodPageViewModel.MondayMenus">
+            <inheritdoc cref="F:SaintMichel.ViewModel.FoodPageViewModel.mondayMenus"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.FoodPageViewModel.TuesdayMenus">
+            <inheritdoc cref="F:SaintMichel.ViewModel.FoodPageViewModel.tuesdayMenus"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.FoodPageViewModel.WednesdayMenus">
+            <inheritdoc cref="F:SaintMichel.ViewModel.FoodPageViewModel.wednesdayMenus"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.FoodPageViewModel.ThursdayMenus">
+            <inheritdoc cref="F:SaintMichel.ViewModel.FoodPageViewModel.thursdayMenus"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.FoodPageViewModel.FridayMenus">
+            <inheritdoc cref="F:SaintMichel.ViewModel.FoodPageViewModel.fridayMenus"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.FoodPageViewModel.CurrentWeek">
+            <inheritdoc cref="F:SaintMichel.ViewModel.FoodPageViewModel.currentWeek"/>
+        </member>
+        <member name="T:SaintMichel.ViewModel.GestionUtilisateurPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.GestionUtilisateurPageViewModel.ObsItems">
+            <inheritdoc cref="F:SaintMichel.ViewModel.GestionUtilisateurPageViewModel._obsItems"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.GestionUtilisateurPageViewModel.EventVisibility">
+            <inheritdoc cref="F:SaintMichel.ViewModel.GestionUtilisateurPageViewModel.eventVisibility"/>
+        </member>
+        <member name="F:SaintMichel.ViewModel.GestionUtilisateurPageViewModel.loadUserCommand">
+            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.GestionUtilisateurPageViewModel.LoadUserCommand"/>.</summary>
+        </member>
+        <member name="P:SaintMichel.ViewModel.GestionUtilisateurPageViewModel.LoadUserCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.GestionUtilisateurPageViewModel.LoadUser"/>.</summary>
         </member>
         <member name="T:SaintMichel.ViewModel.ItemDetailPageViewModel">
             <inheritdoc/>
@@ -35,8 +253,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:SaintMichel.ViewModel.ItemViewModel.ObsItems">
             <inheritdoc cref="F:SaintMichel.ViewModel.ItemViewModel._obsItems"/>
@@ -46,18 +262,6 @@
         </member>
         <member name="P:SaintMichel.ViewModel.ItemViewModel.LoadItemsCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.ItemViewModel.LoadItems"/>.</summary>
-        </member>
-        <member name="F:SaintMichel.ViewModel.ItemViewModel.itemTappedCommand">
-            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.ItemViewModel.ItemTappedCommand"/>.</summary>
-        </member>
-        <member name="P:SaintMichel.ViewModel.ItemViewModel.ItemTappedCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:SaintMichel.ViewModel.ItemViewModel.ItemTapped(SaintMichel.Model.ToDoList)"/>.</summary>
-        </member>
-        <member name="F:SaintMichel.ViewModel.ItemViewModel.addItemCommand">
-            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.ItemViewModel.AddItemCommand"/>.</summary>
-        </member>
-        <member name="P:SaintMichel.ViewModel.ItemViewModel.AddItemCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.ItemViewModel.AddItem"/>.</summary>
         </member>
         <member name="F:SaintMichel.ViewModel.ItemViewModel.navigateToFoodCommand">
             <summary>The backing field for <see cref="P:SaintMichel.ViewModel.ItemViewModel.NavigateToFoodCommand"/>.</summary>
@@ -135,13 +339,51 @@
         <member name="P:SaintMichel.ViewModel.NewItemPageViewModel.SaveBtnCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.NewItemPageViewModel.SaveBtn"/>.</summary>
         </member>
-        <member name="T:SaintMichel.ViewModel.OffresPageViewModel">
+        <member name="T:SaintMichel.ViewModel.OffreDetailPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:SaintMichel.ViewModel.OffresPageViewModel.ObsItems">
-            <inheritdoc cref="F:SaintMichel.ViewModel.OffresPageViewModel._obsItems"/>
+        <member name="P:SaintMichel.ViewModel.OffreDetailPageViewModel.IdInterim">
+            <inheritdoc cref="F:SaintMichel.ViewModel.OffreDetailPageViewModel.idInterim"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.OffreDetailPageViewModel.DateStart">
+            <inheritdoc cref="F:SaintMichel.ViewModel.OffreDetailPageViewModel.dateStart"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.OffreDetailPageViewModel.DateEnd">
+            <inheritdoc cref="F:SaintMichel.ViewModel.OffreDetailPageViewModel.dateEnd"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.OffreDetailPageViewModel.NameEntreprise">
+            <inheritdoc cref="F:SaintMichel.ViewModel.OffreDetailPageViewModel.nameEntreprise"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.OffreDetailPageViewModel.NameVille">
+            <inheritdoc cref="F:SaintMichel.ViewModel.OffreDetailPageViewModel.nameVille"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.OffreDetailPageViewModel.Tache">
+            <inheritdoc cref="F:SaintMichel.ViewModel.OffreDetailPageViewModel.tache"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.OffreDetailPageViewModel.Type_offre">
+            <inheritdoc cref="F:SaintMichel.ViewModel.OffreDetailPageViewModel.type_offre"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.OffreDetailPageViewModel.SecteurActivite">
+            <inheritdoc cref="F:SaintMichel.ViewModel.OffreDetailPageViewModel.secteurActivite"/>
+        </member>
+        <member name="F:SaintMichel.ViewModel.OffreDetailPageViewModel.confirmCommand">
+            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.OffreDetailPageViewModel.ConfirmCommand"/>.</summary>
+        </member>
+        <member name="P:SaintMichel.ViewModel.OffreDetailPageViewModel.ConfirmCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.OffreDetailPageViewModel.Confirm"/>.</summary>
+        </member>
+        <member name="F:SaintMichel.ViewModel.OffreDetailPageViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.OffreDetailPageViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:SaintMichel.ViewModel.OffreDetailPageViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.OffreDetailPageViewModel.Delete"/>.</summary>
         </member>
         <member name="T:SaintMichel.ViewModel.SupervisionPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
@@ -150,11 +392,44 @@
         <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.ObsItems">
             <inheritdoc cref="F:SaintMichel.ViewModel.SupervisionPageViewModel._obsItems"/>
         </member>
-        <member name="F:SaintMichel.ViewModel.SupervisionPageViewModel.loadItemsCommand">
-            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.SupervisionPageViewModel.LoadItemsCommand"/>.</summary>
+        <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.ObsItems2">
+            <inheritdoc cref="F:SaintMichel.ViewModel.SupervisionPageViewModel._obsItems2"/>
         </member>
-        <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.LoadItemsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.SupervisionPageViewModel.LoadItems"/>.</summary>
+        <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.SelectedItem">
+            <inheritdoc cref="F:SaintMichel.ViewModel.SupervisionPageViewModel._selectedItem"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.SelectedOffre">
+            <inheritdoc cref="F:SaintMichel.ViewModel.SupervisionPageViewModel._selectedOffre"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.EventVisibility">
+            <inheritdoc cref="F:SaintMichel.ViewModel.SupervisionPageViewModel.eventVisibility"/>
+        </member>
+        <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.OffreVisibility">
+            <inheritdoc cref="F:SaintMichel.ViewModel.SupervisionPageViewModel.offreVisibility"/>
+        </member>
+        <member name="F:SaintMichel.ViewModel.SupervisionPageViewModel.eventSelectedCommand">
+            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.SupervisionPageViewModel.EventSelectedCommand"/>.</summary>
+        </member>
+        <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.EventSelectedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.SupervisionPageViewModel.EventSelected"/>.</summary>
+        </member>
+        <member name="F:SaintMichel.ViewModel.SupervisionPageViewModel.offreSelectedCommand">
+            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.SupervisionPageViewModel.OffreSelectedCommand"/>.</summary>
+        </member>
+        <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.OffreSelectedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.SupervisionPageViewModel.OffreSelected"/>.</summary>
+        </member>
+        <member name="F:SaintMichel.ViewModel.SupervisionPageViewModel.loadOffresCommand">
+            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.SupervisionPageViewModel.LoadOffresCommand"/>.</summary>
+        </member>
+        <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.LoadOffresCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.SupervisionPageViewModel.LoadOffres"/>.</summary>
+        </member>
+        <member name="F:SaintMichel.ViewModel.SupervisionPageViewModel.loadEventCommand">
+            <summary>The backing field for <see cref="P:SaintMichel.ViewModel.SupervisionPageViewModel.LoadEventCommand"/>.</summary>
+        </member>
+        <member name="P:SaintMichel.ViewModel.SupervisionPageViewModel.LoadEventCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SaintMichel.ViewModel.SupervisionPageViewModel.LoadEvent"/>.</summary>
         </member>
         <member name="F:SaintMichel.ViewModel.SupervisionPageViewModel.navigateToEventsCommand">
             <summary>The backing field for <see cref="P:SaintMichel.ViewModel.SupervisionPageViewModel.NavigateToEventsCommand"/>.</summary>
@@ -186,6 +461,26 @@
             Android Resource Designer class.
             Exposes the Android Resource designer assembly into the project Namespace.
             </summary>
+        </member>
+        <member name="T:ShopPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:ShopPageViewModel.SelectedItem">
+            <inheritdoc cref="F:ShopPageViewModel._selectedItem"/>
+        </member>
+        <member name="F:ShopPageViewModel.addShopCommand">
+            <summary>The backing field for <see cref="P:ShopPageViewModel.AddShopCommand"/>.</summary>
+        </member>
+        <member name="P:ShopPageViewModel.AddShopCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ShopPageViewModel.OnAddShop"/>.</summary>
+        </member>
+        <member name="F:ShopPageViewModel.itemTappedCommand">
+            <summary>The backing field for <see cref="P:ShopPageViewModel.ItemTappedCommand"/>.</summary>
+        </member>
+        <member name="P:ShopPageViewModel.ItemTappedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:ShopPageViewModel.ItemTappedAsync(SaintMichel.Model.ShopItem)"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
             <summary>
@@ -313,8 +608,50 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IdEvent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IdEvent" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Date">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Date" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Lieu">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Lieu" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.State">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "State" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserIdUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserIdUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MondayMenus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MondayMenus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TuesdayMenus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TuesdayMenus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WednesdayMenus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WednesdayMenus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ThursdayMenus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ThursdayMenus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FridayMenus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FridayMenus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentWeek">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentWeek" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ObsItems">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ObsItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EventVisibility">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EventVisibility" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ItemId">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ItemId" generated properties.</summary>
@@ -322,14 +659,47 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Description">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Description" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BtnText">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BtnText" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Headtxt">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Headtxt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IdInterim">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IdInterim" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateStart">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateStart" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateEnd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateEnd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NameEntreprise">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NameEntreprise" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NameVille">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NameVille" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Tache">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Tache" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Type_offre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Type_offre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SecteurActivite">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SecteurActivite" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedItem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedItem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ObsItems2">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ObsItems2" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedOffre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedOffre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OffreVisibility">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OffreVisibility" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Ticketsitems">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Ticketsitems" generated properties.</summary>
@@ -340,8 +710,50 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IdEvent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IdEvent" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Date">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Date" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Lieu">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Lieu" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.State">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "State" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserIdUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserIdUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MondayMenus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MondayMenus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TuesdayMenus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TuesdayMenus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WednesdayMenus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WednesdayMenus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ThursdayMenus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ThursdayMenus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FridayMenus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FridayMenus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentWeek">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentWeek" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ObsItems">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ObsItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EventVisibility">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EventVisibility" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ItemId">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ItemId" generated properties.</summary>
@@ -349,14 +761,47 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Description">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Description" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BtnText">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BtnText" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Headtxt">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Headtxt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IdInterim">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IdInterim" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateStart">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateStart" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateEnd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateEnd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NameEntreprise">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NameEntreprise" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NameVille">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NameVille" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Tache">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Tache" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Type_offre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Type_offre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SecteurActivite">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SecteurActivite" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedItem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedItem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ObsItems2">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ObsItems2" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedOffre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedOffre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OffreVisibility">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OffreVisibility" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Ticketsitems">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Ticketsitems" generated properties.</summary>

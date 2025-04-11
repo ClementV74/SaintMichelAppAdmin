@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaintMichel.View.OffrePage"
+             Title="OffrePage">
+
+    <Grid RowDefinitions="*" ColumnDefinitions="*">
+        <CollectionView ItemsSource="{Binding ObsItems2}" Grid.Column="2" IsVisible="{Binding OffreVisibility}" 
+          SelectionMode="Single" SelectedItem="{Binding SelectedOffre}"
+          IsEnabled="{Binding OffreEnabled}" SelectionChangedCommand="{Binding OffreSelectedCommand}"
+          Margin="10,5">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,8,0,8"
+             Padding="16"
+             CornerRadius="12"
+             BackgroundColor="White"
+             HasShadow="True"
+             BorderColor="#f0f0f0">
+                        <Grid RowSpacing="16">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Company header -->
+                            <Grid Grid.Row="0" ColumnDefinitions="Auto,*" ColumnSpacing="16">
+                                <!-- Company logo/initial -->
+                                <Frame Grid.Column="0"
+                         WidthRequest="56" 
+                         HeightRequest="56"
+                         CornerRadius="10"
+                         Padding="0"
+                         HasShadow="False"
+                         BackgroundColor="#4f46e5"
+                         BorderColor="Transparent">
+                                    <Label Text="{Binding NameEntreprise, Converter={StaticResource FirstLetterConverter}}" 
+                             HorizontalOptions="Center" 
+                             VerticalOptions="Center"
+                             TextColor="White"
+                             FontSize="22"
+                             FontAttributes="Bold"/>
+                                </Frame>
+
+                                <!-- Company details -->
+                                <StackLayout Grid.Column="1" Spacing="8">
+                                    <Label Text="{Binding NameEntreprise}" 
+                             FontSize="18" 
+                             FontAttributes="Bold"
+                             TextColor="#111827" />
+
+                                    <!-- Job type and sector -->
+                                    <StackLayout Orientation="Horizontal" Spacing="8">
+                                        <Frame Padding="8,2" 
+                                 CornerRadius="6" 
+                                 HasShadow="False"
+                                 BackgroundColor="#f3f4f6"
+                                 BorderColor="Transparent">
+                                            <Label Text="{Binding type_offre}" 
+                                     FontSize="13" 
+                                     TextColor="#4f46e5"/>
+                                        </Frame>
+                                        <Frame Padding="8,2" 
+                                 CornerRadius="6" 
+                                 HasShadow="False"
+                                 BackgroundColor="#f3f4f6"
+                                 BorderColor="Transparent">
+                                            <Label Text="{Binding SecteurActivite}" 
+                                     FontSize="13" 
+                                     TextColor="#7c3aed"/>
+                                        </Frame>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+
+                            <!-- Divider -->
+                            <BoxView Grid.Row="1" 
+                       HeightRequest="1" 
+                       Color="#f3f4f6" 
+                       HorizontalOptions="Fill"/>
+
+                            <!-- Location and Dates -->
+                            <Grid Grid.Row="2" RowSpacing="12">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <!-- Location -->
+                                <Grid Grid.Row="0" ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                    <Frame Grid.Column="0"
+                             WidthRequest="36" 
+                             HeightRequest="36"
+                             CornerRadius="8"
+                             Padding="0"
+                             HasShadow="False"
+                             BackgroundColor="#f9fafb"
+                             BorderColor="Transparent">
+                                        <Label Text="📍" 
+                                 FontSize="16" 
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                                    </Frame>
+                                    <StackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                                        <Label Text="Localisation" 
+                                 FontSize="12" 
+                                 TextColor="#6b7280"/>
+                                        <Label Text="{Binding NameVille}" 
+                                 FontSize="15" 
+                                 TextColor="#111827"
+                                 FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Grid>
+
+                                <!-- Dates -->
+                                <Grid Grid.Row="1" ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                    <Frame Grid.Column="0"
+                             WidthRequest="36" 
+                             HeightRequest="36"
+                             CornerRadius="8"
+                             Padding="0"
+                             HasShadow="False"
+                             BackgroundColor="#f9fafb"
+                             BorderColor="Transparent">
+                                        <Label Text="🗓️" 
+                                 FontSize="16" 
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                                    </Frame>
+                                    <StackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                                        <Label Text="Période" 
+                                 FontSize="12" 
+                                 TextColor="#6b7280"/>
+                                        <StackLayout Orientation="Horizontal" Spacing="4">
+                                            <Label Text="{Binding DateStart, StringFormat='{0:dd MMM yyyy}'}" 
+                                     FontSize="15" 
+                                     TextColor="#111827"
+                                     FontAttributes="Bold"/>
+                                            <Label Text="→" 
+                                     FontSize="15" 
+                                     TextColor="#6b7280"
+                                     VerticalOptions="Center"/>
+                                            <Label Text="{Binding DateEnd, StringFormat='{0:dd MMM yyyy}'}" 
+                                     FontSize="15" 
+                                     TextColor="#111827"
+                                     FontAttributes="Bold"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+
+                            <!-- Task section -->
+                            <StackLayout Grid.Row="3" Spacing="8">
+                                <Label Text="Description du poste" 
+                         FontSize="14" 
+                         TextColor="#6b7280"
+                         FontAttributes="Bold"/>
+
+                                <Frame Padding="12,10"
+                         CornerRadius="8"
+                         HasShadow="False"
+                         BackgroundColor="#f9fafb"
+                         BorderColor="Transparent">
+                                    <Label Text="{Binding Tache}" 
+                             FontSize="14" 
+                             TextColor="#374151"
+                             LineBreakMode="WordWrap"/>
+                                </Frame>
+
+                                <!-- Button -->
+                                <Button Text="Voir détails"
+                          FontAttributes="Bold"
+                          FontSize="14"
+                          TextColor="White"
+                          BackgroundColor="#4f46e5"
+                          CornerRadius="8"
+                          Padding="0,12"
+                          Margin="0,8,0,0"
+                          HorizontalOptions="Fill"/>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

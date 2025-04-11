@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaintMichel.View.EventPage"
+             Title="EventPage">
+
+    <Grid RowDefinitions="*" ColumnDefinitions="*">
+
+            <!-- Collection d'événements -->
+    <CollectionView ItemsSource="{Binding ObsItems}" Grid.Column="2" IsVisible="{Binding EventVisibility}" 
+          SelectionMode="Single" SelectedItem="{Binding SelectedItem}"
+          IsEnabled="{Binding EventEnabled}" SelectionChangedCommand="{Binding EventSelectedCommand}"
+          Margin="10,5">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Margin="0,8,0,8"
+             Padding="16"
+             CornerRadius="12"
+             BackgroundColor="White"
+             HasShadow="True"
+             BorderColor="#f0f0f0">
+                    <Grid RowSpacing="12">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Event Name -->
+                        <Label Grid.Row="0"
+                     Text="{Binding Name}" 
+                     FontSize="20" 
+                     FontAttributes="Bold"
+                     TextColor="#1a1a2e" />
+
+                        <!-- Divider -->
+                        <BoxView Grid.Row="1" 
+                       HeightRequest="1" 
+                       Color="#f3f4f6" 
+                       HorizontalOptions="Fill"
+                       Margin="0,4"/>
+
+                        <!-- Description, Date and Location -->
+                        <StackLayout Grid.Row="2" Spacing="16">
+                            <!-- Description with Date -->
+                            <Frame Padding="12,10"
+                         CornerRadius="8"
+                         HasShadow="False"
+                         BackgroundColor="#f9fafb"
+                         BorderColor="Transparent">
+                                <StackLayout Spacing="8">
+                                    <!-- Date -->
+                                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="8">
+                                        <Label Grid.Column="0" 
+                                     Text="🗓️" 
+                                     FontSize="16" 
+                                     VerticalOptions="Center"/>
+                                        <Label Grid.Column="1"
+                                     Text="{Binding Date, StringFormat='{0:dd MMMM yyyy}'}" 
+                                     FontSize="15" 
+                                     TextColor="#3a86ff"
+                                     FontAttributes="Bold"
+                                     VerticalOptions="Center"/>
+                                    </Grid>
+
+                                    <!-- Description -->
+                                    <Label Text="{Binding Description}" 
+                                 FontSize="15" 
+                                 TextColor="#4a4e69"
+                                 LineBreakMode="WordWrap"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Location with icon -->
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Frame Grid.Column="0"
+                             WidthRequest="36" 
+                             HeightRequest="36"
+                             CornerRadius="8"
+                             Padding="0"
+                             HasShadow="False"
+                             BackgroundColor="#f9fafb"
+                             BorderColor="Transparent">
+                                    <Label Text="📍" 
+                                 FontSize="16" 
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                                </Frame>
+                                <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                    <Label Text="{Binding Lieu}" 
+                                 FontSize="16" 
+                                 TextColor="#3a0ca3"
+                                 FontAttributes="Italic"/>
+                                </StackLayout>
+                            </Grid>
+
+                            <!-- Button -->
+                            <Button Text="Voir détails"
+                          FontAttributes="Bold"
+                          FontSize="14"
+                          TextColor="White"
+                          BackgroundColor="#3a86ff"
+                          CornerRadius="8"
+                          Padding="0,12"
+                          Margin="0,4,0,0"
+                          HorizontalOptions="Fill"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+    </Grid>
+</ContentPage>

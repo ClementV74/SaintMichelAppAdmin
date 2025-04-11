@@ -61,6 +61,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.EventDeta
 build_metadata.AdditionalFiles.TargetPath = View\EventDetailPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\EventDetailPage.xaml
 
+[C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/EventPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.EventPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\EventPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\EventPage.xaml
+
 [C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/FoodPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.FoodPage.xaml
@@ -85,6 +91,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.OffreDeta
 build_metadata.AdditionalFiles.TargetPath = View\OffreDetailPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\OffreDetailPage.xaml
 
+[C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/OffrePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.OffrePage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\OffrePage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\OffrePage.xaml
+
 [C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/ShopDetailPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.ShopDetailPage.xaml
@@ -96,12 +108,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.ShopPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\ShopPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\ShopPage.xaml
-
-[C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/SupervisionPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SaintMichel.View.SupervisionPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\SupervisionPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\SupervisionPage.xaml
 
 [C:/Users/Suzuki/source/repos/ClementV74/SaintMichelAppAdmin/SaintMichel/View/TicketDetailPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

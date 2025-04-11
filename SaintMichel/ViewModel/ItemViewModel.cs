@@ -17,30 +17,6 @@
         }
 
         [RelayCommand]
-        async Task LoadItems()
-        {
-            //IsBusy = true;
-            //try
-            //{
-            //    ObsItems.Clear();
-            //    var items = await ItemStore.GetItemsAsync(true);
-
-            //    foreach (var item in items)
-            //    {
-            //        ObsItems.Add(item);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //}
-            //finally
-            //{
-            //    IsBusy = false;
-
-            //}
-        }
-
-        [RelayCommand]
         async Task NavigateToFood()
         {
             await Shell.Current.GoToAsync(nameof(FoodPage));
@@ -59,9 +35,15 @@
         }
 
         [RelayCommand]
-        async Task NavigateToSupervision()
+        async Task NavigateToEvenements()
         {
-            await Shell.Current.GoToAsync(nameof(SupervisionPage));
+            await Shell.Current.GoToAsync(nameof(EventPage));
+        }
+
+        [RelayCommand]
+        async Task NavigateToOffres()
+        {
+            await Shell.Current.GoToAsync(nameof(OffrePage));
         }
 
         [RelayCommand]

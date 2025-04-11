@@ -29,7 +29,7 @@ namespace SaintMichel.Services
         /// <returns>True if the shop was successfully updated; otherwise, false.</returns>
         public async Task<bool> UpdateEventAsync(Event shop)
         {
-            return await UpdateItemAsync(shop.IDevent.ToString(), shop);
+            return await UpdateItemAsync(shop.IDEvent.ToString(), shop);
         }
 
         /// <summary>
